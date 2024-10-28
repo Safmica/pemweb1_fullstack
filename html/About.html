@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="../src/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="../src/output.css" rel="stylesheet" />
+    <title>About</title>
+  </head>
+  <body>
+    <div class="flex mt-5">
+      <a class="" href="index.html">Home ></a>
+      <p>About Us</p>
+    </div>
+    <hr class="my-4" />
+
+    <div class="container mt-5 mx-8">
+      <div class="row">
+        <div class="col-md-5">
+          <img
+            src="../src/Assets/COFounder.jpg"
+            alt="Founder Image"
+            style="width: 100%"
+          />
+        </div>
+
+        <div class="col-md-7">
+          <h2 class="fw-bold mb-2">Our Story</h2>
+          <p class="text-justify">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem
+            error animi sapiente, repellendus a consequuntur. Accusantium
+            obcaecati delectus quo nam distinctio est molestiae, natus quidem,
+            cupiditate accusamus eaque dolores dicta expedita debitis quod
+            laboriosam voluptates nobis nihil iure velit animi.
+          </p>
+          <br />
+          <p class="text-justify" style="font-family: ">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cupiditate
+            ab explicabo reiciendis perspiciatis in soluta sint itaque nostrum
+            cum velit?
+          </p>
+          <p class="fw-bold">
+            Dr. Nisa Almawati, M.B.A <br />
+            <small class="text-muted">Founding of Ersanawata High School</small>
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="container mt-5">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="">
+            <h3 class="fw-bold">Visi</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi
+              nobis illo dolorem, dignissimos qui dolore delectus est velit
+              incidunt ipsam perferendis eligendi molestiae possimus ullam
+              praesentium? Qui accusantium eius ullam.
+            </p>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="">
+            <h3 class="fw-bold">Misi</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo,
+              aliquid? Exercitationem possimus quibusdam facilis quasi aperiam,
+              aliquam tempora delectus iure consequatur incidunt nemo neque iste
+              voluptatem at, in obcaecati corporis?
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 5 Pilar Section -->
+    <div class="container mt-5">
+      <h3 class="text-center fw-bold mb-4">5 Keunggulan</h3>
+      <div class="accordion" id="pilarAccordion">
+        <div class="accordion-item">
+          <h4 class="accordion-header">
+            <button
+              class="accordion-button collapsed"
+              type="button"
+              onclick="toggleAccordion(0)"
+            >
+              Lorem.
+            </button>
+          </h4>
+          <div class="accordion-collapse collapse" id="content-0">
+            <div class="accordion-body"></div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h4 class="accordion-header">
+            <button
+              class="accordion-button collapsed"
+              type="button"
+              onclick="toggleAccordion(1)"
+            >
+              Lorem.
+            </button>
+          </h4>
+          <div class="accordion-collapse collapse" id="content-1">
+            <div class="accordion-body">
+              
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h4 class="accordion-header">
+            <button
+              class="accordion-button collapsed"
+              type="button"
+              onclick="toggleAccordion(2)"
+            >
+            Lorem.
+            </button>
+          </h4>
+          <div class="accordion-collapse collapse" id="content-2">
+            <div class="accordion-body">
+              
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h4 class="accordion-header">
+            <button
+              class="accordion-button collapsed"
+              type="button"
+              onclick="toggleAccordion(3)"
+            >
+              Lorem.
+            </button>
+          </h4>
+          <div class="accordion-collapse collapse" id="content-3">
+            <div class="accordion-body">
+              
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h4 class="accordion-header">
+            <button
+              class="accordion-button collapsed"
+              type="button"
+              onclick="toggleAccordion(4)"
+            >
+              Lorem.
+            </button>
+          </h4>
+          <div class="accordion-collapse collapse" id="content-4">
+            <div class="accordion-body">
+              Detail tentang pilar Overseas Program.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="../src/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+      function toggleAccordion(index) {
+        const content = document.getElementById(`content-${index}`);
+        const isVisible = content.classList.contains("show");
+
+        // Close all other accordions
+        document.querySelectorAll(".accordion-collapse").forEach((element) => {
+          element.classList.remove("show");
+        });
+
+        // Toggle the clicked accordion
+        if (!isVisible) {
+          content.classList.add("show");
+        }
+      }
+    </script>
+  </body>
+</html>
