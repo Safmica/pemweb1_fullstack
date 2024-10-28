@@ -1,54 +1,54 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="../src/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <link href="../src/output.css" rel="stylesheet">
-    <title>Bootstrap Test</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="../src/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="../src/output.css" rel="stylesheet" />
+    <title>Home </title>
     <style>
         .carousel-item img {
-            height: 400px; /* Atur tinggi sesuai keinginan */
+            height: 400px;
             object-fit: cover;
             width: auto;
         }
 
-        /* Tinggi yang lebih kecil di layar yang lebih kecil */
+        
         @media (max-width: 768px) {
             .carousel-item img {
-                height: 250px; /* Tinggi yang lebih rendah untuk layar kecil */
+                height: 250px;
             }
         }
-        /* Mengubah warna teks navbar menjadi putih */
+        
         .navbar .nav-link, .navbar .navbar-brand {
             color: white;
-            transition: color 0.3s ease; /* Transisi warna */
+            transition: color 0.3s ease;
         }
 
-        /* Mengubah warna teks saat hover */
+        
         .navbar .nav-link:hover {
-            color: #f8f9fa; /* Warna hover putih */
-            text-decoration: underline; /* Garis bawah saat hover */
+            color: #f8f9fa;
+            text-decoration: underline;
         }
 
-        /* Mengubah warna link Home menjadi custom orange */
+        
         .nav-link.tw-text-customOrange {
-            color: #ff9800 !important; /* Warna custom orange */
+            color: #ff9800 !important;
         }
 
-        /* Menambahkan efek hover pada tombol Login */
+        
         .btn.tw-bg-customOrange {
             transition: background-color 0.3s ease, transform 0.3s ease; /* Transisi untuk latar belakang dan transformasi */
         }
 
         .btn.tw-bg-customOrange:hover {
-            background-color: #ff9800; /* Ganti dengan warna custom orange yang lebih cerah */
-            transform: scale(1.05); /* Efek zoom saat hover */
+            background-color: #ff9800;
+            transform: scale(1.05);
         }
 
-        /* Menggunakan efek shadow untuk tombol */
+       
         .btn.tw-bg-customOrange:hover {
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Bayangan saat hover */
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
         }
     </style>
 </head>
@@ -133,5 +133,5 @@
     </section>
 
     <script src="../src/bootstrap/js/bootstrap.bundle.min.js"></script>
-</body>
+  </body>
 </html>
