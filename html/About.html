@@ -34,7 +34,7 @@
             laboriosam voluptates nobis nihil iure velit animi.
           </p>
           <br />
-          <p class="text-justify" style="font-family: ">
+          <p class="text-justify">
             Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cupiditate
             ab explicabo reiciendis perspiciatis in soluta sint itaque nostrum
             cum velit?
@@ -74,7 +74,6 @@
       </div>
     </div>
 
-    <!-- 5 Pilar Section -->
     <div class="container mt-5">
       <h3 class="text-center fw-bold mb-4">5 Keunggulan</h3>
       <div class="accordion" id="pilarAccordion">
@@ -103,9 +102,7 @@
             </button>
           </h4>
           <div class="accordion-collapse collapse" id="content-1">
-            <div class="accordion-body">
-              
-            </div>
+            <div class="accordion-body"></div>
           </div>
         </div>
         <div class="accordion-item">
@@ -115,13 +112,11 @@
               type="button"
               onclick="toggleAccordion(2)"
             >
-            Lorem.
+              Lorem.
             </button>
           </h4>
           <div class="accordion-collapse collapse" id="content-2">
-            <div class="accordion-body">
-              
-            </div>
+            <div class="accordion-body"></div>
           </div>
         </div>
         <div class="accordion-item">
@@ -135,9 +130,7 @@
             </button>
           </h4>
           <div class="accordion-collapse collapse" id="content-3">
-            <div class="accordion-body">
-              
-            </div>
+            <div class="accordion-body"></div>
           </div>
         </div>
         <div class="accordion-item">
@@ -166,12 +159,10 @@
         const content = document.getElementById(`content-${index}`);
         const isVisible = content.classList.contains("show");
 
-        // Close all other accordions
         document.querySelectorAll(".accordion-collapse").forEach((element) => {
           element.classList.remove("show");
         });
 
-        // Toggle the clicked accordion
         if (!isVisible) {
           content.classList.add("show");
         }
