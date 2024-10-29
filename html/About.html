@@ -7,10 +7,34 @@
     <link href="../src/output.css" rel="stylesheet" />
     <title>About</title>
   </head>
+  <style>
+        .navbar .nav-link, .navbar .navbar-brand {
+            color: white;
+            transition: color 0.3s ease;
+        }
+
+        .navbar .nav-link:hover {
+            color: #f8f9fa;
+            text-decoration: underline;
+        }
+
+        .nav-link.tw-text-customOrange {
+            color: #ff9800 !important;
+        }
+
+        .btn.tw-bg-customOrange {
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        .btn.tw-bg-customOrange:hover {
+            background-color: #ff9800;
+            transform: scale(1.05);
+        }
+  </style>
   <body>
-    <div class="m-5">
-      <a class="" href="index.html">Home > </a>
-      <a href="Profile.html">About</a>
+    <div class="flex mt-5">
+      <a class="" href="index.html">Home ></a>
+      <p>About Us</p>
     </div>
     <hr class="my-4 tw-w-0.2" />
 
