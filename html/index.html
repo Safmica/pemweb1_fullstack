@@ -7,6 +7,12 @@
     <link href="../src/output.css" rel="stylesheet" />
     <title>Home</title>
     <style>
+        .carousel-caption {
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+        }
+
         .carousel-item img {
             height: 400px;
             object-fit: cover;
@@ -40,6 +46,42 @@
         .btn.tw-bg-customOrange:hover {
             background-color: #ff9800;
             transform: scale(1.05);
+        }
+
+        .stat-box {
+            background-color: #002852;
+            border-radius: 15px;
+            width: 100%;
+            height: 150px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            margin: 10px 0;
+            transition: transform 0.3s;
+        }
+
+        .stat-box:hover {
+            transform: translateY(-5px);
+        }
+
+        .number {
+            font-size: 2rem;
+            font-weight: bold;
+            color: white;
+        }
+
+        .title-achievement {
+            font-size: 1.2rem;
+            font-weight:800;
+            color: #ee7e1b;
+        }
+
+        .desc-achievement {
+            font-size: 1rem;
+            font-weight: 300;
+            color: white;
         }
     </style>
 </head>
@@ -119,7 +161,61 @@
             </div>
         </div>
     </section>
+    <article>
+        <div class="tw-flex tw-items-center tw-justify-center">
+            <div class="tw-bg-white tw-rounded-full tw-w-[50%] tw-h-40 tw-sm:tw-w-[75%] tw-sm:tw-h-[50%] tw-sm:tw-p-4 tw-flex tw-flex-col tw-justify-around tw-items-center tw-sm:tw-space-y-8 tw-md:tw-space-y-0 tw-transform tw--translate-y-1/2 tw-sm:tw-translate-x-[17%] tw-shadow-2xl">
+                <img src="../assets/logo.png" class="tw-w-auto tw-h-[80%]" alt="Logo">
+                <p class="tw-text-3xl tw-font-bold">ERSANAWATA HIGHSCHOOL</p>
+            </div>
+        </div>
+        <div class="container mt-5">
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="stat-box tw-group group">
+                        <div class="number" id="achievement-1">0</div>
+                        <div class="tw-flex tw-justify-center tw-items-center tw-flex-col tw-w-[90%] tw-text-center">
+                            <div class="title-achievement">GRADUATION RATE</div>
+                            <div class="tw-z-20 tw-transform tw-duration-200 tw-opacity-0 group-hover:tw-opacity-100 tw-group-hover:tw-opacity-100">
+                                <p class="desc-achievement">Alumni graduation rate to top universities in the world in the international arena</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="stat-box">
+                        <div class="number" id="achievement-2">0</div>
+                        <div class="tw-flex tw-justify-center tw-items-center tw-flex-col tw-w-[90%] tw-text-center">
+                            <div class="title-achievement">HAS BEEN ESTABLISHED</div>
+                            <p class="desc-achievement">ERSANAWATA High School for 24 years creating the best generation</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="stat-box">
+                        <div class="number" id="achievement-3">0</div>
+                        <div class="tw-flex tw-justify-center tw-items-center tw-flex-col tw-w-[90%] tw-text-center">
+                            <div class="title-achievement">WORLD BEST SCHOOLS</div>
+                            <p class="desc-achievement">ERSANAWATA is the only school in Indonesia on the top 100 world best schools</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="stat-box">
+                        <div class="number" id="achievement-4">0</div>
+                        <div class="tw-flex tw-justify-center tw-items-center tw-flex-col tw-w-[90%] tw-text-center">
+                            <div class="title-achievement">International Champion (2024)</div>
+                            <p class="desc-achievement">international champion won by ERSANAWATA (2024)</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </article>
+    <footer>
+
+    </footer>
 
     <script src="../src/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="../js/index.js"></script>
 </body>
 </html>
