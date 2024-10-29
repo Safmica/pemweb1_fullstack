@@ -1,3 +1,25 @@
+function animateText(text, element) {
+    element.innerHTML = '';
+    const characters = text.split('');
+    characters.forEach((char, index) => {
+        setTimeout(() => {
+            element.innerHTML += char;
+        }, index * 50);
+    });
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+    const fadeInElement = document.getElementById('fadeInElement');
+    fadeInElement.classList.add('active');
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+    const titleElement = document.getElementById('animatedTitle');
+    document.body.classList.add('open');
+
+    animateText("Welcome To ERSANAWATA Official Website", titleElement);
+});
+
 function animateValue(id, start, end, duration, ext) {
     let startTime = null;
 

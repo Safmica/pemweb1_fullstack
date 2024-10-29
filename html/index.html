@@ -7,16 +7,31 @@
     <link href="../src/output.css" rel="stylesheet" />
     <title>Home</title>
     <style>
-        .carousel-caption {
-            left: 50%;
-            transform: translate(-50%, -50%);
-            text-align: center;
+        html,body {
+            width: 100%;
+            height: 100%;
+            margin: 0px;
+            padding: 0px;
+            overflow-x: hidden; 
         }
 
+        .carousel-caption {
+            width: 60%;
+            transform: translate(10%, -140%);
+            text-align: center;
+        }
+        
         .carousel-item img {
-            height: 400px;
+            height: auto;
             object-fit: cover;
             width: 100%;
+        }
+
+        .carousel-caption h5 {
+            color:white;
+            font-weight: 800;
+            font-size: 3rem;
+            line-height: 1;
         }
 
         @media (max-width: 768px) {
@@ -31,8 +46,7 @@
         }
 
         .navbar .nav-link:hover {
-            color: #f8f9fa;
-            text-decoration: underline;
+            color: white;
         }
 
         .nav-link.tw-text-customOrange {
@@ -83,14 +97,59 @@
             font-weight: 300;
             color: white;
         }
+
+
+        .curtain {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 50%;
+            background-color: #ee7e1b;
+            z-index: 9999;
+        }
+
+        .curtain-top{
+            transition: transform 3s ease 2s;
+        }
+
+        .curtain-bottom {
+            transform: translateY(100%);
+            transition: transform 3s ease 2s;
+        }
+
+        .open .curtain-top {
+            transform: translateY(-101%);
+        }
+
+        .open .curtain-bottom {
+            transform: translateY(200%);
+        }
+
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px); /* Bergerak sedikit ke bawah */
+            transition: opacity 1s ease, transform 1s ease; /* Transisi untuk efek fade in */
+        }
+
+        .fade-in.active {
+            opacity: 1; /* Menjadi terlihat */
+            transform: translateY(0); /* Kembali ke posisi normal */
+        }
     </style>
 </head>
 <body>
+    <div class="curtain curtain-top tw-align-middle tw-justify-center tw-flex">
+        <img src="../assets/logo.webp" height="30" alt="Logo" class="logo fade-in" id="fadeInElement">
+    </div>
+    <div class="curtain curtain-bottom tw-flex tw-justify-center tw-align-middle">
+        <h1 class="title tw-text-customBlue tw-font-extrabold tw-text-4xl" id="animatedTitle"></h1>
+    </div>
     <nav class="navbar navbar-expand-lg tw-bg-customBlue">
         <div class="container">
-            <a class="navbar-brand d-flex align-items-center" href="#">
+            <a class="navbar-brand d-flex align-items-center" href="index.html">
                 <img src="../assets/logo_nav.png" alt="Logo" width="30" height="30" class="d-inline-block align-top me-2">
-                ERSANAWATA
+                <p class="tw-font-bold tw-text-white">ERSANAWATA</p>
             </a>
             <button class="navbar-toggler tw-bg-customOrange" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -128,27 +187,48 @@
                 <li data-bs-target="#carouselCaptions" data-bs-slide-to="0" class="active"></li>
                 <li data-bs-target="#carouselCaptions" data-bs-slide-to="1"></li>
                 <li data-bs-target="#carouselCaptions" data-bs-slide-to="2"></li>
+                <li data-bs-target="#carouselCaptions" data-bs-slide-to="3"></li>
+                <li data-bs-target="#carouselCaptions" data-bs-slide-to="4"></li>
               </ol>
               <div class="carousel-inner">
                 <div class="carousel-item active">
-                  <img src="../assets/sekolah.jpg" class="d-block w-100" alt="carousel-img">
+                  <img src="../assets/carousel-1.webp" class="d-block w-100" alt="carousel-img">
                   <div class="carousel-caption d-none d-md-block">
-                    <h5>Sekolah Tinggi Ersanawata</h5>
-                    <p>mengedepankan pendidikan</p>
+                    <h5 class="tw-font-extrabold tw-text-5xl">WELCOME TO ERSANAWATA</h5>
+                    <p>The only school in Indonesia that is included in the top 100 best schools in the world that implements the latest curriculum</p>
+                    <a class="tw-bg-customBlue btn btn-primary" href="About.html">About us</a>
                   </div>
                 </div>
                 <div class="carousel-item">
-                  <img src="../assets/sekolah-2.jpeg" class="d-block w-100" alt="carousel-img">
+                  <img src="../assets/carousel-2.webp" class="d-block w-100" alt="carousel-img">
                   <div class="carousel-caption d-none d-md-block">
-                    <h5>Banyak prestasi international</h5>
-                    <p>Anak anda pasti terjamin</p>
+                    <h5>BEST MAJOR</h5>
+                    <p>Using the latest and most innovative curriculum, proven to produce the best generation with quality facilities</p>
+                    <a class="tw-bg-customBlue btn btn-primary" href="jurusan.html">Our Major</a>
                   </div>
                 </div>
                 <div class="carousel-item">
-                  <img src="../assets/sekolah.jpg" class="d-block w-100" alt="carousel-img">
+                  <img src="../assets/carousel-3.webp" class="d-block w-100" alt="carousel-img">
                   <div class="carousel-caption d-none d-md-block">
-                    <h5>Daftar sekarang</h5>
-                    <p>lewat PPDB kami.</p>
+                    <h5>INTERNATIONAL LEVEL ACHIEVEMENT</h5>
+                    <p>Has won many international achievement, both from institutions and from students</p>
+                    <a class="tw-bg-customBlue btn btn-primary" href="Achievement.html">See the achievement</a>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <img src="../assets/carousel-4.webp" class="d-block w-100" alt="carousel-img">
+                  <div class="carousel-caption d-none d-md-block">
+                    <h5>QUALITY EXTRACURRICULAR</h5>
+                    <p>Ensuring that students's academic and non-academic development continues to progress by ensuring the quality of extracurricular activities.</p>
+                    <a class="tw-bg-customBlue btn btn-primary" href="activity.html">All Activity</a>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <img src="../assets/carousel-5.webp" class="d-block w-100" alt="carousel-img">
+                  <div class="carousel-caption d-none d-md-block">
+                    <h5>JOIN ERSANAWATA NOW!</h5>
+                    <p>Ensure a bright future for your child, equip him with competent and internationally competitive education</p>
+                    <a class="tw-bg-customBlue btn btn-primary" href="ppdb.html">Register Now!</a>
                   </div>
                 </div>
               </div>
