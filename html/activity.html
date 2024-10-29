@@ -29,13 +29,28 @@
             padding: 10px;
             border-radius: 5px;
         }
-        .tw-custom-heading {
-            background-color: white; 
-            color: #003366; 
-            padding: 20px; 
-            text-align: center; 
-            border-radius: 5px;
-            margin: 20px 0; 
+
+        .navbar .nav-link, .navbar .navbar-brand {
+            color: white;
+            transition: color 0.3s ease;
+        }
+
+        .navbar .nav-link:hover {
+            color: #f8f9fa;
+            text-decoration: underline;
+        }
+
+        .nav-link.tw-text-customOrange {
+            color: #ff9800 !important;
+        }
+
+        .btn.tw-bg-customOrange {
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        .btn.tw-bg-customOrange:hover {
+            background-color: #ff9800;
+            transform: scale(1.05);
         }
     </style>
 </head>
@@ -55,16 +70,16 @@
                         <a class="nav-link active tw-text-customOrange" href="#">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Profile</a>
+                        <a class="nav-link" href="About.html">About</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Jurusan</a>
+                        <a class="nav-link" href="jurusan.html">Major</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Prestasi</a>
+                        <a class="nav-link" href="Achievement.html">Achievement</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Aktivitas</a>
+                        <a class="nav-link" href="activity.html">Activity</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">PPDB</a>
@@ -74,7 +89,6 @@
             </div>
         </div>
     </nav>
-
     <section>
         <div id="carouselExampleCaptions" class="carousel slide">
             <div class="carousel-indicators">

@@ -85,9 +85,66 @@
     .zoom-card:hover img {
         transform: scale(1.1) rotate(2deg); /* Zoom dan rotasi saat hover */
     }
+
+    .navbar .nav-link, .navbar .navbar-brand {
+            color: white;
+            transition: color 0.3s ease;
+        }
+
+        .navbar .nav-link:hover {
+            color: #f8f9fa;
+            text-decoration: underline;
+        }
+
+        .nav-link.tw-text-customOrange {
+            color: #ff9800 !important;
+        }
+
+        .btn.tw-bg-customOrange {
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        .btn.tw-bg-customOrange:hover {
+            background-color: #ff9800;
+            transform: scale(1.05);
+        }
     </style>
 </head>
 <body>
+    <nav class="navbar navbar-expand-lg tw-bg-customBlue">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="#">
+                <img src="../assets/logo_nav.png" alt="Logo" width="30" height="30" class="d-inline-block align-top me-2">
+                ERSANAWATA
+            </a>
+            <button class="navbar-toggler tw-bg-customOrange" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active tw-text-customOrange" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="About.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="jurusan.html">Major</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Achievement.html">Achievement</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="activity.html">Activity</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">PPDB</a>
+                    </li>
+                </ul>
+                <a class="btn tw-bg-customOrange ms-lg-3 text-white" href="#" role="button">Login</a>
+            </div>
+        </div>
+    </nav>
     <!-- Awal Hero section -->
 <section class="position-relative d-flex justify-content-center align-items-end w-100 min-vh-100">
     <!-- Background Gambar -->
@@ -97,9 +154,9 @@
 
     <!-- Kontainer Achievement -->
     <div class="position-absolute w-50 h-30 d-flex flex-column align-items-center justify-content-center bg-white p-4 mb-0">
-        <h3 class="display-6 fw-semibold text-danger">Achievement</h3>
+        <h3 class="display-6 fw-semibold tw-text-customBlue">Achievement</h3>
         <p class="display-1 fw-bold py-1">Academic</p>
-        <div style="width: 40%; height: 5px; background-color: #ff0000;"></div>
+        <div style="width: 40%; height: 5px; background-color: #002852;"></div>
 
         <!-- Tagline Inspiratif -->
         <p class="mt-2 text-center text-muted">
@@ -107,13 +164,13 @@
         </p>
 
         <!-- Tombol CTA -->
-        <a href="#grafikbatang" class="btn btn-danger btn-lg mt-3">Explore More</a>
+        <a href="#grafikbatang" class="btn tw-bg-customBlue tw-text-white btn-lg mt-3 hover:tw-bg-slate-400">Explore More</a>
     </div>
 </section><br>
 <!-- Akhir Hero section -->
 
 
-    <h1 class="text-center display-5 font-bold mb-4">Academic Achievement of Ersanawata High School</h1><br>
+    <h1 class="text-center display-5 tw-font-bold mb-4">Academic Achievement of Ersanawata High School</h1><br>
     <!-- Awal Grafik batang -->
     <section id="grafikbatang"> 
     <!-- Container untuk Grafik -->
@@ -127,7 +184,7 @@
                 <span>Matematika</span><span>95%</span>
             </div>
             <div class="progress">
-                <div class="progress-bar bg-primary" style="width: 95%;">95%</div>
+                <div class="progress-bar tw-bg-customBlue" style="width: 95%;">95%</div>
             </div>
         </div>
 
@@ -136,7 +193,7 @@
                 <span>Fisika</span><span>89%</span>
             </div>
             <div class="progress">
-                <div class="progress-bar bg-success" style="width: 89%;">89</div>
+                <div class="progress-bar tw-bg-customOrange" style="width: 89%;">89</div>
             </div>
         </div>
 
@@ -145,7 +202,7 @@
                 <span>Kimia</span><span>92%</span>
             </div>
             <div class="progress">
-                <div class="progress-bar bg-danger" style="width: 92%;">92%</div>
+                <div class="progress-bar tw-bg-customBlue" style="width: 92%;">92%</div>
             </div>
         </div>
 
@@ -154,7 +211,7 @@
                 <span>Biologi</span><span>90%</span>
             </div>
             <div class="progress">
-                <div class="progress-bar bg-warning" style="width: 90%;">90%</div>
+                <div class="progress-bar tw-bg-customOrange" style="width: 90%;">90%</div>
             </div>
         </div> <br> <br>
     <!-- Akhir grafik nilai rata-rata -->
@@ -167,7 +224,7 @@
                 <span>2021</span><span>80%</span>
             </div>
             <div class="progress">
-                <div class="progress-bar bg-primary" style="width: 80%;">80%</div>
+                <div class="progress-bar tw-bg-customBlue" style="width: 80%;">80%</div>
             </div>
         </div>
 
@@ -176,7 +233,7 @@
                 <span>2022</span><span>85%</span>
             </div>
             <div class="progress">
-                <div class="progress-bar bg-success" style="width: 85%;">85</div>
+                <div class="progress-bar tw-bg-customOrange" style="width: 85%;">85</div>
             </div>
         </div>
 
@@ -185,7 +242,7 @@
                 <span>2023</span><span>90%</span>
             </div>
             <div class="progress">
-                <div class="progress-bar bg-danger" style="width: 90%;">90%</div>
+                <div class="progress-bar tw-bg-customBlue" style="width: 90%;">90%</div>
             </div>
         </div>
 
@@ -194,7 +251,7 @@
                 <span>2024</span><span>93%</span>
             </div>
             <div class="progress">
-                <div class="progress-bar bg-warning" style="width: 93%;">93%</div>
+                <div class="progress-bar tw-bg-customOrange" style="width: 93%;">93%</div>
             </div>
         </div><br><br>
     <!-- Akhir grafik kelulusan dan penghargaan yang diterima -->
@@ -207,7 +264,7 @@
                 <span>2021</span><span>75%</span>
             </div>
             <div class="progress">
-                <div class="progress-bar bg-primary" style="width: 75%;">75%</div>
+                <div class="progress-bar tw-bg-customBlue" style="width: 75%;">75%</div>
             </div>
         </div>
 
@@ -216,7 +273,7 @@
                 <span>2022</span><span>80%</span>
             </div>
             <div class="progress">
-                <div class="progress-bar bg-success" style="width: 85%;">80</div>
+                <div class="progress-bar tw-bg-customOrange" style="width: 85%;">80</div>
             </div>
         </div>
 
@@ -225,7 +282,7 @@
                 <span>2023</span><span>85%</span>
             </div>
             <div class="progress">
-                <div class="progress-bar bg-danger" style="width: 85%;">85%</div>
+                <div class="progress-bar tw-bg-customBlue" style="width: 85%;">85%</div>
             </div>
         </div>
 
@@ -234,7 +291,7 @@
                 <span>2024</span><span>90%</span>
             </div>
             <div class="progress">
-                <div class="progress-bar bg-warning" style="width: 90%;">90%</div>
+                <div class="progress-bar tw-bg-customOrange" style="width: 90%;">90%</div>
             </div>
         </div>
     <!-- Akhir grafik alumni yang lanjut kuliah -->
