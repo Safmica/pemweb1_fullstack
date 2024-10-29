@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="../src/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../src/output.css" rel="stylesheet">
+    <style>
+        body {
+        position: relative;
+        margin: 0;
+        min-height: 100vh;
+    }
+
+    body::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-image: url('../assets/bg.webp');
+        background-repeat: repeat;
+        background-position: center;
+        opacity: 0.3;
+        z-index: -1;
+    }
+        #menu-toggle:checked ~ #menu-content {
+            display: flex;
+        }
+
+        #menu-toggle {
+            display: none;
+        }
+
+        @media (max-width: 1024px) {
+            .nav-links {
+                display: none;
+            }
+            #menu-toggle:checked ~ .nav-links {
+                display: flex;
+            }
+        }
+
+        /* Efek hover untuk judul grafik */
+        h2:hover {
+            color: #0056b3; /* Ubah warna teks menjadi biru lebih gelap */
+            transform: scale(1.05); /* Perbesar sedikit ukuran judul */
+            transition: color 0.3s ease, transform 0.3s ease; /* Efek transisi yang halus */
+        }
+
+         /* Menambahkan efek hover untuk progress-bar */
+        .progress:hover .progress-bar {
+            transform: scaleY(1.1); /* Membuat grafik sedikit lebih besar */
+            transition: all 0.3s ease;
+            filter: brightness(1.2); /* Meningkatkan kecerahan */
+        }
+
+        /* Variasi warna saat di-hover berdasarkan warna aslinya */
+        .progress-bar.bg-primary:hover {
+            background-color: #007bff; /* Biru lebih terang */
+        }
+
+        .progress-bar.bg-success:hover {
+            background-color: #28a745; /* Hijau lebih terang */
+        }
+
+        .progress-bar.bg-danger:hover {
+            background-color: #dc3545; /* Merah lebih terang */
+        }
+
+        .progress-bar.bg-warning:hover {
+            background-color: #ffc107; /* Kuning lebih terang */
+        }
+
+        .zoom-card {
+        position: relative;
+        overflow: hidden; /* Menghilangkan bagian yang keluar dari kontainer */
+    }
+
+    .zoom-card img {
+        transition: transform 0.5s ease; /* Transisi untuk efek zoom dan rotasi */
+    }
+
+    .zoom-card:hover img {
+        transform: scale(1.1) rotate(2deg); /* Zoom dan rotasi saat hover */
+    }
+    </style>
+</head>
+<body>
+    <!-- Awal Hero section -->
+<section class="position-relative d-flex justify-content-center align-items-end w-100 min-vh-100">
+    <!-- Background Gambar -->
+    <div id="custom-controls-gallery" class="position-absolute top-0 start-0 w-100 h-100">
+        <img src="../assets/Achievement bg.webp" loading="lazy" alt="Bg Sekolah" class="img-fluid w-100 h-100 object-fit-cover">
+    </div> 
+
+    <!-- Kontainer Achievement -->
+    <div class="position-absolute w-50 h-30 d-flex flex-column align-items-center justify-content-center bg-white p-4 mb-0">
+        <h3 class="display-6 fw-semibold text-danger">Achievement</h3>
+        <p class="display-1 fw-bold py-1">Academic</p>
+        <div style="width: 40%; height: 5px; background-color: #ff0000;"></div>
+
+        <!-- Tagline Inspiratif -->
+        <p class="mt-2 text-center text-muted">
+            "Creating a brilliant generation ready to change the world."
+        </p>
+
+        <!-- Tombol CTA -->
+        <a href="#grafikbatang" class="btn btn-danger btn-lg mt-3">Explore More</a>
+    </div>
+</section><br>
+<!-- Akhir Hero section -->
+
+
+    <h1 class="text-center display-5 font-bold mb-4">Academic Achievement of Ersanawata High School</h1><br>
+    <!-- Awal Grafik batang -->
+    <section id="grafikbatang"> 
+    <!-- Container untuk Grafik -->
+    <div class="container my-5 p-4 bg-light shadow rounded">
+    <!-- Awal Gafik nilai rata-rata -->
+    <h2 class="text-center display-6 font-bold mb-4">Flat Sqoore of our students</h2>
+
+        <!-- Grafik Batang -->
+        <div class="mb-3">
+            <div class="d-flex justify-content-between">
+                <span>Matematika</span><span>95%</span>
+            </div>
+            <div class="progress">
+                <div class="progress-bar bg-primary" style="width: 95%;">95%</div>
+            </div>
+        </div>
+
+        <div class="mb-3">
+            <div class="d-flex justify-content-between">
+                <span>Fisika</span><span>89%</span>
+            </div>
+            <div class="progress">
+                <div class="progress-bar bg-success" style="width: 89%;">89</div>
+            </div>
+        </div>
+
+        <div class="mb-3">
+            <div class="d-flex justify-content-between">
+                <span>Kimia</span><span>92%</span>
+            </div>
+            <div class="progress">
+                <div class="progress-bar bg-danger" style="width: 92%;">92%</div>
+            </div>
+        </div>
+
+        <div class="mb-3">
+            <div class="d-flex justify-content-between">
+                <span>Biologi</span><span>90%</span>
+            </div>
+            <div class="progress">
+                <div class="progress-bar bg-warning" style="width: 90%;">90%</div>
+            </div>
+        </div> <br> <br>
+    <!-- Akhir grafik nilai rata-rata -->
+
+    <!-- Awal grafik kelulusan dan penghargaan yang diterima -->
+    <h2 class="text-center display-6 font-bold mb-4">Graduation and awards received</h2>
+        <!-- Grafik Batang -->
+        <div class="mb-3">
+            <div class="d-flex justify-content-between">
+                <span>2021</span><span>80%</span>
+            </div>
+            <div class="progress">
+                <div class="progress-bar bg-primary" style="width: 80%;">80%</div>
+            </div>
+        </div>
+
+        <div class="mb-3">
+            <div class="d-flex justify-content-between">
+                <span>2022</span><span>85%</span>
+            </div>
+            <div class="progress">
+                <div class="progress-bar bg-success" style="width: 85%;">85</div>
+            </div>
+        </div>
+
+        <div class="mb-3">
+            <div class="d-flex justify-content-between">
+                <span>2023</span><span>90%</span>
+            </div>
+            <div class="progress">
+                <div class="progress-bar bg-danger" style="width: 90%;">90%</div>
+            </div>
+        </div>
+
+        <div class="mb-3">
+            <div class="d-flex justify-content-between">
+                <span>2024</span><span>93%</span>
+            </div>
+            <div class="progress">
+                <div class="progress-bar bg-warning" style="width: 93%;">93%</div>
+            </div>
+        </div><br><br>
+    <!-- Akhir grafik kelulusan dan penghargaan yang diterima -->
+
+    <!-- Awal grafik alumni yang lanjut kuliah -->
+    <h2 class="text-center display-6 font-bold mb-4">Alumni who continue to college</h2>
+        <!-- Grafik Batang -->
+        <div class="mb-3">
+            <div class="d-flex justify-content-between">
+                <span>2021</span><span>75%</span>
+            </div>
+            <div class="progress">
+                <div class="progress-bar bg-primary" style="width: 75%;">75%</div>
+            </div>
+        </div>
+
+        <div class="mb-3">
+            <div class="d-flex justify-content-between">
+                <span>2022</span><span>80%</span>
+            </div>
+            <div class="progress">
+                <div class="progress-bar bg-success" style="width: 85%;">80</div>
+            </div>
+        </div>
+
+        <div class="mb-3">
+            <div class="d-flex justify-content-between">
+                <span>2023</span><span>85%</span>
+            </div>
+            <div class="progress">
+                <div class="progress-bar bg-danger" style="width: 85%;">85%</div>
+            </div>
+        </div>
+
+        <div class="mb-3">
+            <div class="d-flex justify-content-between">
+                <span>2024</span><span>90%</span>
+            </div>
+            <div class="progress">
+                <div class="progress-bar bg-warning" style="width: 90%;">90%</div>
+            </div>
+        </div>
+    <!-- Akhir grafik alumni yang lanjut kuliah -->
+    </div><br>
+    </section>
+    <!-- Akhir Grafik Batang -->
+
+    <!-- Awal Card -->
+    <!-- Grid container -->
+    <div class="container my-5">
+        <div class="row g-4">
+            
+            <!-- Card 1 -->
+            <div class="col-12 col-md-6 col-lg-3">
+                <div class="card p-4 rounded-lg overflow-hidden transition duration-300 zoom-card">
+                    <div class="h-auto w-auto overflow-hidden rounded-lg">
+                        <img src="../assets/AAimg1.jpeg" alt="Achievement Academic image1" class="rounded-t-lg object-cover w-100 h-100">
+                    </div>            
+                    <div class="p-4">
+                        <h3 class="text-center mb-2 font-bold">National Science Olympiad Champion</h3>
+                        <p class="text-gray-600 text-justify">Congratulations to Alexander who won the National Science Olympiad, showing great dedication and intelligence in the field of science!</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Card 2 -->
+            <div class="col-12 col-md-6 col-lg-3">
+                <div class="card p-4 rounded-lg overflow-hidden transition duration-300 zoom-card">
+                    <div class="h-auto w-auto overflow-hidden rounded-lg">
+                        <img src="../assets/AAimg2.jpeg" alt="Achievement Academic image2" class="rounded-t-lg object-cover w-100 h-100">
+                    </div>            
+                    <div class="p-4">
+                        <h3 class="text-center mb-2 font-bold">The General Champion Debate Team</h3>
+                        <p class="text-gray-600 text-justify">Pride for the science class Debate Team won the General Champion in the Debate Competition between high schools. This is the result of hard work team!</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Card 3 -->
+            <div class="col-12 col-md-6 col-lg-3">
+                <div class="card p-4 rounded-lg overflow-hidden transition duration-300 zoom-card">
+                    <div class="h-auto w-auto overflow-hidden rounded-lg">
+                        <img src="../assets/AAimg3.jpeg" alt="Achievement Academic image3" class="rounded-t-lg object-cover w-100 h-100">
+                    </div>            
+                    <div class="p-4">
+                        <h3 class="text-center mb-2 font-bold">Superior Scholarship Winners</h3>
+                        <p class="text-gray-600 text-justify">Congratulations to Siti for your outstanding achievement as a recipient of the Excellence Scholarship! Your dedication and hard work have paid off.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Card 4 -->
+            <div class="col-12 col-md-6 col-lg-3">
+                <div class="card p-4 rounded-lg overflow-hidden transition duration-300 zoom-card">
+                    <div class="h-auto w-auto overflow-hidden rounded-lg">
+                        <img src="../assets/AAimg4.jpeg" alt="Achievement Academic image4" class="rounded-t-lg object-cover w-100 h-100">
+                    </div>            
+                    <div class="p-4">
+                        <h3 class="text-center mb-2 font-bold">Inspiration of the Young Generation</h3>
+                        <p class="text-gray-600 text-justify">With passion and determination, Ahmad has become an inspiration to the younger generation. Through his achievements in IT Competition.</p>
+                    </div>
+                </div>
+            </div>  
+        </div>
+    </div>
+    <!-- Akhir card -->
+    </section> <br><br><br>
+</body>
+</html>
