@@ -5,27 +5,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="../src/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
     <link href="../src/output.css" rel="stylesheet" />
-    <title>About</title>
+    <title>Profile</title>
   </head>
   <body>
-    <div class="flex mt-5">
-      <a class="" href="index.html">Home ></a>
-      <p>About Us</p>
+    <div class="m-5">
+      <a class="" href="index.html">Home > </a>
+      <a href="Profile.html">Profile</a>
     </div>
-    <hr class="my-4" />
+    <hr class="my-4 tw-w-0.2" />
 
     <div class="container mt-5 mx-8">
       <div class="row">
         <div class="col-md-5">
           <img
-            src="../src/Assets/COFounder.jpg"
+            src="../assets/COFounder.jpg"
             alt="Founder Image"
             style="width: 100%"
+            class="tw-grayscale"
           />
         </div>
 
         <div class="col-md-7">
-          <h2 class="fw-bold mb-2">Our Story</h2>
+          <h1 class="mb-2 tw-text-5xl tw-font-bold">Our Story</h1>
           <p class="text-justify">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem
             error animi sapiente, repellendus a consequuntur. Accusantium
@@ -39,7 +40,7 @@
             ab explicabo reiciendis perspiciatis in soluta sint itaque nostrum
             cum velit?
           </p>
-          <p class="fw-bold">
+          <p class="tw-font-medium">
             Dr. Nisa Almawati, M.B.A <br />
             <small class="text-muted">Founding of Ersanawata High School</small>
           </p>
@@ -51,7 +52,7 @@
       <div class="row">
         <div class="col-md-6">
           <div class="">
-            <h3 class="fw-bold">Visi</h3>
+            <h3 class="">Visi</h3>
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi
               nobis illo dolorem, dignissimos qui dolore delectus est velit
@@ -62,7 +63,7 @@
         </div>
         <div class="col-md-6">
           <div class="">
-            <h3 class="fw-bold">Misi</h3>
+            <h3 class="">Misi</h3>
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo,
               aliquid? Exercitationem possimus quibusdam facilis quasi aperiam,
@@ -75,7 +76,7 @@
     </div>
 
     <div class="container mt-5">
-      <h3 class="text-center fw-bold mb-4">5 Keunggulan</h3>
+      <h3 class="text-center mb-4">5 Keunggulan</h3>
       <div class="accordion" id="pilarAccordion">
         <div class="accordion-item">
           <h4 class="accordion-header">
@@ -153,20 +154,6 @@
     </div>
 
     <script src="../src/bootstrap/js/bootstrap.bundle.min.js"></script>
-
-    <script>
-      function toggleAccordion(index) {
-        const content = document.getElementById(`content-${index}`);
-        const isVisible = content.classList.contains("show");
-
-        document.querySelectorAll(".accordion-collapse").forEach((element) => {
-          element.classList.remove("show");
-        });
-
-        if (!isVisible) {
-          content.classList.add("show");
-        }
-      }
-    </script>
+    <script src="../js/index.js"></script>
   </body>
 </html>

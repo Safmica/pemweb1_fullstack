@@ -24,3 +24,18 @@ animateValue("achievement-1", 0, 97, 2000, '%');
 animateValue("achievement-2", 0, 24, 2000, ' Years');
 animateValue("achievement-3", 0, 100, 2000, ' Top');
 animateValue("achievement-4", 0, 147, 2000, 'x');
+
+
+// about
+function toggleAccordion(index) {
+    const content = document.getElementById(`content-${index}`);
+    const isVisible = content.classList.contains("show");
+
+    document.querySelectorAll(".accordion-collapse").forEach((element) => {
+      element.classList.remove("show");
+    });
+
+    if (!isVisible) {
+      content.classList.add("show");
+    }
+  }
