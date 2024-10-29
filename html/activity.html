@@ -29,9 +29,66 @@
             padding: 10px;
             border-radius: 5px;
         }
+
+        .navbar .nav-link, .navbar .navbar-brand {
+            color: white;
+            transition: color 0.3s ease;
+        }
+
+        .navbar .nav-link:hover {
+            color: #f8f9fa;
+            text-decoration: underline;
+        }
+
+        .nav-link.tw-text-customOrange {
+            color: #ff9800 !important;
+        }
+
+        .btn.tw-bg-customOrange {
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        .btn.tw-bg-customOrange:hover {
+            background-color: #ff9800;
+            transform: scale(1.05);
+        }
     </style>
 </head>
 <body>
+    <nav class="navbar navbar-expand-lg tw-bg-customBlue">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="#">
+                <img src="../assets/logo_nav.png" alt="Logo" width="30" height="30" class="d-inline-block align-top me-2">
+                ERSANAWATA
+            </a>
+            <button class="navbar-toggler tw-bg-customOrange" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active tw-text-customOrange" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="About.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="jurusan.html">Major</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Achievement.html">Achievement</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="activity.html">Activity</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">PPDB</a>
+                    </li>
+                </ul>
+                <a class="btn tw-bg-customOrange ms-lg-3 text-white" href="#" role="button">Login</a>
+            </div>
+        </div>
+    </nav>
     <section>
     <div id="carouselExampleCaptions" class="carousel slide">
         <div class="carousel-indicators">
