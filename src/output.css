@@ -708,8 +708,20 @@ video {
   padding: 2.5rem;
 }
 
+.tw-pb-10 {
+  padding-bottom: 2.5rem;
+}
+
+.tw-pb-4 {
+  padding-bottom: 1rem;
+}
+
 .tw-text-center {
   text-align: center;
+}
+
+.tw-text-justify {
+  text-align: justify;
 }
 
 .tw-align-middle {
@@ -740,6 +752,16 @@ video {
   line-height: 1;
 }
 
+.tw-text-8xl {
+  font-size: 6rem;
+  line-height: 1;
+}
+
+.tw-text-6xl {
+  font-size: 3.75rem;
+  line-height: 1;
+}
+
 .tw-font-bold {
   font-weight: 700;
 }
@@ -750,6 +772,10 @@ video {
 
 .tw-font-medium {
   font-weight: 500;
+}
+
+.tw-font-semibold {
+  font-weight: 600;
 }
 
 .tw-text-customBlue {

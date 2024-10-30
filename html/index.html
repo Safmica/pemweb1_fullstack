@@ -241,6 +241,123 @@
                 font-size: 32px;
             }                   
         }
+
+        .headmaster {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 50px;
+        }
+        .image-headmaster {
+            width: 400px;
+            margin-left: 10px;
+            border-radius: 40px;
+            overflow: hidden;
+        }
+        .image-headmaster img {
+            width: 400px;
+            height: 400px;
+            object-fit:contain;
+            scale: 1.5;
+            transform: translateY(40px);
+            border-radius: 15px;
+        }
+        .text-headmaster {
+            flex: 1;
+            padding-left: 20px;
+        }
+        .text-headmaster h2 {
+            font-size: 24px;
+            font-weight: bold;
+            color: #003366;
+        }
+        .text-headmaster p {
+            font-size: 18px;
+            color: #003366;
+        }
+        .text-headmaster .headmaster-quote {
+            font-size: 20px;
+            font-style: italic;
+            color: #003366;
+        }
+        .text-headmaster .author {
+            font-size: 16px;
+            color: #0056b3;
+        }
+        .text-headmaster .btn {
+            background-color: #0056b3;
+            color: white;
+            font-size: 16px;
+            padding: 10px 20px;
+            border-radius: 25px;
+            text-decoration: none;
+        }
+        .text-headmaster .btn:hover {
+            background-color: #004494;
+        }
+
+        .flipbook
+        {
+            max-width: 1000px;
+            margin: 100px auto;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+        .flipbook-card
+        {
+        position: relative;
+        margin: 20px 0;
+        width: 300px;
+        height: 400px;
+        background: #fff;
+        transform-style: preserve-3d;
+        transform: perspective(2000px);
+        box-shadow: inset 300px 0 50px rgba(0,0,0,.5), 0 20px 20px rgba(0,0,0,.5);
+        transition: 1s;
+        }
+        .flipbook-card:hover
+        {
+        z-index: 10000;
+        transform: perspective(2000px) rotate(-10deg);
+        box-shadow: inset 20px 0 50px rgba(0,0,0,.5), 0 10px 100px rgba(0,0,0,.5);
+        }
+
+        .flipbook-card .flipbook-box
+        {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        border: 1px solid #000;
+        box-sizing: border-box;
+        position: relative;
+        transform-origin: left;
+        z-index: 1;
+        transition: 1s cubic-bezier(.15,1.7,.84,.58);
+        background: #111;
+        }
+        .flipbook-card .flipbook-box img
+        {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        }
+        .flipbook-card:hover .flipbook-box
+        {
+        transform: rotateY(-135deg);
+        }
+        .flipbook-card .flipbook-details
+        {
+        position: absolute;
+        top: 0;
+        left: 0;
+        box-sizing: border-box;
+        padding: 20px;
+        z-index: -1;
+        }
     </style>
 </head>
 <body>
@@ -354,7 +471,7 @@
             </div>
         </div>
         <div class="tw-flex tw-align-middle tw-justify-center">
-            <p class="tw-font-extrabold tw-text-4xl">COMMITED TO</p>
+            <p class="tw-font-extrabold tw-text-5xl tw-text-customBlue">COMMITED TO</p>
         </div>
         <div class="type-animation tw-flex tw-align-middle tw-justify-center tw-font-bold">
             <h1><span class="text blue">Building</span> Best Generation</h1>
@@ -409,6 +526,52 @@
                 </div>
             </div>
         </div>
+        <div class="headmaster">
+            <div class="image-headmaster">
+             <img alt="headmaster" src="../assets/COFounder.jpg" height="700" width="700" />
+            </div>
+            <div class="text-headmaster">
+             <h2 class="tw-pb-10">Why should choose ERSANAWATA?</h2>
+             <p class="headmaster-quote"> “Choosing ERSANAWATA is an investment in your child's future. Ranked among the top 100 schools globally, we offer a curriculum that fosters critical thinking and creativity, with our students averaging 95% on national assessments. Our experienced major provides personalized support, while diverse extracurricular activities promote holistic development.”</p>
+             <p class="author tw-pb-10">— Dr. Nisa Almawati, M.B.A, Founding of Ersanawata High School</p>
+             <a class="btn" href="About.html">About ERSANAWATA</a>
+            </div>
+        </div>
+        <div class="tw-flex tw-justify-center tw-align-middle">
+            <h2 class="tw-font-extrabold tw-text-5xl tw-text-customBlue">What our student said?</h2>
+        </div>
+        <div class="flipbook">
+            <div class="flipbook-card">
+              <div class="flipbook-box">
+                <img src="../assets/best-student-1.webp">
+              </div>
+              <div class="flipbook-details">
+                <h2 class="tw-font-extrabold">Ambatama Tukamsi</h2>
+                <h2 class="tw-font-semibold tw-pb-4">1st Japan Festival Essay Winner</h2>
+                <p class="tw-text-justify">"I am honored to win the International Essay Competition at the Japan Festival. This achievement reflects the incredible support from ERSANAWATA, which fosters creativity and cultural exchange. I encourage all students to embrace opportunities for growth and share their voices with the world."</p>
+              </div>
+            </div>
+            <div class="flipbook-card">
+              <div class="flipbook-box">
+                <img src="../assets/best-student-2.webp">
+              </div>
+              <div class="flipbook-details">
+                <h2 class="tw-font-extrabold">Dewi Ayusari</h2>
+                <h2 class="tw-font-semibold tw-pb-4">1st Hackathon 2024 Winner</h2>
+                <p class="tw-text-justify">"I am thrilled to be the winner of the 2024 hackathon! This achievement highlights the incredible opportunities provided by ERSANAWATA, which encourages innovation and collaboration. I hope to inspire other students to pursue their passions in technology and creativity. Together, we can make a difference!"</p>
+              </div>
+            </div>
+            <div class="flipbook-card">
+              <div class="flipbook-box">
+                <img src="../assets/best-student-3.webp">
+              </div>
+              <div class="flipbook-details">
+                <h2 class="tw-font-extrabold">Muhammad Wahyu Saputra</h2>
+                <h2 class="tw-font-semibold tw-pb-4">1st Norwegia Student Debate Winner</h2>
+                <p class="tw-text-justify">"I am honored to be the 1st Norway Student Debate Winner! This achievement reflects the supportive environment at ERSANAWATA, which fosters critical thinking and effective communication. I encourage my fellow students to embrace opportunities to express their ideas and engage in meaningful discussions."</p>
+              </div>
+            </div>
+          </div>
     </article>
     <section>
         <br/>
