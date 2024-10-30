@@ -40,13 +40,21 @@
             }
         }
 
+        .word {
+            margin: auto;
+            color: white;
+            text-shadow: 5px 2px #222324, 2px 4px #222324, 3px 5px #222324;
+        }
+
         .navbar .nav-link, .navbar .navbar-brand {
             color: white;
             transition: color 0.3s ease;
         }
 
         .navbar .nav-link:hover {
-            color: white;
+            color: #ff9800;
+            text-decoration: underline; /* Menambahkan garis bawah saat di-hover */
+        text-underline-offset: 4px;
         }
 
         .nav-link.tw-text-customOrange {
@@ -60,6 +68,44 @@
         .btn.tw-bg-customOrange:hover {
             background-color: #ff9800;
             transform: scale(1.05);
+        }
+
+        .title mark {
+            background-color: transparent;
+            color: inherit;
+            background-image: linear-gradient(#ff9800, #ff9800);
+            background-position: 0 50%;
+            background-repeat: no-repeat;
+            background-size: 0 60%;
+            border-radius: 200;
+            animation: highlightTitle 1500ms 1 ease-out;
+            animation-fill-mode: forwards;
+            animation-play-state: paused;
+        }
+
+        @keyframes highlightTitle {
+            to {
+                background-size: 100% 60%;
+            }
+        }
+
+        .carausel-caption mark {
+            background-color: transparent;
+            color: inherit;
+            background-image: linear-gradient(#ff9800, #ff9800);
+            background-position: 0 80%;
+            background-repeat: no-repeat;
+            background-size: 0 10%;
+            border-radius: 200;
+            animation: highlightCaption 1500ms 1 ease-out;
+            animation-fill-mode: forwards;
+            animation-play-state: paused;
+        }
+
+        @keyframes highlightCaption {
+            to {
+                background-size: 100% 10%;
+            }
         }
 
         .stat-box {
@@ -128,23 +174,82 @@
 
         .fade-in {
             opacity: 0;
-            transform: translateY(20px); /* Bergerak sedikit ke bawah */
-            transition: opacity 1s ease, transform 1s ease; /* Transisi untuk efek fade in */
+            transform: translateY(20px);
+            transition: opacity 1s ease, transform 1s ease;
         }
 
         .fade-in.active {
-            opacity: 1; /* Menjadi terlihat */
-            transform: translateY(0); /* Kembali ke posisi normal */
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .type-animation h1 {
+            font-size: 68px;
+            color: #747474;
+        }
+
+        .type-animation span.text {
+            padding: 0;
+            padding-right: 4px;
+            border-right: 2px solid #747474;
+            animation: blink 0.75s infinite;
+        }
+
+        .blue {
+            color: #4480ff;
+        }
+        .green {
+            color: #4caf50;
+        }
+        .yellow {
+            color: #f4b400;
+        }
+        .red {
+            color: #f44336;
+        }
+
+        .type-animation p.info {
+            font-size: 12px;
+            margin-top: 6rem;
+            color: #747474;
+        }
+
+        .type-animation a {
+            text-decoration: none;
+            color: #4480ff;
+        }
+
+        @keyframes blink {
+            from {
+                border: none;
+            }
+            to {
+                border-color: 2px solid #747474;
+            }
+        }
+        @media screen and (max-width: 670px) {
+            h1 {
+                font-size: 40px;
+            }
+            img {
+                width: 75px;
+                height: 75px;
+            }
+        }
+        @media screen and (max-width: 400px) {
+            h1 {
+                font-size: 32px;
+            }                   
         }
     </style>
 </head>
 <body>
-    <div class="curtain curtain-top tw-align-middle tw-justify-center tw-flex">
+    <!-- <div class="curtain curtain-top tw-align-middle tw-justify-center tw-flex">
         <img src="../assets/logo.webp" height="30" alt="Logo" class="logo fade-in" id="fadeInElement">
     </div>
     <div class="curtain curtain-bottom tw-flex tw-justify-center tw-align-middle">
-        <h1 class="title tw-text-customBlue tw-font-extrabold tw-text-4xl" id="animatedTitle"></h1>
-    </div>
+        <h1 class="title-curtain tw-text-customBlue tw-font-extrabold tw-text-4xl" id="animatedTitle"></h1>
+    </div> -->
     <nav class="navbar navbar-expand-lg tw-bg-customBlue">
         <div class="container">
             <a class="navbar-brand d-flex align-items-center" href="index.html">
@@ -194,40 +299,40 @@
                 <div class="carousel-item active">
                   <img src="../assets/carousel-1.webp" class="d-block w-100" alt="carousel-img">
                   <div class="carousel-caption d-none d-md-block">
-                    <h5 class="tw-font-extrabold tw-text-5xl">WELCOME TO ERSANAWATA</h5>
-                    <p>The only school in Indonesia that is included in the top 100 best schools in the world that implements the latest curriculum</p>
+                    <h5 class="title"><mark>WELCOME TO ERSANAWATA</mark></h5>
+                    <p class="carausel-caption">The only school in Indonesia that is included in the <mark>top 100 best schools in the world</mark> that implements the latest curriculum</p>
                     <a class="tw-bg-customBlue btn btn-primary" href="About.html">About us</a>
                   </div>
                 </div>
                 <div class="carousel-item">
                   <img src="../assets/carousel-2.webp" class="d-block w-100" alt="carousel-img">
                   <div class="carousel-caption d-none d-md-block">
-                    <h5>BEST MAJOR</h5>
-                    <p>Using the latest and most innovative curriculum, proven to produce the best generation with quality facilities</p>
+                    <h5 class="title"><mark>BEST MAJOR</mark></h5>
+                    <p class="carausel-caption">Using <mark>the latest and most innovative curriculum</mark>, proven to produce the best generation with quality facilities</p>
                     <a class="tw-bg-customBlue btn btn-primary" href="jurusan.html">Our Major</a>
                   </div>
                 </div>
                 <div class="carousel-item">
                   <img src="../assets/carousel-3.webp" class="d-block w-100" alt="carousel-img">
                   <div class="carousel-caption d-none d-md-block">
-                    <h5>INTERNATIONAL LEVEL ACHIEVEMENT</h5>
-                    <p>Has won many international achievement, both from institutions and from students</p>
+                    <h5 class="title"><mark>INTERNATIONAL LEVEL ACHIEVEMENT</mark></h5>
+                    <p class="carausel-caption">Has <mark>won many international achievement</mark>, both from institutions and from students</p>
                     <a class="tw-bg-customBlue btn btn-primary" href="Achievement.html">See the achievement</a>
                   </div>
                 </div>
                 <div class="carousel-item">
                   <img src="../assets/carousel-4.webp" class="d-block w-100" alt="carousel-img">
                   <div class="carousel-caption d-none d-md-block">
-                    <h5>QUALITY EXTRACURRICULAR</h5>
-                    <p>Ensuring that students's academic and non-academic development continues to progress by ensuring the quality of extracurricular activities.</p>
+                    <h5 class="title"><mark>QUALITY EXTRACURRICULAR</mark></h5>
+                    <p class="carausel-caption">Ensuring that students's academic and non-academic development continues to progress by <mark>ensuring the quality of extracurricular activities</mark></p>
                     <a class="tw-bg-customBlue btn btn-primary" href="activity.html">All Activity</a>
                   </div>
                 </div>
                 <div class="carousel-item">
                   <img src="../assets/carousel-5.webp" class="d-block w-100" alt="carousel-img">
                   <div class="carousel-caption d-none d-md-block">
-                    <h5>JOIN ERSANAWATA NOW!</h5>
-                    <p>Ensure a bright future for your child, equip him with competent and internationally competitive education</p>
+                    <h5 class="title"><mark>JOIN ERSANAWATA NOW!</mark></h5>
+                    <p class="carausel-caption"><mark>Ensure a bright future for your child</mark>, equip him with competent and internationally competitive education</p>
                     <a class="tw-bg-customBlue btn btn-primary" href="ppdb.html">Register Now!</a>
                   </div>
                 </div>
@@ -243,10 +348,16 @@
     </section>
     <article>
         <div class="tw-flex tw-items-center tw-justify-center">
-            <div class="tw-bg-white tw-rounded-full tw-w-[50%] tw-h-40 tw-sm:tw-w-[75%] tw-sm:tw-h-[50%] tw-sm:tw-p-4 tw-flex tw-flex-col tw-justify-around tw-items-center tw-sm:tw-space-y-8 tw-md:tw-space-y-0 tw-transform tw--translate-y-1/2 tw-sm:tw-translate-x-[17%] tw-shadow-2xl">
+            <div class="tw-bg-white tw-rounded-full tw-w-[50%] tw-h-52 tw-sm:tw-w-[75%] tw-sm:tw-h-[50%] tw-sm:tw-p-4 tw-flex tw-flex-col tw-justify-around tw-items-center tw-sm:tw-space-y-8 tw-md:tw-space-y-0 tw-transform tw--translate-y-1/2 tw-sm:tw-translate-x-[17%] tw-shadow-2xl">
                 <img src="../assets/logo.png" class="tw-w-auto tw-h-[80%]" alt="Logo">
                 <p class="tw-text-3xl tw-font-bold">ERSANAWATA HIGHSCHOOL</p>
             </div>
+        </div>
+        <div class="tw-flex tw-align-middle tw-justify-center">
+            <p class="tw-font-extrabold tw-text-4xl">COMMITED TO</p>
+        </div>
+        <div class="type-animation tw-flex tw-align-middle tw-justify-center tw-font-bold">
+            <h1><span class="text blue">Building</span> Best Generation</h1>
         </div>
         <div class="container mt-5">
             <div class="row">
@@ -276,7 +387,9 @@
                     <div class="stat-box tw-group group">
                         <div class="number tw-transform tw-translate-y-[50%] group-hover:tw-translate-y-[0%] tw-duration-200" id="achievement-3">0</div>
                         <div class="tw-flex tw-justify-center tw-items-center tw-flex-col tw-transform tw-translate-y-[30%] group-hover:tw-translate-y-[0%] tw-duration-200 tw-w-[90%] tw-text-center">
-                            <div class="title-achievement">WORLD BEST SCHOOLS</div>
+                            <div class="word">
+                                <div class="title-achievement">WORLD BEST SCHOOLS</div>
+                            </div>
                             <div class="tw-z-20 tw-transform tw-duration-200 tw-opacity-0 group-hover:tw-opacity-100 tw-group-hover:tw-opacity-100">
                                 <p class="desc-achievement">ERSANAWATA is the only school in Indonesia on the top 100 world best schools</p>
                             </div>
