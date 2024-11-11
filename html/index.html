@@ -383,6 +383,9 @@
 
         .alumni-card {
             position: absolute;
+            display: flex;
+            justify-content: center;
+            align-items: center;
             width: 60%;
             height: 100%;
             left: 0;
@@ -394,8 +397,6 @@
 
         .alumni-container {
             width: 100%;
-            max-width: 800px;
-            max-height: 600px;
             height: 100%;
             transform-style: preserve-3d;
             display: flex;
@@ -408,12 +409,15 @@
             position: relative;
             width: 100%;
             height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
             margin-bottom: 20px;
         }
 
         .alumni-body-container img {
-            width: 100%;
-            height: 100%;
+            width: 80%;
+            height: 120%;
             border-radius: 10px;
             object-fit: cover;
         }
@@ -451,7 +455,7 @@
         .alumni-quote {
             background-color: #fff;
             border-radius: 8px;
-            min-width: 320px;
+            min-width: 80%;
             padding: 16px 10px;
         }
 
@@ -459,43 +463,20 @@
             position: relative;
             display: flex;
             align-items: center;
+            justify-content: center;
             margin-bottom: 12px;
-            height: 36px;
+            height: 205px;
             overflow: hidden;
         }
 
-        .play-icon {
-            margin-right: 10px;
-        }
-
         .quote-info {
-            width: calc(100% - 32px);
-            display: block;
-        }
-
-        .quote-info .title {
-            color: #403d40;
-            font-size: 14px;
-            line-height: 24px;
-        }
-
-        .sub-line {
-            display: flex;
-            justify-content: space-between;
             width: 100%;
-        }
-
-        .subtitle {
-            font-size: 12px;
-            line-height: 16px;
-            color: #c6c5c6;
         }
 
         .info-area {
             width: 100%;
             position: absolute;
-            top: 0;
-            left: 30px;
+            top: 0; 
             transition: transform .4s ease-in;
         }
 
@@ -504,11 +485,11 @@
         }
 
         #item-2:checked ~ .alumni-quote #test {
-            transform: translateY(-40px);
+            transform: translateY(-205px);
         }
 
         #item-3:checked ~ .alumni-quote #test {
-            transform: translateY(-80px);
+            transform: translateY(-410px);
         }
     </style>
 </head>
@@ -745,21 +726,24 @@
                     <div class="upper-part">
                         <div class="info-area" id="test">
                             <label class="quote-info" id="quote-info-1">
-                                <div class="title">Bunker</div>
-                                <div class="sub-line">
-                                    <div class="subtitle">Balthazar</div>
+                                <div class="sub-line tw-flex tw-flex-col tw-align-middle tw-justify-center">
+                                    <div class="tw-text-center tw-text-3xl tw-font-bold tw-text-black">Muhammad Pratama Safar</div>
+                                    <div class="tw-text-center tw-text-lg tw-font-semibold tw-text-customOrange">CEO of Shopee Indonesia - ERSANAWATA 1998</div>
+                                    <div class="tw-text-center tw-text-xl tw-font-medium tw-text-customBlue">"As a CEO who has studied at ERSANAWATA, I can say that this school has provided me with very meaningful provisions in shaping my character and skills. The learning experience here taught me to dare to take big steps and face challenges with confidence. For those of you who are struggling, worry that every effort here will open up great opportunities in the future. Keep dreaming and trying!"</div>
                                 </div>
                             </label>
                             <label class="quote-info" id="quote-info-2">
-                                <div class="title">Words Remain</div>
                                 <div class="sub-line">
-                                    <div class="subtitle">Moderator</div>
+                                    <div class="tw-text-center tw-text-3xl tw-font-bold">Filumena C. Gultom</div>
+                                    <div class="tw-text-center tw-text-lg tw-font-semibold tw-text-customOrange">CEO of Bank BCA</div>
+                                    <div class="tw-text-center tw-text-xl tw-font-medium tw-text-customBlue">"As an alumni of ERSANAWATA and now serving as CEO of Bank BCA, I would like to share that education in this school has become an important foundation for my career journey. Here, I learned the values ​​of integrity, and an unyielding spirit that are very helpful in facing challenges in the banking world. believe that the hard work and perseverance that you instill in ERSANAWATA will pave the way to success."</div>
                                 </div>
                             </label>
                             <label class="quote-info" id="quote-info-3">
-                                <div class="title">Falling Out</div>
                                 <div class="sub-line">
-                                    <div class="subtitle">Otzeki</div>
+                                    <div class="tw-text-center tw-text-3xl tw-font-bold">Saputra Erlangga</div>
+                                    <div class="tw-text-center tw-text-lg tw-font-semibold tw-text-customOrange">CEO of Tiktok Indonesia</div>
+                                    <div class="tw-text-center tw-text-xl tw-font-medium tw-text-customBlue">"As an ERSANAWATA alumnus and CEO of TikTok Indonesia, I would like to say that this school has given me incredible provisions to achieve my dreams. Here, I learned the importance of creativity, innovation, and the courage to try new things — values ​​that have played a huge role in my career journey in the digital world. Make every challenge an opportunity, because the future is in your hands!"</div>
                                 </div>
                             </label>
                         </div>
