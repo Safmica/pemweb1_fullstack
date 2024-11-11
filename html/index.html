@@ -7,6 +7,10 @@
     <link href="../src/output.css" rel="stylesheet" />
     <title>Home</title>
     <style>
+        * {
+            box-sizing: border-box;
+        }
+
         html,body {
             width: 100%;
             height: 100%;
@@ -246,7 +250,6 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            padding: 50px;
         }
         .image-headmaster {
             width: 400px;
@@ -269,20 +272,21 @@
         .text-headmaster h2 {
             font-size: 24px;
             font-weight: bold;
-            color: #003366;
+            color: #ee7e1b;
         }
         .text-headmaster p {
             font-size: 18px;
-            color: #003366;
+            color: #ee7e1b;
         }
         .text-headmaster .headmaster-quote {
             font-size: 20px;
             font-style: italic;
-            color: #003366;
+            color: white;
+            text-align: justify;
         }
         .text-headmaster .author {
             font-size: 16px;
-            color: #0056b3;
+            color: #ee7e1b;
         }
         .text-headmaster .btn {
             background-color: #0056b3;
@@ -357,6 +361,154 @@
         box-sizing: border-box;
         padding: 20px;
         z-index: -1;
+        }
+
+        .alumni-body-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 30px 10px;
+            transition: background .4s ease-in;
+            width: 100%;
+            height: 100%;
+        }
+
+        .alumni-body-container.blue {
+            background-color: #428aa6;
+        }
+
+        .alumni-body-container input[type=radio] {
+            display: none;
+        }
+
+        .alumni-card {
+            position: absolute;
+            width: 60%;
+            height: 100%;
+            left: 0;
+            right: 0;
+            margin: auto;
+            transition: transform .4s ease;
+            cursor: pointer;
+        }
+
+        .alumni-container {
+            width: 100%;
+            max-width: 800px;
+            max-height: 600px;
+            height: 100%;
+            transform-style: preserve-3d;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .alumni-cards {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            margin-bottom: 20px;
+        }
+
+        .alumni-body-container img {
+            width: 100%;
+            height: 100%;
+            border-radius: 10px;
+            object-fit: cover;
+        }
+
+        #item-1:checked ~ .alumni-cards #quote-3,
+        #item-2:checked ~ .alumni-cards #quote-1,
+        #item-3:checked ~ .alumni-cards #quote-2 {
+            transform: translateX(-40%) scale(.8);
+            opacity: .4;
+            z-index: 0;
+        }
+
+        #item-1:checked ~ .alumni-cards #quote-2,
+        #item-2:checked ~ .alumni-cards #quote-3,
+        #item-3:checked ~ .alumni-cards #quote-1 {
+            transform: translateX(40%) scale(.8);
+            opacity: .4;
+            z-index: 0;
+        }
+
+        #item-1:checked ~ .alumni-cards #quote-1,
+        #item-2:checked ~ .alumni-cards #quote-2,
+        #item-3:checked ~ .alumni-cards #quote-3 {
+            transform: translateX(0) scale(1);
+            opacity: 1;
+            z-index: 1;
+        }
+
+        #item-1:checked ~ .alumni-cards #quote-1 img,
+        #item-2:checked ~ .alumni-cards #quote-2 img,
+        #item-3:checked ~ .alumni-cards #quote-3 img {
+            box-shadow: 0px 0px 5px 0px rgba(81, 81, 81, 0.47);
+        }
+
+        .alumni-quote {
+            background-color: #fff;
+            border-radius: 8px;
+            min-width: 320px;
+            padding: 16px 10px;
+        }
+
+        .upper-part {
+            position: relative;
+            display: flex;
+            align-items: center;
+            margin-bottom: 12px;
+            height: 36px;
+            overflow: hidden;
+        }
+
+        .play-icon {
+            margin-right: 10px;
+        }
+
+        .quote-info {
+            width: calc(100% - 32px);
+            display: block;
+        }
+
+        .quote-info .title {
+            color: #403d40;
+            font-size: 14px;
+            line-height: 24px;
+        }
+
+        .sub-line {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+        }
+
+        .subtitle {
+            font-size: 12px;
+            line-height: 16px;
+            color: #c6c5c6;
+        }
+
+        .info-area {
+            width: 100%;
+            position: absolute;
+            top: 0;
+            left: 30px;
+            transition: transform .4s ease-in;
+        }
+
+        #item-2:checked ~ .alumni-quote #test {
+            transform: translateY(0);
+        }
+
+        #item-2:checked ~ .alumni-quote #test {
+            transform: translateY(-40px);
+        }
+
+        #item-3:checked ~ .alumni-quote #test {
+            transform: translateY(-80px);
         }
     </style>
 </head>
@@ -526,7 +678,7 @@
                 </div>
             </div>
         </div>
-        <div class="headmaster">
+        <div class="tw-bg-customBlue headmaster tw-p-10 tw-my-10">
             <div class="image-headmaster">
              <img alt="headmaster" src="../assets/COFounder.jpg" height="700" width="700" />
             </div>
@@ -536,7 +688,7 @@
              <p class="author tw-pb-10">— Dr. Nisa Almawati, M.B.A, Founding of Ersanawata High School</p>
              <a class="btn" href="About.html">About ERSANAWATA</a>
             </div>
-        </div>
+        </div>   
         <div class="tw-flex tw-justify-center tw-align-middle">
             <h2 class="tw-font-extrabold tw-text-5xl tw-text-customBlue">What our student said?</h2>
         </div>
@@ -573,9 +725,48 @@
             </div>
           </div>
     </article>
-    <section>
-        <br/>
-    </section>
+        <div class="alumni-body-container">
+            <div class="alumni-container">
+                <input type="radio" name="slider" id="item-1" checked>
+                <input type="radio" name="slider" id="item-2">
+                <input type="radio" name="slider" id="item-3">
+                <div class="alumni-cards">
+                    <label class="alumni-card" for="item-1" id="quote-1">
+                        <img src="../assets/alumni-1.webp" alt="alumni-1">
+                    </label>
+                    <label class="alumni-card" for="item-2" id="quote-2">
+                        <img src="../assets/alumni-2.webp" alt="alumni-2">
+                    </label>
+                    <label class="alumni-card" for="item-3" id="quote-3">
+                        <img src="../assets/alumni-3.webp" alt="alumni-3">
+                    </label>
+                </div>
+                <div class="alumni-quote">
+                    <div class="upper-part">
+                        <div class="info-area" id="test">
+                            <label class="quote-info" id="quote-info-1">
+                                <div class="title">Bunker</div>
+                                <div class="sub-line">
+                                    <div class="subtitle">Balthazar</div>
+                                </div>
+                            </label>
+                            <label class="quote-info" id="quote-info-2">
+                                <div class="title">Words Remain</div>
+                                <div class="sub-line">
+                                    <div class="subtitle">Moderator</div>
+                                </div>
+                            </label>
+                            <label class="quote-info" id="quote-info-3">
+                                <div class="title">Falling Out</div>
+                                <div class="sub-line">
+                                    <div class="subtitle">Otzeki</div>
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>      
         <footer class="tw-w-full tw-bg-customBlue">
         <div class="tw-mx-auto tw-max-w-7xl tw-px-4 sm:tw-px-6 lg:tw-px-8">
           <div class="tw-grid tw-grid-cols-2 sm:tw-grid-cols-4 lg:tw-grid-cols-6 tw-gap-3 tw-gap-y-8 md:tw-gap-8 tw-py-8 tw-max-w-sm tw-mx-auto sm:tw-max-w-3xl lg:tw-max-w-full">
