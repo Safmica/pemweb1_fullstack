@@ -977,6 +977,11 @@ video {
   line-height: 1rem;
 }
 
+.tw-text-2xl {
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+
 .tw-font-bold {
   font-weight: 700;
 }
@@ -1025,6 +1030,11 @@ video {
 .tw-text-white {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.tw-text-black {
+  --tw-text-opacity: 1;
+  color: rgb(0 0 0 / var(--tw-text-opacity));
 }
 
 .tw-opacity-0 {
