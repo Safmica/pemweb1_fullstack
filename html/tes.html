@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+         * {
+            box-sizing: border-box;
+        }
+
+        html,body {
+            width: 100%;
+            height: 100%;
+            margin: 0px;
+            padding: 0px;
+            overflow-x: hidden; 
+        }
+
+        .carousel-caption {
+            width: 60%;
+            transform: translate(10%, -140%);
+            text-align: center;
+        }
+        
+        .carousel-item img {
+            height: auto;
+            object-fit: cover;
+            width: 100%;
+        }
+
+        .carousel-caption h5 {
+            color:white;
+            font-weight: 800;
+            font-size: 3rem;
+            line-height: 1;
+        }
+
+        @media (max-width: 768px) {
+            .carousel-item img {
+                height: 250px;
+            }
+        }
+
+        .word {
+            margin: auto;
+            color: white;
+            text-shadow: 5px 2px #222324, 2px 4px #222324, 3px 5px #222324;
+        }
+
+        .navbar .nav-link, .navbar .navbar-brand {
+            color: white;
+            transition: color 0.3s ease;
+        }
+
+        .navbar .nav-link:hover {
+            color: #ff9800;
+            text-decoration: underline; /* Menambahkan garis bawah saat di-hover */
+        text-underline-offset: 4px;
+        }
+
+        .nav-link.tw-text-customOrange {
+            color: #ff9800 !important;
+        }
+
+        .btn.tw-bg-customOrange {
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        .btn.tw-bg-customOrange:hover {
+            background-color: #ff9800;
+            transform: scale(1.05);
+        }
+
+        .title mark {
+            background-color: transparent;
+            color: inherit;
+            background-image: linear-gradient(#ff9800, #ff9800);
+            background-position: 0 50%;
+            background-repeat: no-repeat;
+            background-size: 0 60%;
+            border-radius: 200;
+            animation: highlightTitle 1500ms 1 ease-out;
+            animation-fill-mode: forwards;
+            animation-play-state: paused;
+        }
+
+        @keyframes highlightTitle {
+            to {
+                background-size: 100% 60%;
+            }
+        }
+
+        .carausel-caption mark {
+            background-color: transparent;
+            color: inherit;
+            background-image: linear-gradient(#ff9800, #ff9800);
+            background-position: 0 80%;
+            background-repeat: no-repeat;
+            background-size: 0 10%;
+            border-radius: 200;
+            animation: highlightCaption 1500ms 1 ease-out;
+            animation-fill-mode: forwards;
+            animation-play-state: paused;
+        }
+
+        @keyframes highlightCaption {
+            to {
+                background-size: 100% 10%;
+            }
+        }
+
+        .stat-box {
+            background-color: #002852;
+            border-radius: 15px;
+            width: 100%;
+            height: 150px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            margin: 10px 0;
+            transition: transform 0.3s;
+        }
+
+        .stat-box:hover {
+            transform: translateY(-5px);
+        }
+
+        .number {
+            font-size: 2rem;
+            font-weight: bold;
+            color: white;
+        }
+
+        .title-achievement {
+            font-size: 1.2rem;
+            font-weight:800;
+            color: #ee7e1b;
+        }
+
+        .desc-achievement {
+            font-size: 1rem;
+            font-weight: 300;
+            color: white;
+        }
+
+
+        .curtain {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 50%;
+            background-color: #ee7e1b;
+            z-index: 9999;
+        }
+
+        .curtain-top{
+            transition: transform 3s ease 2s;
+        }
+
+        .curtain-bottom {
+            transform: translateY(100%);
+            transition: transform 3s ease 2s;
+        }
+
+        .open .curtain-top {
+            transform: translateY(-101%);
+        }
+
+        .open .curtain-bottom {
+            transform: translateY(200%);
+        }
+
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 1s ease, transform 1s ease;
+        }
+
+        .fade-in.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .type-animation h1 {
+            font-size: 68px;
+            color: #747474;
+        }
+
+        .type-animation span.text {
+            padding: 0;
+            padding-right: 4px;
+            border-right: 2px solid #747474;
+            animation: blink 0.75s infinite;
+        }
+
+        .blue {
+            color: #4480ff;
+        }
+        .green {
+            color: #4caf50;
+        }
+        .yellow {
+            color: #f4b400;
+        }
+        .red {
+            color: #f44336;
+        }
+
+        .type-animation p.info {
+            font-size: 12px;
+            margin-top: 6rem;
+            color: #747474;
+        }
+
+        .type-animation a {
+            text-decoration: none;
+            color: #4480ff;
+        }
+
+        @keyframes blink {
+            from {
+                border: none;
+            }
+            to {
+                border-color: 2px solid #747474;
+            }
+        }
+        @media screen and (max-width: 670px) {
+            h1 {
+                font-size: 40px;
+            }
+            img {
+                width: 75px;
+                height: 75px;
+            }
+        }
+        @media screen and (max-width: 400px) {
+            h1 {
+                font-size: 32px;
+            }                   
+        }
+
+        .headmaster {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 50px;
+        }
+        .image-headmaster {
+            width: 400px;
+            margin-left: 10px;
+            border-radius: 40px;
+            overflow: hidden;
+        }
+        .image-headmaster img {
+            width: 400px;
+            height: 400px;
+            object-fit:contain;
+            scale: 1.5;
+            transform: translateY(40px);
+            border-radius: 15px;
+        }
+        .text-headmaster {
+            flex: 1;
+            padding-left: 20px;
+        }
+        .text-headmaster h2 {
+            font-size: 24px;
+            font-weight: bold;
+            color: #003366;
+        }
+        .text-headmaster p {
+            font-size: 18px;
+            color: #003366;
+        }
+        .text-headmaster .headmaster-quote {
+            font-size: 20px;
+            font-style: italic;
+            color: #003366;
+        }
+        .text-headmaster .author {
+            font-size: 16px;
+            color: #0056b3;
+        }
+        .text-headmaster .btn {
+            background-color: #0056b3;
+            color: white;
+            font-size: 16px;
+            padding: 10px 20px;
+            border-radius: 25px;
+            text-decoration: none;
+        }
+        .text-headmaster .btn:hover {
+            background-color: #004494;
+        }
+
+        .flipbook
+        {
+            max-width: 1000px;
+            margin: 100px auto;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+        .flipbook-card
+        {
+        position: relative;
+        margin: 20px 0;
+        width: 300px;
+        height: 400px;
+        background: #fff;
+        transform-style: preserve-3d;
+        transform: perspective(2000px);
+        box-shadow: inset 300px 0 50px rgba(0,0,0,.5), 0 20px 20px rgba(0,0,0,.5);
+        transition: 1s;
+        }
+        .flipbook-card:hover
+        {
+        z-index: 10000;
+        transform: perspective(2000px) rotate(-10deg);
+        box-shadow: inset 20px 0 50px rgba(0,0,0,.5), 0 10px 100px rgba(0,0,0,.5);
+        }
+
+        .flipbook-card .flipbook-box
+        {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        border: 1px solid #000;
+        box-sizing: border-box;
+        position: relative;
+        transform-origin: left;
+        z-index: 1;
+        transition: 1s cubic-bezier(.15,1.7,.84,.58);
+        background: #111;
+        }
+        .flipbook-card .flipbook-box img
+        {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        }
+        .flipbook-card:hover .flipbook-box
+        {
+        transform: rotateY(-135deg);
+        }
+        .flipbook-card .flipbook-details
+        {
+        position: absolute;
+        top: 0;
+        left: 0;
+        box-sizing: border-box;
+        padding: 20px;
+        z-index: -1;
+        }
+
+        .alumni-body-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 30px 10px;
+            font-family: 'DM Sans', sans-serif;
+            transition: background .4s ease-in;
+            background-color: #c394f8;
+            width: 100%;
+            height: 100%;
+        }
+
+        .alumni-body-container.blue {
+            background-color: #428aa6;
+        }
+
+        .alumni-body-container input[type=radio] {
+            display: none;
+        }
+
+        .alumni-card {
+            position: absolute;
+            width: 60%;
+            height: 100%;
+            left: 0;
+            right: 0;
+            margin: auto;
+            transition: transform .4s ease;
+            cursor: pointer;
+        }
+
+        .alumni-container {
+            width: 100%;
+            max-width: 800px;
+            max-height: 600px;
+            height: 100%;
+            transform-style: preserve-3d;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .alumni-cards {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            margin-bottom: 20px;
+        }
+
+        .alumni-body-container img {
+            width: 100%;
+            height: 100%;
+            border-radius: 10px;
+            object-fit: cover;
+        }
+
+        #item-1:checked ~ .alumni-cards #quote-3,
+        #item-2:checked ~ .alumni-cards #quote-1,
+        #item-3:checked ~ .alumni-cards #quote-2 {
+            transform: translateX(-40%) scale(.8);
+            opacity: .4;
+            z-index: 0;
+        }
+
+        #item-1:checked ~ .alumni-cards #quote-2,
+        #item-2:checked ~ .alumni-cards #quote-3,
+        #item-3:checked ~ .alumni-cards #quote-1 {
+            transform: translateX(40%) scale(.8);
+            opacity: .4;
+            z-index: 0;
+        }
+
+        #item-1:checked ~ .alumni-cards #quote-1,
+        #item-2:checked ~ .alumni-cards #quote-2,
+        #item-3:checked ~ .alumni-cards #quote-3 {
+            transform: translateX(0) scale(1);
+            opacity: 1;
+            z-index: 1;
+        }
+
+        #item-1:checked ~ .alumni-cards #quote-1 img,
+        #item-2:checked ~ .alumni-cards #quote-2 img,
+        #item-3:checked ~ .alumni-cards #quote-3 img {
+            box-shadow: 0px 0px 5px 0px rgba(81, 81, 81, 0.47);
+        }
+
+        .alumni-quote {
+            background-color: #fff;
+            border-radius: 8px;
+            min-width: 320px;
+            padding: 16px 10px;
+        }
+
+        .upper-part {
+            position: relative;
+            display: flex;
+            align-items: center;
+            margin-bottom: 12px;
+            height: 36px;
+            overflow: hidden;
+        }
+
+        .play-icon {
+            margin-right: 10px;
+        }
+
+        .quote-info {
+            width: calc(100% - 32px);
+            display: block;
+        }
+
+        .quote-info .title {
+            color: #403d40;
+            font-size: 14px;
+            line-height: 24px;
+        }
+
+        .sub-line {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+        }
+
+        .subtitle {
+            font-size: 12px;
+            line-height: 16px;
+            color: #c6c5c6;
+        }
+
+        .info-area {
+            width: 100%;
+            position: absolute;
+            top: 0;
+            left: 30px;
+            transition: transform .4s ease-in;
+        }
+
+        #item-2:checked ~ .alumni-quote #test {
+            transform: translateY(0);
+        }
+
+        #item-2:checked ~ .alumni-quote #test {
+            transform: translateY(-40px);
+        }
+
+        #item-3:checked ~ .alumni-quote #test {
+            transform: translateY(-80px);
+        }
+    </style>
+</head>         
+<body>
+    <div class="alumni-body-container">
+        <div class="alumni-container">
+            <input type="radio" name="slider" id="item-1" checked>
+            <input type="radio" name="slider" id="item-2">
+            <input type="radio" name="slider" id="item-3">
+            <div class="alumni-cards">
+                <label class="alumni-card" for="item-1" id="quote-1">
+                    <img src="https://images.unsplash.com/photo-1530651788726-1dbf58eeef1f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=882&q=80" alt="quote">
+                </label>
+                <label class="alumni-card" for="item-2" id="quote-2">
+                    <img src="https://images.unsplash.com/photo-1559386484-97dfc0e15539?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1234&q=80" alt="quote">
+                </label>
+                <label class="alumni-card" for="item-3" id="quote-3">
+                    <img src="https://images.unsplash.com/photo-1533461502717-83546f485d24?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=900&q=60" alt="quote">
+                </label>
+            </div>
+            <div class="alumni-quote">
+                <div class="upper-part">
+                    <div class="info-area" id="test">
+                        <label class="quote-info" id="quote-info-1">
+                            <div class="title">Bunker</div>
+                            <div class="sub-line">
+                                <div class="subtitle">Balthazar</div>
+                            </div>
+                        </label>
+                        <label class="quote-info" id="quote-info-2">
+                            <div class="title">Words Remain</div>
+                            <div class="sub-line">
+                                <div class="subtitle">Moderator</div>
+                            </div>
+                        </label>
+                        <label class="quote-info" id="quote-info-3">
+                            <div class="title">Falling Out</div>
+                            <div class="sub-line">
+                                <div class="subtitle">Otzeki</div>
+                            </div>
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
