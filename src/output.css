@@ -107,7 +107,7 @@
 }
 
 /*
-! tailwindcss v3.4.14 | MIT License | https://tailwindcss.com
+! tailwindcss v3.4.13 | MIT License | https://tailwindcss.com
 */
 
 /*
@@ -550,7 +550,7 @@ video {
 
 /* Make elements with the HTML hidden attribute stay hidden by default */
 
-[hidden]:where(:not([hidden="until-found"])) {
+[hidden] {
   display: none;
 }
 
@@ -761,6 +761,8 @@ video {
   margin-top: 2rem;
 }
 
+.tw-mb-4 {
+  margin-bottom: 1rem;
 .tw-mb-2 {
   margin-bottom: 0.5rem;
 }
@@ -777,6 +779,24 @@ video {
   margin-top: 1.25rem;
 }
 
+.tw-ml-1 {
+  margin-left: 0.25rem;
+}
+
+.tw-mt-10 {
+  margin-top: 2.5rem;
+}
+
+.tw-mt-20 {
+  margin-top: 5rem;
+}
+
+.tw-mt-3 {
+  margin-top: 0.75rem;
+}
+
+.tw-mt-32 {
+  margin-top: 8rem;
 .tw-ml-4 {
   margin-left: 1rem;
 }
@@ -1133,10 +1153,6 @@ video {
   white-space: nowrap;
 }
 
-.tw-rounded {
-  border-radius: 0.25rem;
-}
-
 .tw-rounded-full {
   border-radius: 9999px;
 }
@@ -1147,6 +1163,10 @@ video {
 
 .tw-rounded-sm {
   border-radius: 0.125rem;
+}
+
+.tw-rounded {
+  border-radius: 0.25rem;
 }
 
 .tw-rounded-md {
@@ -1163,6 +1183,10 @@ video {
 
 .tw-border-t {
   border-top-width: 1px;
+}
+
+.tw-border-r {
+  border-right-width: 1px;
 }
 
 .tw-border-t-2 {
@@ -1323,6 +1347,14 @@ video {
   padding: 2.5rem;
 }
 
+.tw-p-1 {
+  padding: 0.25rem;
+}
+
+.tw-p-2 {
+  padding: 0.5rem;
+}
+
 .tw-p-5 {
   padding: 1.25rem;
 }
@@ -1384,6 +1416,11 @@ video {
   padding-bottom: 2rem;
 }
 
+.tw-px-8 {
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
 .tw-px-6 {
   padding-left: 1.5rem;
   padding-right: 1.5rem;
@@ -1399,9 +1436,22 @@ video {
   padding-bottom: 0.75rem;
 }
 
+.tw-py-20 {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+
+.tw-py-4 {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
 .tw-px-2 {
   padding-left: 0.5rem;
   padding-right: 0.5rem;
+}
+
+.tw-px-1 {
+  padding-left: 0.25rem;
+  padding-right: 0.25rem;
 }
 
 .tw-pb-10 {
@@ -1414,6 +1464,14 @@ video {
 
 .tw-pl-5 {
   padding-left: 1.25rem;
+}
+
+.tw-pl-2 {
+  padding-left: 0.5rem;
+}
+
+.tw-pl-1 {
+  padding-left: 0.25rem;
 }
 
 .tw-text-left {
