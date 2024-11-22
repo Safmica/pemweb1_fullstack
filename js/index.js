@@ -1,26 +1,29 @@
 (function (document) {
-  const markers = [...document.querySelectorAll('mark')];
-  
-  const observer = new IntersectionObserver(entries => {
-    entries.forEach((entry) => {
-      if (entry.intersectionRatio > 0) {
-        entry.target.style.animationPlayState = 'running';
-        observer.unobserve(entry.target);
-      }
-    });
-  }, {
-    threshold: 0.8
-  });
-  
-  markers.forEach(mark => {
+  const markers = [...document.querySelectorAll("mark")];
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.intersectionRatio > 0) {
+          entry.target.style.animationPlayState = "running";
+          observer.unobserve(entry.target);
+        }
+      });
+    },
+    {
+      threshold: 0.8,
+    }
+  );
+
+  markers.forEach((mark) => {
     observer.observe(mark);
   });
 })(document);
 
 //curtains
 function animateText(text, element) {
-  element.innerHTML = '';
-  const characters = text.split('');
+  element.innerHTML = "";
+  const characters = text.split("");
   characters.forEach((char, index) => {
     setTimeout(() => {
       element.innerHTML += char;
@@ -28,8 +31,15 @@ function animateText(text, element) {
   });
 }
 
-const words = ['WELCOME TO ERSANAWATA HIGH SCHOOL'];
-let part, i = 0, offset = 0, len = words.length, forwards = true, skip_count = 0, skip_delay = 15, speed = 70;
+const words = ["WELCOME TO ERSANAWATA HIGH SCHOOL"];
+let part,
+  i = 0,
+  offset = 0,
+  len = words.length,
+  forwards = true,
+  skip_count = 0,
+  skip_delay = 15,
+  speed = 70;
 
 const wordflick = () => {
   setInterval(() => {
@@ -57,14 +67,14 @@ const wordflick = () => {
   }, speed);
 };
 
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener("DOMContentLoaded", () => {
   wordflick();
 
-  const fadeInElement = document.getElementById('fadeInElement');
-  fadeInElement.classList.add('active');
+  const fadeInElement = document.getElementById("fadeInElement");
+  fadeInElement.classList.add("active");
 
-  const titleElement = document.getElementById('animatedTitle');
-  document.body.classList.add('open');
+  const titleElement = document.getElementById("animatedTitle");
+  document.body.classList.add("open");
   animateText("Welcome To ERSANAWATA Official Website", titleElement);
 });
 
@@ -119,7 +129,9 @@ function animateValue(id, start, end, duration, ext) {
   const animate = (timestamp) => {
     if (!startTime) startTime = timestamp;
     const progress = timestamp - startTime;
-    const currentValue = Math.floor((progress / duration) * (end - start) + start);
+    const currentValue = Math.floor(
+      (progress / duration) * (end - start) + start
+    );
     document.getElementById(id).innerText = currentValue + ext;
 
     if (progress < duration) {
@@ -155,3 +167,29 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 });
 
+
+// Wahyu Trisno Aji
+
+// ADVANTAGES SECTION
+function toggleAccordion(index) {
+  const buttons = document.querySelectorAll(".accordion-button");
+  const contentPanels = document.querySelectorAll(".accordion-collapse");
+
+  contentPanels.forEach((panel, i) => {
+    if (i === index) {
+      if (panel.classList.contains("show")) {
+        panel.classList.remove("show");
+        buttons[i].classList.add("collapsed");
+        panel.style.height = 0;
+      } else {
+        panel.classList.add("show");
+        buttons[i].classList.remove("collapsed");
+        panel.style.height = `${panel.scrollHeight}px`;
+      }
+    } else {
+      panel.classList.remove("show");
+      buttons[i].classList.add("collapsed");
+      panel.style.height = 0;
+    }
+  });
+}
