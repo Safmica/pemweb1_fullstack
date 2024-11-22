@@ -494,12 +494,12 @@
     </style>
 </head>
 <body>
-    <!-- <div class="curtain curtain-top tw-align-middle tw-justify-center tw-flex">
+    <div class="curtain curtain-top tw-align-middle tw-justify-center tw-flex">
         <img src="../assets/logo.webp" height="30" alt="Logo" class="logo fade-in" id="fadeInElement">
     </div>
     <div class="curtain curtain-bottom tw-flex tw-justify-center tw-align-middle">
         <h1 class="title-curtain tw-text-customBlue tw-font-extrabold tw-text-4xl" id="animatedTitle"></h1>
-    </div> -->
+    </div>
     <nav class="navbar navbar-expand-lg tw-bg-customBlue">
         <div class="container">
             <a class="navbar-brand d-flex align-items-center" href="index.html">
@@ -612,7 +612,7 @@
         <div class="container mt-5">
             <div class="row">
                 <div class="col-md-3">
-                    <div class="stat-box tw-group group">
+                    <div class="stat-box tw-group group" id="stat-box">
                         <div class="number tw-transform tw-translate-y-[50%] group-hover:tw-translate-y-[0%] tw-duration-200" id="achievement-1">0</div>
                         <div class="tw-flex tw-justify-center tw-items-center tw-flex-col tw-transform tw-translate-y-[30%] group-hover:tw-translate-y-[0%] tw-duration-200 tw-w-[90%] tw-text-center">
                             <div class="title-achievement">GRADUATION RATE</div>
@@ -705,104 +705,114 @@
               </div>
             </div>
           </div>
-    </article>
-        <div class="alumni-body-container">
-            <div class="alumni-container">
-                <input type="radio" name="slider" id="item-1" checked>
-                <input type="radio" name="slider" id="item-2">
-                <input type="radio" name="slider" id="item-3">
-                <div class="alumni-cards">
-                    <label class="alumni-card" for="item-1" id="quote-1">
-                        <img src="../assets/alumni-1.webp" alt="alumni-1">
-                    </label>
-                    <label class="alumni-card" for="item-2" id="quote-2">
-                        <img src="../assets/alumni-2.webp" alt="alumni-2">
-                    </label>
-                    <label class="alumni-card" for="item-3" id="quote-3">
-                        <img src="../assets/alumni-3.webp" alt="alumni-3">
-                    </label>
-                </div>
-                <div class="alumni-quote">
-                    <div class="upper-part">
-                        <div class="info-area" id="test">
-                            <label class="quote-info" id="quote-info-1">
-                                <div class="sub-line tw-flex tw-flex-col tw-align-middle tw-justify-center">
-                                    <div class="tw-text-center tw-text-3xl tw-font-bold tw-text-black">Muhammad Pratama Safar</div>
-                                    <div class="tw-text-center tw-text-lg tw-font-semibold tw-text-customOrange">CEO of Shopee Indonesia - ERSANAWATA 1998</div>
-                                    <div class="tw-text-center tw-text-xl tw-font-medium tw-text-customBlue">"As a CEO who has studied at ERSANAWATA, I can say that this school has provided me with very meaningful provisions in shaping my character and skills. The learning experience here taught me to dare to take big steps and face challenges with confidence. For those of you who are struggling, worry that every effort here will open up great opportunities in the future. Keep dreaming and trying!"</div>
-                                </div>
-                            </label>
-                            <label class="quote-info" id="quote-info-2">
-                                <div class="sub-line">
-                                    <div class="tw-text-center tw-text-3xl tw-font-bold">Filumena C. Gultom</div>
-                                    <div class="tw-text-center tw-text-lg tw-font-semibold tw-text-customOrange">CEO of Bank BCA</div>
-                                    <div class="tw-text-center tw-text-xl tw-font-medium tw-text-customBlue">"As an alumni of ERSANAWATA and now serving as CEO of Bank BCA, I would like to share that education in this school has become an important foundation for my career journey. Here, I learned the values ​​of integrity, and an unyielding spirit that are very helpful in facing challenges in the banking world. believe that the hard work and perseverance that you instill in ERSANAWATA will pave the way to success."</div>
-                                </div>
-                            </label>
-                            <label class="quote-info" id="quote-info-3">
-                                <div class="sub-line">
-                                    <div class="tw-text-center tw-text-3xl tw-font-bold">Saputra Erlangga</div>
-                                    <div class="tw-text-center tw-text-lg tw-font-semibold tw-text-customOrange">CEO of Tiktok Indonesia</div>
-                                    <div class="tw-text-center tw-text-xl tw-font-medium tw-text-customBlue">"As an ERSANAWATA alumnus and CEO of TikTok Indonesia, I would like to say that this school has given me incredible provisions to achieve my dreams. Here, I learned the importance of creativity, innovation, and the courage to try new things — values ​​that have played a huge role in my career journey in the digital world. Make every challenge an opportunity, because the future is in your hands!"</div>
-                                </div>
-                            </label>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>      
-        <footer class="tw-w-full tw-bg-customBlue">
-        <div class="tw-mx-auto tw-max-w-7xl tw-px-4 sm:tw-px-6 lg:tw-px-8">
-          <div class="tw-grid tw-grid-cols-2 sm:tw-grid-cols-4 lg:tw-grid-cols-6 tw-gap-3 tw-gap-y-8 md:tw-gap-8 tw-py-8 tw-max-w-sm tw-mx-auto sm:tw-max-w-3xl lg:tw-max-w-full">
-            <div class="tw-col-span-full tw-mb-10 lg:tw-col-span-2 lg:tw-mb-0">
-              <div class="tw-flex tw-justify-center lg:tw-justify-start">
-                <img src="../assets/logo.webp" loading="lazy" alt="hogwarts-icon" class="tw-h-20">
-                <span class="tw-self-center tw-text-3xl tw-font-semibold tw-whitespace-nowrap tw-flex tw-flex-col tw-pl-5 ">
-                    <p class="tw-text-customOrange tw-font-bold">ERSANAWATA</p>
-                </span>
-            </div>
-                <p class="tw-py-8 tw-text-sm tw-text-white lg:tw-max-w-xs tw-text-justify">Has produced more than 1000 extraordinary wizards who can change the world. has produced many extraordinary wizards who can change the world. has produced many experts in various fields of magic. interested in hogwarts?</p>
-                <div class="tw-flex tw-flex-row tw-space-x-2">
-                    <a href="contact.html" class="tw-py-2.5 tw-px-5 tw-h-9 tw-block tw-w-fit tw-rounded-full tw-shadow-sm tw-text-xs tw-text-white tw-mx-auto tw-bg-transparent tw-border-2 tw-transition-transform tw-duration-300 tw-transform hover:tw-scale-110 lg:tw-mx-0 tw-z-50">
-                        Contact us
-                    </a>
-                    <a href="contact.html" class="tw-py-2.5 tw-px-5 tw-h-9 tw-block tw-w-fit tw-rounded-full tw-shadow-sm tw-text-xs tw-text-white tw-mx-auto tw-bg-transparent tw-border-2 tw-transition-transform tw-duration-300 tw-transform hover:tw-scale-110 lg:tw-mx-0 tw-z-50">
-                        Contact us
-                    </a>
-                </div>                       
-            </div>
-            <div class="lg:tw-col-span-2 tw-text-left lg:tw-ml-auto">
-              <h4 class="tw-text-lg tw-text-white tw-font-medium mb-7">About Hogwarts</h4>
-              <div class="tw-text-justify">
-                <p class="tw-text-white tw-text-sm">Hogwarts School of Witchcraft and Wizardry is a renowned, magical boarding school that has been shaping the brightest witches and wizards for centuries. Founded over a thousand years ago, Hogwarts provides a transformative education for young magic users.</p>
-                <br>
-                <p class="tw-text-white tw-text-sm">With a focus on holistic growth, Hogwarts nurtures each student's magical abilities while encouraging bravery, intelligence, loyalty, and ambition through its four iconic houses: Gryffindor, Ravenclaw, Hufflepuff, and Slytherin.</p>
-              </div>
-            </div>
-            <div class="lg:tw-col-span-2 tw-text-left tw-ml-11">
-              <h4 class="tw-text-lg tw-text-white tw-font-bold tw-mb-7">Contact Us</h4>
-              <ul class="tw-text-sm tw-transition-all tw-duration-500">
-                <li class="tw-mb-6 tw-text-white tw-font-semibold">Mailing Address
-                    <div class="tw0font-normal">
-                        <p class="tw-text-white">Hogwarts School of Witchcraft and Wizardry</p>
-                        <p class="tw-text-white">Owl Post Box 394</p>
-                        <p class="tw-text-white">Hogsmeade Village, Scotland</p>
-                    </div>
-                </li>
-                <li class="tw-mb-6 tw-text-white tw-font-semibold">Physical Address
-                    <div class="tw-font-normal">
-                        <p class="tw-text-white">Hogwarts Castle</p>
-                        <p class="tw-text-white">Highlands of Scotland</p>
-                    </div>
-                </li>
-                <li class="tw-mb-6 tw-text-white tw-font-semibold">Owl Fax:
-                    <div class="tw-font-normal">
-                        <p class="tw-text-white">Send to: Headmaster's Office, Hogwarts</p>
-                    </div>
-                </li>
-              </ul>
-            </div>
+          <div id="video-container" style="width: 100%; max-width: 800px; margin: auto; text-align: center;">
+            <video width="100%">
+              <source src="video.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
           </div>
+    </article>
+    <div class="tw-flex tw-justify-center tw-align-middle">
+        <h2 class="tw-font-extrabold tw-text-5xl tw-text-customBlue">Let's meet our alumni</h2>
+    </div>
+    <div class="alumni-body-container tw-mt-32">
+        <div class="alumni-container">
+            <input type="radio" name="slider" id="item-1" checked>
+            <input type="radio" name="slider" id="item-2">
+            <input type="radio" name="slider" id="item-3">
+            <div class="alumni-cards">
+                <label class="alumni-card" for="item-1" id="quote-1">
+                    <img src="../assets/alumni-1.webp" alt="alumni-1">
+                </label>
+                <label class="alumni-card" for="item-2" id="quote-2">
+                    <img src="../assets/alumni-2.webp" alt="alumni-2">
+                </label>
+                <label class="alumni-card" for="item-3" id="quote-3">
+                    <img src="../assets/alumni-3.webp" alt="alumni-3">
+                </label>
+            </div>
+            <div class="alumni-quote">
+                <div class="upper-part">
+                    <div class="info-area" id="test">
+                        <label class="quote-info" id="quote-info-1">
+                            <div class="sub-line tw-flex tw-flex-col tw-align-middle tw-justify-center">
+                                <div class="tw-text-center tw-text-3xl tw-font-bold tw-text-black">Muhammad Pratama Safar</div>
+                                <div class="tw-text-center tw-text-lg tw-font-semibold tw-text-customOrange">CEO of Shopee Indonesia - ERSANAWATA 1998</div>
+                                <div class="tw-text-center tw-text-xl tw-font-medium tw-text-customBlue">"As a CEO who has studied at ERSANAWATA, I can say that this school has provided me with very meaningful provisions in shaping my character and skills. The learning experience here taught me to dare to take big steps and face challenges with confidence. For those of you who are struggling, worry that every effort here will open up great opportunities in the future. Keep dreaming and trying!"</div>
+                            </div>
+                        </label>
+                        <label class="quote-info" id="quote-info-2">
+                            <div class="sub-line">
+                                <div class="tw-text-center tw-text-3xl tw-font-bold">Filumena C. Gultom</div>
+                                <div class="tw-text-center tw-text-lg tw-font-semibold tw-text-customOrange">CEO of Bank BCA</div>
+                                <div class="tw-text-center tw-text-xl tw-font-medium tw-text-customBlue">"As an alumni of ERSANAWATA and now serving as CEO of Bank BCA, I would like to share that education in this school has become an important foundation for my career journey. Here, I learned the values ​​of integrity, and an unyielding spirit that are very helpful in facing challenges in the banking world. believe that the hard work and perseverance that you instill in ERSANAWATA will pave the way to success."</div>
+                            </div>
+                        </label>
+                        <label class="quote-info" id="quote-info-3">
+                            <div class="sub-line">
+                                <div class="tw-text-center tw-text-3xl tw-font-bold">Saputra Erlangga</div>
+                                <div class="tw-text-center tw-text-lg tw-font-semibold tw-text-customOrange">CEO of Tiktok Indonesia</div>
+                                <div class="tw-text-center tw-text-xl tw-font-medium tw-text-customBlue">"As an ERSANAWATA alumnus and CEO of TikTok Indonesia, I would like to say that this school has given me incredible provisions to achieve my dreams. Here, I learned the importance of creativity, innovation, and the courage to try new things — values ​​that have played a huge role in my career journey in the digital world. Make every challenge an opportunity, because the future is in your hands!"</div>
+                            </div>
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>      
+    <footer class="tw-w-full tw-bg-customBlue">
+    <div class="tw-mx-auto tw-max-w-7xl tw-px-4 sm:tw-px-6 lg:tw-px-8">
+        <div class="tw-grid tw-grid-cols-2 sm:tw-grid-cols-4 lg:tw-grid-cols-6 tw-gap-3 tw-gap-y-8 md:tw-gap-8 tw-py-8 tw-max-w-sm tw-mx-auto sm:tw-max-w-3xl lg:tw-max-w-full">
+        <div class="tw-col-span-full tw-mb-10 lg:tw-col-span-2 lg:tw-mb-0">
+            <div class="tw-flex tw-justify-center lg:tw-justify-start">
+            <img src="../assets/logo.webp" loading="lazy" alt="hogwarts-icon" class="tw-h-20">
+            <span class="tw-self-center tw-text-3xl tw-font-semibold tw-whitespace-nowrap tw-flex tw-flex-col tw-pl-5 ">
+                <p class="tw-text-customOrange tw-font-bold">ERSANAWATA</p>
+            </span>
+        </div>
+            <p class="tw-py-8 tw-text-sm tw-text-white lg:tw-max-w-xs tw-text-justify">Has produced more than 1000 extraordinary graduates who are ready to make a positive impact in the world. ERSANAWATA High School has developed many skilled experts across various fields. Are you interested in joining ERSANAWATA?</p>
+            <div class="tw-flex tw-flex-row tw-space-x-2">
+                <a href="contact.html" class="tw-py-2.5 tw-px-5 tw-h-9 tw-block tw-w-fit tw-rounded-full tw-shadow-sm tw-text-xs tw-text-white tw-mx-auto tw-bg-transparent tw-border-2 tw-transition-transform tw-duration-300 tw-transform hover:tw-scale-110 lg:tw-mx-0 tw-z-50">
+                    Contact us
+                </a>
+                <a href="contact.html" class="tw-py-2.5 tw-px-5 tw-h-9 tw-block tw-w-fit tw-rounded-full tw-shadow-sm tw-text-xs tw-text-white tw-mx-auto tw-bg-transparent tw-border-2 tw-transition-transform tw-duration-300 tw-transform hover:tw-scale-110 lg:tw-mx-0 tw-z-50">
+                    Register
+                </a>
+            </div>                       
+        </div>
+        <div class="lg:tw-col-span-2 tw-text-left lg:tw-ml-auto">
+            <h4 class="tw-text-lg tw-text-white tw-font-medium mb-7">About ERSANAWATA</h4>
+            <div class="tw-text-justify">
+            <p class="tw-text-white tw-text-sm">ERSANAWATA High School is a well-known educational institution dedicated to shaping outstanding young individuals. Founded with a mission to provide quality education, ERSANAWATA fosters a learning environment that emphasizes both academic excellence and personal growth.</p>
+            <br>
+            <p class="tw-text-white tw-text-sm">ERSANAWATA High School encourages students to pursue their passions and excel in diverse areas of study, helping them build a foundation of integrity, responsibility, creativity, and perseverance. With a strong commitment to character-building, ERSANAWATA guides students to become responsible, knowledgeable, and compassionate members of society.</p>
+            </div>
+        </div>
+        <div class="lg:tw-col-span-2 tw-text-left tw-ml-11">
+            <h4 class="tw-text-lg tw-text-white tw-font-bold tw-mb-7">Contact Us</h4>
+            <ul class="tw-text-sm tw-transition-all tw-duration-500">
+            <li class="tw-mb-6 tw-text-white tw-font-semibold">Mailing Address
+                <div class="tw0font-normal">
+                    <p class="tw-text-white">(0711) 123-4567</p>
+                    <p class="tw-text-white">info@ersanawata.sch.id</p>
+                    <p class="tw-text-white">sponsorship@ersanawata.sch.id</p>
+                </div>
+            </li>
+            <li class="tw-mb-6 tw-text-white tw-font-semibold">Physical Address
+                <div class="tw-font-normal">
+                    <p class="tw-text-white">ERSANAWATA High School</p>
+                    <p class="tw-text-white">Jl. Ersanawata No 1, Palembang, South Sumatera</p>
+                </div>
+            </li>
+            <li class="tw-mb-6 tw-text-white tw-font-semibold">Need Help?
+                <div class="tw-font-normal tw-flex tw-flex-row">
+                    <p class="tw-text-white">Chat With Our</p>
+                    <a href="#"><p class="tw-ml-1 tw-px-1 tw-bg-customOrange tw-rounded">BOT</p></a>
+                </div>
+            </li>
+            </ul>
+        </div>
+        </div>
             <div class="tw-py-2 tw-border-t tw-border-gray-200">
                 <div class="tw-flex tw-items-center tw-justify-center tw-flex-col lg:tw-justify-between lg:tw-flex-row">
                     <span class="tw-text-sm tw-text-gray-500 ">©<a href="https://pagedone.io/">Copyright 2024 kelompok 4</a>, All rights reserved.</span>
