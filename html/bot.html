@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bot</title>
+    <link href="../src/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="../src/output.css" rel="stylesheet" />
+    <link rel="icon" href="../assets/logo_nav.png" type="image/png">
+    <style>
+        .navbar{
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .navbar .nav-link,
+        .navbar .navbar-brand {
+            color: white;
+            transition: color 0.3s ease;
+        }
+
+        .navbar .nav-link:hover {
+            color: #ff9800;
+            text-decoration: underline;
+            text-underline-offset: 4px;
+        }
+
+        .nav-link.tw-text-customOrange {
+            color: #ff9800 !important;
+        }
+
+        .btn.tw-bg-customOrange {
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        .btn.tw-bg-customOrange:hover {
+            background-color: #ff9800;
+            transform: scale(1.05);
+        }
+
+        .nav-item.dropdown:hover .dropdown-menu {
+            display: block;
+        }
+
+        .dropdown-menu {
+            display: none;
+        }
+
+        #chat-box {
+            border: 1px solid #ddd;
+            padding: 10px;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+        }
+        .bot-message {
+            color: white;
+            background-color: #002852;
+            padding: 8px;
+            border-radius: 5px;
+            margin-bottom: 5px;
+            text-align: left;
+        }
+        .user-message {
+            color: black;
+            background-color: #e9ecef;
+            padding: 8px;
+            border-radius: 5px;
+            margin-bottom: 5px;
+            text-align: right;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg tw-bg-customBlue">
+        <div class="container">
+          <a class="navbar-brand d-flex align-items-center" href="index.html">
+            <img
+              src="../assets/logo_nav.png"
+              alt="Logo"
+              width="30"
+              height="30"
+              class="d-inline-block align-top me-2"
+            />
+            <p class="tw-font-bold tw-text-white">ERSANAWATA</p>
+          </a>
+          <button
+            class="navbar-toggler tw-bg-customOrange"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarContent"
+            aria-controls="navbarContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarContent">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link" href="index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="About.html">About</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="majorDropdown" role="button">
+                  Major
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="majorDropdown">
+                  <li><a class="dropdown-item" href="ipa.html">Science</a></li>
+                  <li><a class="dropdown-item" href="ips.html">Social</a></li>
+                </ul>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="achievementDropdown" role="button">
+                  Achievement
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="achievementDropdown">
+                  <li><a class="dropdown-item" href="academic.html">Academic</a></li>
+                  <li><a class="dropdown-item" href="non-academic.html">Non-Academic</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="activity.html">Activity</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">PPDB</a>
+              </li>
+            </ul>
+            <div class="dropdown">
+              <button id="loginButton" class="btn tw-bg-customOrange ms-lg-3 text-white" href="#" role="button">Login</button>
+              <ul class="dropdown-menu" aria-labelledby="loginButton">
+                <li><a class="dropdown-item" href="#" id="logoutButton">Logout</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </nav>
+    <div class="container my-5">
+        <h1 class="text-center mb-4 tw-text-3xl tw-font-bold">ERSANAWATA Bot</h1>
+        <div class="card">
+            <div class="card-body">
+                <div id="chat-box" class="mb-3 tw-bg-customBlue" style="max-height: 300px; overflow-y: auto;">
+                </div>
+                <div class="input-group">
+                    <select id="user-input" class="form-select">
+                        <option value="" disabled selected>Select your question...</option>
+                        <option value="Why can't I register for ERSANAWATA High School?">Why can't I register for ERSANAWATA High School?</option>
+                        <option value="What are the general requirements to apply for ERSANAWATA High School?">What are the general requirements to apply for ERSANAWATA High School?</option>
+                        <option value="What are the requirements for the academic pathway for ERSANAWATA High School?">What are the requirements for the academic pathway for ERSANAWATA High School?</option>
+                        <option value="What are the requirements for the general pathway for ERSANAWATA High School?">What are the requirements for the general pathway for ERSANAWATA High School?</option>
+                        <option value="What documents are required to apply for ERSANAWATA High School?">What documents are required to apply for ERSANAWATA High School?</option>
+                        <option value="Can I apply after the deadline for ERSANAWATA High School?">Can I apply after the deadline for ERSANAWATA High School?</option>
+                        <option value="Are there any specific documents needed for the academic pathway?">Are there any specific documents needed for the academic pathway?</option>
+                        <option value="Are there any specific documents needed for the general pathway?">Are there any specific documents needed for the general pathway?</option>
+                    </select>                    
+                    <button class="btn btn-primary tw-bg-customBlue" id="send-btn">Send</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const chatBox = document.getElementById("chat-box");
+            const userInput = document.getElementById("user-input");
+            const sendBtn = document.getElementById("send-btn");
+
+            const botResponses = {
+                "Why can't I register for ERSANAWATA High School?": "If you're unable to register, it could be due to incomplete documents, missing the application deadline, or not meeting the required academic criteria. Please check your application and try again.",
+                "What are the general requirements to apply for ERSANAWATA High School?": "The general requirements include a completed application form, recent school records, and meeting the minimum academic standards set by ERSANAWATA. Please refer to the official website for detailed instructions.",
+                "What are the requirements for the academic pathway for ERSANAWATA High School?": "For the academic pathway, students must have a strong academic background with a minimum grade point average (GPA) from their previous school. Specific requirements can vary based on the chosen program, so it's best to consult the admission guide for details.",
+                "What are the requirements for the general pathway for ERSANAWATA High School?": "The general pathway has fewer academic requirements compared to the academic pathway but still requires a completed application form, recent school records, and the submission of other necessary documents. Please make sure to meet the general criteria listed on the website.",
+                "What documents are required to apply for ERSANAWATA High School?": "The documents required include: a completed application form, a recent copy of your school report, a birth certificate, a passport-sized photograph, and any additional documents requested by the admissions office.",
+                "Can I apply after the deadline for ERSANAWATA High School?": "Unfortunately, we do not accept late applications. Make sure to submit your application before the deadline. For future application periods, keep an eye on the official announcements on the website.",
+                "Are there any specific documents needed for the academic pathway?": "For the academic pathway, you will need to submit your latest report cards, academic achievements, and a recommendation letter from your previous school, if applicable.",
+                "Are there any specific documents needed for the general pathway?": "For the general pathway, you need to provide your school report card, birth certificate, and a recent photograph. The process is simpler compared to the academic pathway."
+            };
+
+            function addMessage(message, sender) {
+                const messageDiv = document.createElement("div");
+                messageDiv.classList.add(sender === "bot" ? "bot-message" : "user-message");
+                messageDiv.textContent = message;
+                chatBox.appendChild(messageDiv);
+                chatBox.scrollTop = chatBox.scrollHeight;
+            }
+
+            sendBtn.addEventListener("click", function () {
+                const userText = userInput.value;
+                if (userText) {
+                    addMessage(userText, "user");
+                    const botReply = botResponses[userText] || "Sorry, I don't understand your question.";
+                    addMessage(botReply, "bot");
+                    userInput.selectedIndex = 0;
+                }
+            });
+        });
+    </script>
+</body>
+</html>
