@@ -42,6 +42,47 @@
   overflow: hidden;
 }
 
+/* wahyu */
+/* ALUMNI */
+.tw-perspective-1000 {
+perspective: 1000px;
+}
+
+.tw-card-inner {
+transform-style: preserve-3d;
+transition: transform 0.5s;
+}
+
+.tw-card-front,
+.tw-card-back {
+backface-visibility: hidden;
+}
+
+.tw-card-front {
+position: relative;
+z-index: 2;
+}
+
+.tw-card-back {
+position: absolute;
+top: 0;
+left: 0;
+background-color: #ffffff;
+padding: 16px;
+transform: rotateY(180deg);
+}
+
+.tw-card-inner:hover {
+transform: rotateY(180deg);
+}
+
+.tw-rotate-y-0 {
+transform: rotateY(0deg);
+}
+
+.tw-rotate-y-180 {
+transform: rotateY(180deg);
+}
 
   </style>
   <body>
@@ -108,7 +149,7 @@
 
     <hr class="tw-my-4 tw-w-0.2" />
 
-    <!-- INTRODUCING -->
+    <!-- INTRODUCING SECTION-->
     <div class="tw-container tw-mx-auto tw-py-10 tw-px-4 md:tw-px-16">
       <div class="tw-text-center tw-mb-10">
         <h1 class="tw-text-5xl tw-font-extrabold tw-text-gray-800">
@@ -116,16 +157,14 @@
         </h1>
         <p class="tw-text-lg tw-font-semibold tw-text-gray-600">ERSANAWATA</p>
         <div
-          class="tw-border-t-2 tw-border-gray-300 tw-w-16 tw-mx-auto tw-mt-2"
-        ></div>
+          class="tw-border-t-2 tw-border-gray-300 tw-w-16 tw-mx-auto tw-mt-2"></div>
       </div>
 
       <div class="tw-grid md:tw-grid-cols-2 tw-gap-8">
 
         <div>
           <p
-            class="tw-text-gray-700 tw-leading-relaxed tw-mb-4 tw-text-justify"
-          >
+            class="tw-text-gray-700 tw-leading-relaxed tw-mb-4 tw-text-justify">
             ERSANAWATA Senior High School is an international-level institution
             dedicated to preparing students for a global future. Offering two
             main programs, Natural Sciences (IPA) and Social Sciences (IPS), the
@@ -182,7 +221,6 @@
           </div>
         </div>
 
-      
         <div class="tw-relative">
           <div
             class="tw-w-3/4 md:tw-w-3/4 tw-mx-auto tw-shadow-lg tw-rounded-lg tw-overflow-hidden md:"
@@ -194,8 +232,7 @@
             />
           </div>
           <div
-            class="tw-absolute tw-top-2 tw-right-2 tw-bg-white tw-shadow-md tw-rounded-lg tw-p-3 tw-w-48"
-          >
+            class="tw-absolute tw-top-2 tw-right-2 tw-bg-white tw-shadow-md tw-rounded-lg tw-p-3 tw-w-48">
             <div class="tw-flex tw-items-center tw-mb-2">
               <img
                 src="../assets/ceo.jpg"
@@ -276,10 +313,8 @@
                 </svg>
               </div>
             </div>
-
             <p
-              class="tw-w-38 tw-text-xs tw-text-slate-800 tw-mb-1.5 tw-font-bold"
-            >
+              class="tw-w-38 tw-text-xs tw-text-slate-800 tw-mb-1.5 tw-font-bold">
               Unlock knowledge, shape the future with ERSANAWATA
             </p>
             <p class="tw-text-xs tw-font-normal tw-text-slate-500">
@@ -289,21 +324,15 @@
         </div>
       </div>
     </div>
-<br><br><br><br>
-    <!-- Akreditasi -->
-    <div class="tw-bg-gray-900 tw-text-white">
+
+    <!-- AKREDITASI SECTION -->
+    <div class="tw-mt-32 tw-bg-gray-900 tw-text-white tw-my-6">
       <div
-        class="tw-relative tw-bg-cover tw-bg-center tw-py-12"
+        class="tw-relative tw-w-full tw-object-cover tw-bg-center tw-py-12"
         style="
-          background-image: url(../assets/akreditasi.jpg);
-        "
-      >
-
+          background-image: url(../assets/ERSANAWATA\ \(1\).png);">
         <div class="tw-absolute tw-inset-0 tw-bg-black tw-bg-opacity-60"></div>
-
-
         <div class="tw-relative tw-max-w-5xl tw-mx-auto tw-text-center">
-
           <h1 class="tw-text-3xl md:tw-text-4xl tw-font-bold tw-mb-4">
             National Accreditation of ERSANAWATA Senior High School
           </h1>
@@ -311,48 +340,22 @@
             This recap was updated in January 2024 and will be updated
             periodically.
           </p>
-
-          <!-- Statistik -->
           <div
-            class="tw-grid tw-grid-cols-2 md:tw-grid-cols-3 tw-gap-4 tw-mb-8 tw-text-center"
-          >
+            class="tw-text-center tw-my-4">
             <div>
-              <p class="tw-text-blue-400 tw-text-5xl tw-font-bold">94 Point</p>
-              <p class="tw-text-gray-300">Natural Sciences</p>
-            </div>
-            <div>
-              <p class="tw-text-blue-400 tw-text-5xl tw-font-bold">92 Point</p>
-              <p class="tw-text-gray-300">Social Sciences</p>
-            </div>
-            <div>
-              <p class="tw-text-blue-400 tw-text-5xl tw-font-bold">92 Point</p>
-              <p class="tw-text-gray-300">Educator Resources</p>
-            </div>
-            <div>
-              <p class="tw-text-blue-400 tw-text-5xl tw-font-bold">96 Point</p>
-              <p class="tw-text-gray-300">Facility</p>
-            </div>
-            <div>
-              <p class="tw-text-blue-400 tw-text-5xl tw-font-bold">98 Point</p>
-              <p class="tw-text-gray-300">Environment</p>
-            </div>
-            <div>
-              <p class="tw-text-blue-400 tw-text-5xl tw-font-bold">90 Point</p>
-              <p class="tw-text-gray-300">Alumni</p>
+              <p class="tw-text-blue-400 tw-text-5xl tw-font-bold">95.9</p>
+              <p class="tw-text-gray-300">Score Index</p>
             </div>
           </div>
-
           <div class="tw-flex tw-justify-center tw-space-x-4">
             <a
               href="#"
-              class="tw-bg-blue-400 tw-text-gray-900 tw-font-semibold tw-px-6 tw-py-2 tw-rounded hover:tw-bg-orange-500 tw-transition"
-            >
+              class="tw-bg-blue-400 tw-text-gray-900 tw-font-semibold tw-px-6 tw-py-2 tw-rounded hover:tw-bg-orange-500 tw-transition">
               Check International Accreditation
             </a>
             <a
               href="https://ban-pdm.id/"
-              class="tw-bg-gray-700 tw-text-white tw-font-semibold tw-px-6 tw-py-2 tw-rounded hover:tw-bg-gray-500 tw-transition"
-            >
+              class="tw-bg-gray-700 tw-text-white tw-font-semibold tw-px-6 tw-py-2 tw-rounded hover:tw-bg-gray-500 tw-transition">
               About BAN-PDM
             </a>
           </div>
@@ -360,17 +363,8 @@
       </div>
     </div>
 
-  <!-- FACILITY -->
-  <div class="tw-container tw-mx-auto tw-py-10 tw-px-4 md:tw-px-16">
-    <div class="tw-text-center tw-mb-10">
-      <h1 class="tw-text-5xl tw-font-extrabold tw-text-gray-800">
-        OUR FACILITIES
-      </h1>
-      <p class="tw-text-lg tw-font-semibold tw-text-gray-600">A comfortable school with complete facilities will increase the enthusiasm of students to study at ERSANAWATA high school</p>
-      
-
-    <!-- HISTORY -->
-    <div class="tw-container tw-mx-auto tw-py-10 tw-px-4 md:tw-px-16">
+    <!-- HISTORY SECTION -->
+    <div class="tw-mx-auto tw-py-10 tw-px-4 md:tw-px-16">
       <div class="tw-text-center tw-mb-10">
         <h1 class="tw-text-5xl tw-font-extrabold tw-text-gray-800">
           HISTORY OF
@@ -381,9 +375,9 @@
         ></div>
       </div>
 
-      <div class="container">
+      <div class="container tw-mt-32">
         <div>
-          <img src="../assets/historyImage.jpg" alt="">
+          <img src="../assets/historyImage.jpg" alt="History ERSANAWATA">
         </div>
         <p class="tw-text-justify tw-tracking-wider tw-mt-4">
           Established in 1985, ERSANAWATA High School began as a small
@@ -415,10 +409,9 @@
           reputation as a center for excellence continues to inspire
           generations to strive for knowledge, integrity, and innovation.
         </p>
-        <br />
       </div>
-      
-      <!-- HEADMASTER -->
+    </div>  
+      <!-- HEADMASTER SECTION-->
     <div class="container tw-mt-12">
       <div class="row">
         <div class="col-md-5">
@@ -429,7 +422,6 @@
             class="tw-grayscale"
           />
         </div>
-
         <div class="col-md-7 tw-font-poppins">
           <h1 class="tw-text-4xl tw-font-extrabold tw-text-gray-800">HEADMASTER</h1>
           <p class="tw-text-justify tw-tracking-wider">
@@ -447,11 +439,10 @@
       </div>
     </div>
 
-    <!-- VISI MISI -->
+    <!-- VISI MISI SECTION-->
     <div class="container tw-flex tw-flex-wrap md:tw-flex-nowrap tw-mt-32">
       <div
-        class="tw-bg-blue-400 tw-mb-4 md:tw-mb-0 md:tw-mr-4 md:tw-w-1/2 tw-text-center tw-py-4"
-      >
+        class="tw-bg-blue-400 tw-mb-4 md:tw-mb-0 md:tw-mr-4 md:tw-w-1/2 tw-text-center tw-py-4">
         <h3 class="tw-mt-2 tw-text-3xl tw-font-bold">Visi</h3>
         <p class="tw-m-2">
           To become a leading educational institution that fosters intelligent,
@@ -471,34 +462,105 @@
       </div>
     </div>
 
-    <!-- ALUMNI -->
-    <div class="tw-bg-blue-100 tw-text-center tw-p-3 mt-5 tw-rounded-lg">
-      <div class="tw-mx-auto tw-py-8 tw-px-2 md:tw-px-8">
-        <div class="tw-text-center tw-mb-4">
-          <h1 class="tw-text-5xl tw-font-extrabold tw-text-gray-800">
+    <!-- ALUMNI SECTION-->
+    <div class="containertw-bg-gray-900 tw-text-white tw-mt-32">
+      <div
+        class="tw-relative tw-w-full tw-object-cover tw-bg-center tw-py-12"
+        style="
+          background-image: url(../assets/AlumniBg.jpg);">
+        <div class="tw-absolute tw-inset-0 tw-bg-black tw-bg-opacity-60"></div>
+        <div class="tw-relative tw-max-w-5xl tw-mx-auto tw-text-center">
+          <h1 class="tw-text-3xl md:tw-text-4xl tw-font-bold tw-mb-2">
             Alumni
           </h1>
-          <p class="tw-text-lg tw-font-semibold tw-text-gray-600">ERSANAWATA HIGH SCHOOL</p>
+          <p class="tw-text-gray-300 tw-mb-4">
+            500+ Alumni 
+            ERSANAWATA High School alumni are spread across various leading campuses.
+          </p>
           <div
-            class="tw-border-t-2 tw-border-orange-300 tw-w-16 tw-mx-auto tw-mt-2"
-          ></div>
+        class="tw-border-t-2 tw-border-gray-300 tw-w-16 tw-mx-auto tw-my-1"
+      ></div>
         </div>
-      <a
-        href="aboutAlumni.html"
-        class="btn tw-bg-customOrange tw-text-white tw-mt-3 tw-px-4 tw-py-2 tw-rounded hover:tw-bg-orange-500"
-      >
-        Find Our Alumni
-      </a>
+      </div>
     </div>
-  </div>
+
+    <div class="tw-container tw-mx-auto tw-my-8">
+      <div class="tw-flex tw-flex-wrap tw-gap-6 tw-justify-center">
+        <!-- CARD CHRISTANTA-->
+        <div class="tw-bg-white tw-rounded-lg tw-shadow-md tw-overflow-hidden tw-transition-transform tw-transform hover:tw-scale-105 tw-w-64 tw-perspective-1000">
+          <div class="tw-card-inner tw-relative tw-w-full tw-h-full tw-transform-style-preserve-3d tw-transition-transform">
+            <div class="tw-card-front tw-w-full tw-h-full tw-relative tw-transform tw-rotate-y-0 tw-transition-transform">
+              <img class="tw-w-full tw-h-40 tw-object-cover tw-object-top" src="../assets/alumni1.jpg" alt="Alumni Name">
+              <div class="tw-p-4">
+                <h3 class="tw-text-lg tw-font-bold tw-text-gray-700">Christanta</h3>
+              </div>
+            </div>
+            <div class="tw-card-back tw-w-full tw-h-full tw-absolute tw-top-0 tw-left-0 tw-bg-white tw-rounded-lg tw-p-4 tw-transform tw-rotate-y-180 tw-transition-transform">
+              <img class="tw-w-full tw-h-32 tw-object-contain " src="../assets/UILogo.svg" alt="Alumni Full Image">
+              <p class="tw-text-gray-600 tw-text-sm tw-mt-4">Graduated in 2020, currently pursuing a career in Computer Science.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- CARD ERLANGGA -->
+        <div class="tw-bg-white tw-rounded-lg tw-shadow-md tw-overflow-hidden tw-transition-transform tw-transform hover:tw-scale-105 tw-w-64 tw-perspective-1000">
+          <div class="tw-card-inner tw-relative tw-w-full tw-h-full tw-transform-style-preserve-3d tw-transition-transform">
+            <div class="tw-card-front tw-w-full tw-h-full tw-relative tw-transform tw-rotate-y-0 tw-transition-transform">
+              <img class="tw-w-full tw-h-40 tw-object-cover tw-object-top" src="../assets/alumni2.jpg" alt="Alumni Name">
+              <div class="tw-p-4">
+                <h3 class="tw-text-lg tw-font-bold tw-text-gray-700">Erlangga</h3>
+              </div>
+            </div>
+            <div class="tw-card-back tw-w-full tw-h-full tw-absolute tw-top-0 tw-left-0 tw-bg-white tw-rounded-lg tw-p-4 tw-transform tw-rotate-y-180 tw-transition-transform">
+              <img class="tw-w-full tw-h-32 tw-object-contain " src="../assets/AirlanggaLogo.svg" alt="Alumni Full Image">
+              <p class="tw-text-gray-600 tw-text-sm tw-mt-4">Graduated in 2022, an entrepreneur in renewable energy.</p>
+            </div>
+          </div>
+        </div>
+        
+        <!-- CARD NAILA -->
+        <div class="tw-bg-white tw-rounded-lg tw-shadow-md tw-overflow-hidden tw-transition-transform tw-transform hover:tw-scale-105 tw-w-64 tw-perspective-1000">
+          <div class="tw-card-inner tw-relative tw-w-full tw-h-full tw-transform-style-preserve-3d tw-transition-transform">
+
+            <div class="tw-card-front tw-w-full tw-h-full tw-relative tw-transform tw-rotate-y-0 tw-transition-transform">
+              <img class="tw-w-full tw-h-40 tw-object-cover tw-object-top" src="../assets/alumni3.jpg" alt="Alumni Name">
+              <div class="tw-p-4">
+                <h3 class="tw-text-lg tw-font-bold tw-text-gray-700">Naila</h3>
+              </div>
+            </div>
+            <div class="tw-card-back tw-w-full tw-h-full tw-absolute tw-top-0 tw-left-0 tw-bg-white tw-rounded-lg tw-p-4 tw-transform tw-rotate-y-180 tw-transition-transform">
+              <img class="tw-w-full tw-h-32 tw-object-contain " src="../assets/UGMLogo.svg" alt="Alumni Full Image">
+              <p class="tw-text-gray-600 tw-text-sm tw-mt-4">Graduated in 2015, founder of a tech startup.</p>
+            </div>
+          </div>
+        </div>
+        
+        <!-- CARD SAFAR -->
+        <div class="tw-bg-white tw-rounded-lg tw-shadow-md tw-overflow-hidden tw-transition-transform tw-transform hover:tw-scale-105 tw-w-64 tw-perspective-1000">
+          <div class="tw-card-inner tw-relative tw-w-full tw-h-full tw-transform-style-preserve-3d tw-transition-transform">
+
+            <div class="tw-card-front tw-w-full tw-h-full tw-relative tw-transform tw-rotate-y-0 tw-transition-transform">
+              <img class="tw-w-full tw-h-40 tw-object-cover" src="../assets/alumni4.jpg" alt="Alumni Name">
+              <div class="tw-p-4">
+                <h3 class="tw-text-lg tw-font-bold tw-text-gray-700">Safar</h3>
+              </div>
+            </div>
+            
+            <div class="tw-card-back tw-w-full tw-h-full tw-absolute tw-top-0 tw-left-0 tw-bg-white tw-rounded-lg tw-p-4 tw-transform tw-rotate-y-180 tw-transition-transform">
+              <img class="tw-w-full tw-h-32 tw-object-contain " src="../assets/UNDIPLogo.svg" alt="Alumni Full Image">
+              <p class="tw-text-gray-600 tw-text-sm tw-mt-4">Graduated in 2021, a professional athlete.</p>
+            </div>
+          </div>
+        </div>
+      </div>
   
-  <!-- ADVANTAGES -->
+  <!-- ADVANTAGES SECTION -->
   <div class="tw-my-8 tw-border tw-rounded-lg">
     <h3 class="tw-text-center tw-m-4 tw-font-semibold tw-text-xl">
       5 Advantages of ERSANAWATA Senior High School
     </h3>
     <div class="accordion tw-my-4 tw-mx-4 tw-border-none" id="pilarAccordion">
-      <!-- Item 1 -->
+
       <div class="accordion-item tw-border-b">
         <h4 class="accordion-header">
           <button
@@ -517,7 +579,7 @@
           </div>
         </div>
       </div>
-      <!-- Item 2 -->
+
       <div class="accordion-item tw-border-b">
         <h4 class="accordion-header">
           <button
@@ -536,7 +598,7 @@
           </div>
         </div>
       </div>
-      <!-- Item 3 -->
+
       <div class="accordion-item tw-border-b">
         <h4 class="accordion-header">
           <button
@@ -554,7 +616,7 @@
           </div>
         </div>
       </div>
-      <!-- Item 4 -->
+
       <div class="accordion-item tw-border-b">
         <h4 class="accordion-header">
           <button
@@ -572,7 +634,7 @@
           </div>
         </div>
       </div>
-      <!-- Item 5 -->
+
       <div class="accordion-item tw-border-b">
         <h4 class="accordion-header">
           <button
@@ -590,11 +652,7 @@
             national and international levels.
           </div>
         </div>
-      </div>
-    </div>
-  </div>
-  
-      
+     
     <script src="../src/bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="../js/index.js"></script>
   </body>
