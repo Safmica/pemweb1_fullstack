@@ -847,10 +847,6 @@ video {
   height: 100vh;
 }
 
-.tw-h-1 {
-  height: 0.25rem;
-}
-
 .tw-min-h-screen {
   min-height: 100vh;
 }
@@ -1200,11 +1196,6 @@ video {
 .tw-bg-gray-900 {
   --tw-bg-opacity: 1;
   background-color: rgb(17 24 39 / var(--tw-bg-opacity));
-}
-
-.tw-bg-orange-400 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(251 146 60 / var(--tw-bg-opacity));
 }
 
 .tw-bg-transparent {
@@ -1673,6 +1664,10 @@ video {
   transition-duration: 150ms;
 }
 
+.tw-duration-100 {
+  transition-duration: 100ms;
+}
+
 .tw-duration-1000 {
   transition-duration: 1000ms;
 }
@@ -1687,10 +1682,6 @@ video {
 
 .tw-duration-500 {
   transition-duration: 500ms;
-}
-
-.tw-duration-100 {
-  transition-duration: 100ms;
 }
 
 @font-face {
@@ -1880,16 +1871,6 @@ body {
   cursor: url('../assets/cursor.png'), auto;
 }
 
-.hover\:tw-size-96:hover {
-  width: 24rem;
-  height: 24rem;
-}
-
-.hover\:tw-size-28:hover {
-  width: 7rem;
-  height: 7rem;
-}
-
 .hover\:tw-translate-y-1:hover {
   --tw-translate-y: 0.25rem;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
@@ -1954,9 +1935,9 @@ body {
   fill: #dc2626;
 }
 
-.hover\:tw-text-xl:hover {
-  font-size: 1.25rem;
-  line-height: 1.75rem;
+.hover\:tw-text-6xl:hover {
+  font-size: 3.75rem;
+  line-height: 1;
 }
 
 .hover\:tw-text-lg:hover {
@@ -1964,28 +1945,20 @@ body {
   line-height: 1.75rem;
 }
 
-.hover\:tw-text-6xl:hover {
-  font-size: 3.75rem;
-  line-height: 1;
-}
-
-.hover\:tw-text-sm:hover {
-  font-size: 0.875rem;
-  line-height: 1.25rem;
-}
-
-.hover\:tw-text-base:hover {
-  font-size: 1rem;
-  line-height: 1.5rem;
-}
-
 .hover\:tw-opacity-50:hover {
   opacity: 0.5;
 }
 
-.tw-group:hover .group-hover\:tw-size-96 {
-  width: 24rem;
-  height: 24rem;
+.hover\:tw-transition-all:hover {
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
+.hover\:\*\:tw-transition-all > *:hover {
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
 }
 
 .tw-group:hover .group-hover\:tw-translate-y-\[0\%\] {
