@@ -25,31 +25,31 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     }
 
 
-    if (isset($data['namaLengkap'], $data['namaPanggilan'], $data['jenisKelamin'], $data['nisn'], $data['nik'], 
-            $data['tempatLahir'], $data['tanggalLahir'], $data['agama'], $data['golonganDarah'], 
-            $data['alamatRumah'], $data['nomorHp'], $data['emailPendaftaran'])) {
+    if (isset($data['fullName'], $data['nickname'], $data['gender'], $data['nisn'], $data['nik'], 
+            $data['birthPlace'], $data['birthDate'], $data['religion'], $data['bloodType'], 
+            $data['homeAddress'], $data['phoneNumber'], $data['registrationEmail'])) {
 
         $id_user = $data['id_user'];
         $id = generateUUID();
-        $namaLengkap = $data['namaLengkap'];
-        $namaPanggilan = $data['namaPanggilan'];
-        $jenisKelamin = $data['jenisKelamin'];
+        $fullName = $data['fullName'];
+        $nickname = $data['nickname'];
+        $gender = $data['gender'];
         $nisn = $data['nisn'];
         $nik = $data['nik'];
-        $tempatLahir = $data['tempatLahir'];
-        $tanggalLahir = $data['tanggalLahir'];
-        $agama = $data['agama'];
-        $golonganDarah = isset($data['golonganDarah']) ? $data['golonganDarah'] : '';
-        $alamatRumah = $data['alamatRumah'];
-        $nomorHp = $data['nomorHp'];
-        $emailPendaftaran = $data['emailPendaftaran'];
+        $birthPlace = $data['birthPlace'];
+        $birthDate = $data['birthDate'];
+        $religion = $data['religion'];
+        $bloodType = isset($data['bloodType']) ? $data['bloodType'] : '';
+        $homeAddress = $data['homeAddress'];
+        $phoneNumber = $data['phoneNumber'];
+        $registrationEmail = $data['registrationEmail'];
 
         $stmt = $conn->prepare("INSERT INTO pendaftaran (id, id_user, nama_lengkap, nama_panggilan, jenis_kelamin, nisn, nik, tempat_lahir, 
                               tanggal_lahir, agama, golongan_darah, alamat_rumah, nomor_hp, email_pendaftaran) 
                               VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
 
-        $stmt->bind_param("ssssssssssssss", $id, $id_user, $namaLengkap, $namaPanggilan, $jenisKelamin, $nisn, $nik, $tempatLahir, 
-                          $tanggalLahir, $agama, $golonganDarah, $alamatRumah, $nomorHp, $emailPendaftaran);
+        $stmt->bind_param("ssssssssssssss", $id, $id_user, $fullName, $nickname, $gender, $nisn, $nik, $birthPlace, 
+                          $birthDate, $religion, $bloodType, $homeAddress, $phoneNumber, $registrationEmail);
 
         if ($stmt->execute()) {
             echo json_encode([
