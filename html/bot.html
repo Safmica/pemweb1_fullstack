@@ -141,7 +141,6 @@
         <div class="card">
             <div class="card-body">
                 <div id="chat-box" class="mb-3 tw-bg-customBlue" style="max-height: 300px; overflow-y: auto;">
-                    <!-- Chat log akan ditampilkan di sini -->
                 </div>
                 <div class="input-group">
                     <select id="user-input" class="form-select">
@@ -166,7 +165,6 @@
             const userInput = document.getElementById("user-input");
             const sendBtn = document.getElementById("send-btn");
 
-            // Data pertanyaan dan jawaban statis
             const botResponses = {
                 "Why can't I register for ERSANAWATA High School?": "If you're unable to register, it could be due to incomplete documents, missing the application deadline, or not meeting the required academic criteria. Please check your application and try again.",
                 "What are the general requirements to apply for ERSANAWATA High School?": "The general requirements include a completed application form, recent school records, and meeting the minimum academic standards set by ERSANAWATA. Please refer to the official website for detailed instructions.",
@@ -178,27 +176,20 @@
                 "Are there any specific documents needed for the general pathway?": "For the general pathway, you need to provide your school report card, birth certificate, and a recent photograph. The process is simpler compared to the academic pathway."
             };
 
-
-            // Fungsi untuk menambah pesan ke chatbox
             function addMessage(message, sender) {
                 const messageDiv = document.createElement("div");
                 messageDiv.classList.add(sender === "bot" ? "bot-message" : "user-message");
                 messageDiv.textContent = message;
                 chatBox.appendChild(messageDiv);
-                chatBox.scrollTop = chatBox.scrollHeight; // Auto-scroll
+                chatBox.scrollTop = chatBox.scrollHeight;
             }
 
-            // Event ketika tombol diklik
             sendBtn.addEventListener("click", function () {
                 const userText = userInput.value;
                 if (userText) {
                     addMessage(userText, "user");
-
-                    // Cari jawaban dari bot
                     const botReply = botResponses[userText] || "Sorry, I don't understand your question.";
                     addMessage(botReply, "bot");
-
-                    // Reset dropdown ke pilihan default
                     userInput.selectedIndex = 0;
                 }
             });

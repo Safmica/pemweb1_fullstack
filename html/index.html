@@ -729,12 +729,12 @@
     </style>
 </head>
 <body>
-    <!-- <div class="curtain curtain-top tw-align-middle tw-justify-center tw-flex">
+    <div class="curtain curtain-top tw-align-middle tw-justify-center tw-flex">
         <img src="../assets/logo.webp" height="30" alt="Logo" class="logo fade-in" id="fadeInElement">
     </div>
     <div class="curtain curtain-bottom tw-flex tw-justify-center tw-align-middle">
         <h1 class="title-curtain tw-text-customBlue tw-font-extrabold tw-text-4xl" id="animatedTitle"></h1>
-    </div> -->
+    </div>
     <a href="bot.html">
       <div class="bot">
         <img src="../assets/logo.png" width="20">
@@ -1335,20 +1335,14 @@
   var logoutButton = document.getElementById('logoutButton');
 
   if (username) {
-    // Jika ada username, ubah teks tombol menjadi username dan tampilkan opsi logout
     loginButton.textContent = username;
-    loginButton.setAttribute("data-bs-toggle", "dropdown"); // Menambahkan fitur dropdown
-
-    // Menambahkan event listener untuk logout
+    loginButton.setAttribute("data-bs-toggle", "dropdown");
     logoutButton.addEventListener('click', function() {
-      // Menghapus cookie (logout)
       document.cookie = "username=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
       document.cookie = "user_id=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
-      // Redirect ke halaman login
       window.location.href = 'login.html';
     });
   } else {
-    // Jika tidak ada username di cookie, tetap tampilkan "Login"
     loginButton.addEventListener('click', function() {
       window.location.href = 'login.html';
     });
