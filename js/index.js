@@ -144,13 +144,20 @@ function animateValue(id, start, end, duration, ext) {
   requestAnimationFrame(animate);
 }
 
+<<<<<<< HEAD
+animateValue("achievement-1", 0, 97, 2000, '%');
+animateValue("achievement-2", 0, 24, 2000, ' Years');
+animateValue("achievement-3", 0, 100, 2000, ' Top');
+animateValue("achievement-4", 0, 147, 2000, 'x');
+
+=======
 function startAnimation(entries, observer) {
   entries.forEach((entry) => {
     if (entry.isIntersecting) {
-      animateValue("achievement-1", 0, 97, 2000, "%");
-      animateValue("achievement-2", 0, 24, 2000, " Years");
-      animateValue("achievement-3", 0, 100, 2000, " Top");
-      animateValue("achievement-4", 0, 147, 2000, "x");
+      animateValue("achievement-1", 0, 97, 2000, '%');
+      animateValue("achievement-2", 0, 24, 2000, ' Years');
+      animateValue("achievement-3", 0, 100, 2000, ' Top');
+      animateValue("achievement-4", 0, 147, 2000, 'x');
       observer.disconnect();
     }
   });
@@ -167,7 +174,9 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 });
 
+
 // Wahyu Trisno Aji
+
 // ADVANTAGES SECTION
 function toggleAccordion(index) {
   const buttons = document.querySelectorAll(".accordion-button");
