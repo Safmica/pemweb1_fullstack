@@ -8,37 +8,418 @@
     <title>About</title>
   </head>
   <style>
-        .navbar .nav-link, .navbar .navbar-brand {
-            color: white;
-            transition: color 0.3s ease;
-        }
+    .navbar .nav-link,
+    .navbar .navbar-brand {
+      color: white;
+      transition: color 0.3s ease;
+    }
 
-        .navbar .nav-link:hover {
-            color: #f8f9fa;
-            text-decoration: underline;
-        }
+    .navbar .nav-link:hover {
+      color: #f8f9fa;
+      text-decoration: underline;
+    }
 
-        .nav-link.tw-text-customOrange {
-            color: #ff9800 !important;
-        }
+    .nav-link.tw-text-customOrange {
+      color: #ff9800 !important;
+    }
 
-        .btn.tw-bg-customOrange {
-            transition: background-color 0.3s ease, transform 0.3s ease;
-        }
+    .btn.tw-bg-customOrange {
+      transition: background-color 0.3s ease, transform 0.3s ease;
+    }
 
-        .btn.tw-bg-customOrange:hover {
-            background-color: #ff9800;
-            transform: scale(1.05);
-        }
+    .btn.tw-bg-customOrange:hover {
+      background-color: #ff9800;
+      transform: scale(1.05);
+    }
+
+    .accordion {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+.accordion-container {
+  overflow: hidden;
+}
+
+
   </style>
   <body>
-    <div class="flex mt-5">
-      <a class="" href="index.html">Home ></a>
-      <p>About Us</p>
-    </div>
-    <hr class="my-4 tw-w-0.2" />
+    <nav class="navbar navbar-expand-lg tw-bg-customBlue">
+      <div class="container">
+        <a class="navbar-brand d-flex align-items-center" href="index.html">
+          <img
+            src="../assets/logo_nav.png"
+            alt="Logo"
+            width="30"
+            height="30"
+            class="d-inline-block align-top me-2"
+          />
+          <p class="tw-font-bold tw-text-white">ERSANAWATA</p>
+        </a>
+        <button
+          class="navbar-toggler tw-bg-customOrange"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarContent"
+          aria-controls="navbarContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarContent">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active tw-text-customOrange" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="About.html">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="jurusan.html">Major</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="Achievement.html">Achievement</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="activity.html">Activity</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">PPDB</a>
+            </li>
+          </ul>
+          <a
+            class="btn tw-bg-customOrange ms-lg-3 text-white"
+            href="#"
+            role="button"
+            >Login</a
+          >
+        </div>
+      </div>
+    </nav>
 
-    <div class="container mt-5 mx-8">
+    <div class="tw-px-8">
+      <div class="tw-flex tw-mt-8 tw-ml-8">
+        <a href="index.html">Home ></a>
+        <p class="tw-ml-2">About Us</p>
+      </div>
+    </div>
+
+    <hr class="tw-my-4 tw-w-0.2" />
+
+    <!-- INTRODUCING -->
+    <div class="tw-container tw-mx-auto tw-py-10 tw-px-4 md:tw-px-16">
+      <div class="tw-text-center tw-mb-10">
+        <h1 class="tw-text-5xl tw-font-extrabold tw-text-gray-800">
+          SENIOR HIGH SCHOOL
+        </h1>
+        <p class="tw-text-lg tw-font-semibold tw-text-gray-600">ERSANAWATA</p>
+        <div
+          class="tw-border-t-2 tw-border-gray-300 tw-w-16 tw-mx-auto tw-mt-2"
+        ></div>
+      </div>
+
+      <div class="tw-grid md:tw-grid-cols-2 tw-gap-8">
+
+        <div>
+          <p
+            class="tw-text-gray-700 tw-leading-relaxed tw-mb-4 tw-text-justify"
+          >
+            ERSANAWATA Senior High School is an international-level institution
+            dedicated to preparing students for a global future. Offering two
+            main programs, Natural Sciences (IPA) and Social Sciences (IPS), the
+            school combines a modern curriculum with expert educators and
+            excellent facilities to provide a well-rounded educational
+            experience.
+          </p>
+          <p class="tw-text-gray-700 tw-leading-relaxed tw-text-justify">
+            With a focus on academic excellence and character development,
+            ERSANAWATA empowers students to reach their full potential. By
+            fostering creativity, integrity, and innovation, the school equips
+            future leaders to make meaningful contributions to society on a
+            global scale.
+          </p>
+          <div class="tw-mt-6">
+            <p class="tw-font-semibold tw-text-gray-800">
+              We Are In Social Media:
+            </p>
+            <div class="tw-flex tw-space-x-4 tw-mt-2">
+              <svg
+                class="tw-w-5 tw-h-5 tw-fill-slate-400 hover:tw-fill-blue-600 hover:tw-translate-y-1 tw-cursor-pointer"
+                role="img"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <title>Facebook</title>
+                <path
+                  d="M9.101 23.691v-7.98H6.627v-3.667h2.474v-1.58c0-4.085 1.848-5.978 5.858-5.978.401 0 .955.042 1.468.103a8.68 8.68 0 0 1 1.141.195v3.325a8.623 8.623 0 0 0-.653-.036 26.805 26.805 0 0 0-.733-.009c-.707 0-1.259.096-1.675.309a1.686 1.686 0 0 0-.679.622c-.258.42-.374.995-.374 1.752v1.297h3.919l-.386 2.103-.287 1.564h-3.246v8.245C19.396 23.238 24 18.179 24 12.044c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.628 3.874 10.35 9.101 11.647Z"
+                />
+              </svg>
+              <svg
+                class="tw-w-5 tw-h-5 tw-fill-slate-400 hover:tw-fill-red-600 hover:tw-translate-y-1 tw-cursor-pointer"
+                role="img"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <title>Instagram</title>
+                <path
+                  d="M7.0301.084c-1.2768.0602-2.1487.264-2.911.5634-.7888.3075-1.4575.72-2.1228 1.3877-.6652.6677-1.075 1.3368-1.3802 2.127-.2954.7638-.4956 1.6365-.552 2.914-.0564 1.2775-.0689 1.6882-.0626 4.947.0062 3.2586.0206 3.6671.0825 4.9473.061 1.2765.264 2.1482.5635 2.9107.308.7889.72 1.4573 1.388 2.1228.6679.6655 1.3365 1.0743 2.1285 1.38.7632.295 1.6361.4961 2.9134.552 1.2773.056 1.6884.069 4.9462.0627 3.2578-.0062 3.668-.0207 4.9478-.0814 1.28-.0607 2.147-.2652 2.9098-.5633.7889-.3086 1.4578-.72 2.1228-1.3881.665-.6682 1.0745-1.3378 1.3795-2.1284.2957-.7632.4966-1.636.552-2.9124.056-1.2809.0692-1.6898.063-4.948-.0063-3.2583-.021-3.6668-.0817-4.9465-.0607-1.2797-.264-2.1487-.5633-2.9117-.3084-.7889-.72-1.4568-1.3876-2.1228C21.2982 1.33 20.628.9208 19.8378.6165 19.074.321 18.2017.1197 16.9244.0645 15.6471.0093 15.236-.005 11.977.0014 8.718.0076 8.31.0215 7.0301.0839m.1402 21.6932c-1.17-.0509-1.8053-.2453-2.2287-.408-.5606-.216-.96-.4771-1.3819-.895-.422-.4178-.6811-.8186-.9-1.378-.1644-.4234-.3624-1.058-.4171-2.228-.0595-1.2645-.072-1.6442-.079-4.848-.007-3.2037.0053-3.583.0607-4.848.05-1.169.2456-1.805.408-2.2282.216-.5613.4762-.96.895-1.3816.4188-.4217.8184-.6814 1.3783-.9003.423-.1651 1.0575-.3614 2.227-.4171 1.2655-.06 1.6447-.072 4.848-.079 3.2033-.007 3.5835.005 4.8495.0608 1.169.0508 1.8053.2445 2.228.408.5608.216.96.4754 1.3816.895.4217.4194.6816.8176.9005 1.3787.1653.4217.3617 1.056.4169 2.2263.0602 1.2655.0739 1.645.0796 4.848.0058 3.203-.0055 3.5834-.061 4.848-.051 1.17-.245 1.8055-.408 2.2294-.216.5604-.4763.96-.8954 1.3814-.419.4215-.8181.6811-1.3783.9-.4224.1649-1.0577.3617-2.2262.4174-1.2656.0595-1.6448.072-4.8493.079-3.2045.007-3.5825-.006-4.848-.0608M16.953 5.5864A1.44 1.44 0 1 0 18.39 4.144a1.44 1.44 0 0 0-1.437 1.4424M5.8385 12.012c.0067 3.4032 2.7706 6.1557 6.173 6.1493 3.4026-.0065 6.157-2.7701 6.1506-6.1733-.0065-3.4032-2.771-6.1565-6.174-6.1498-3.403.0067-6.156 2.771-6.1496 6.1738M8 12.0077a4 4 0 1 1 4.008 3.9921A3.9996 3.9996 0 0 1 8 12.0077"
+                />
+              </svg>
+              <svg
+                class="tw-w-5 tw-h-5 tw-fill-slate-400 hover:tw-fill-blue-600 hover:tw-translate-y-1 tw-cursor-pointer"
+                role="img"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <title>LinkedIn</title>
+                <path
+                  d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"
+                />
+              </svg>
+            </div>
+          </div>
+        </div>
+
+      
+        <div class="tw-relative">
+          <div
+            class="tw-w-3/4 md:tw-w-3/4 tw-mx-auto tw-shadow-lg tw-rounded-lg tw-overflow-hidden md:"
+          >
+            <img
+              src="../assets/aboutUs.jpg"
+              alt="ERSANAWATA Letter"
+              class="tw-w-full tw-object-cover"
+            />
+          </div>
+          <div
+            class="tw-absolute tw-top-2 tw-right-2 tw-bg-white tw-shadow-md tw-rounded-lg tw-p-3 tw-w-48"
+          >
+            <div class="tw-flex tw-items-center tw-mb-2">
+              <img
+                src="../assets/ceo.jpg"
+                alt="Profile"
+                class="tw-w-8 tw-h-8 tw-rounded-full tw-mr-2"
+              />
+
+              <div class="tw-flex">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  class="tw-w-4 tw-h-4 tw-fill-yellow-400 tw-stroke-yellow-400"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M11.48 3.499a.562.562 0 0 1 1.04 0l2.125 5.111a.563.563 0 0 0 .475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 0 0-.182.557l1.285 5.385a.562.562 0 0 1-.84.61l-4.725-2.885a.562.562 0 0 0-.586 0L6.982 20.54a.562.562 0 0 1-.84-.61l1.285-5.386a.562.562 0 0 0-.182-.557l-4.204-3.602a.562.562 0 0 1 .321-.988l5.518-.442a.563.563 0 0 0 .475-.345L11.48 3.5Z"
+                  />
+                </svg>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  class="tw-w-4 tw-h-4 tw-fill-yellow-400 tw-stroke-yellow-400"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M11.48 3.499a.562.562 0 0 1 1.04 0l2.125 5.111a.563.563 0 0 0 .475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 0 0-.182.557l1.285 5.385a.562.562 0 0 1-.84.61l-4.725-2.885a.562.562 0 0 0-.586 0L6.982 20.54a.562.562 0 0 1-.84-.61l1.285-5.386a.562.562 0 0 0-.182-.557l-4.204-3.602a.562.562 0 0 1 .321-.988l5.518-.442a.563.563 0 0 0 .475-.345L11.48 3.5Z"
+                  />
+                </svg>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  class="tw-w-4 tw-h-4 tw-fill-yellow-400 tw-stroke-yellow-400"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M11.48 3.499a.562.562 0 0 1 1.04 0l2.125 5.111a.563.563 0 0 0 .475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 0 0-.182.557l1.285 5.385a.562.562 0 0 1-.84.61l-4.725-2.885a.562.562 0 0 0-.586 0L6.982 20.54a.562.562 0 0 1-.84-.61l1.285-5.386a.562.562 0 0 0-.182-.557l-4.204-3.602a.562.562 0 0 1 .321-.988l5.518-.442a.563.563 0 0 0 .475-.345L11.48 3.5Z"
+                  />
+                </svg>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  class="tw-w-4 tw-h-4 tw-fill-yellow-400 tw-stroke-yellow-400"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M11.48 3.499a.562.562 0 0 1 1.04 0l2.125 5.111a.563.563 0 0 0 .475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 0 0-.182.557l1.285 5.385a.562.562 0 0 1-.84.61l-4.725-2.885a.562.562 0 0 0-.586 0L6.982 20.54a.562.562 0 0 1-.84-.61l1.285-5.386a.562.562 0 0 0-.182-.557l-4.204-3.602a.562.562 0 0 1 .321-.988l5.518-.442a.563.563 0 0 0 .475-.345L11.48 3.5Z"
+                  />
+                </svg>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  class="tw-w-4 tw-h-4 tw-fill-yellow-400 tw-stroke-yellow-400"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M11.48 3.499a.562.562 0 0 1 1.04 0l2.125 5.111a.563.563 0 0 0 .475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 0 0-.182.557l1.285 5.385a.562.562 0 0 1-.84.61l-4.725-2.885a.562.562 0 0 0-.586 0L6.982 20.54a.562.562 0 0 1-.84-.61l1.285-5.386a.562.562 0 0 0-.182-.557l-4.204-3.602a.562.562 0 0 1 .321-.988l5.518-.442a.563.563 0 0 0 .475-.345L11.48 3.5Z"
+                  />
+                </svg>
+              </div>
+            </div>
+
+            <p
+              class="tw-w-38 tw-text-xs tw-text-slate-800 tw-mb-1.5 tw-font-bold"
+            >
+              Unlock knowledge, shape the future with ERSANAWATA
+            </p>
+            <p class="tw-text-xs tw-font-normal tw-text-slate-500">
+              Motivator, Content Creator
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+<br><br><br><br>
+    <!-- Akreditasi -->
+    <div class="tw-bg-gray-900 tw-text-white">
+      <div
+        class="tw-relative tw-bg-cover tw-bg-center tw-py-12"
+        style="
+          background-image: url(../assets/akreditasi.jpg);
+        "
+      >
+
+        <div class="tw-absolute tw-inset-0 tw-bg-black tw-bg-opacity-60"></div>
+
+
+        <div class="tw-relative tw-max-w-5xl tw-mx-auto tw-text-center">
+
+          <h1 class="tw-text-3xl md:tw-text-4xl tw-font-bold tw-mb-4">
+            National Accreditation of ERSANAWATA Senior High School
+          </h1>
+          <p class="tw-text-gray-300 tw-mb-8">
+            This recap was updated in January 2024 and will be updated
+            periodically.
+          </p>
+
+          <!-- Statistik -->
+          <div
+            class="tw-grid tw-grid-cols-2 md:tw-grid-cols-3 tw-gap-4 tw-mb-8 tw-text-center"
+          >
+            <div>
+              <p class="tw-text-blue-400 tw-text-5xl tw-font-bold">94 Point</p>
+              <p class="tw-text-gray-300">Natural Sciences</p>
+            </div>
+            <div>
+              <p class="tw-text-blue-400 tw-text-5xl tw-font-bold">92 Point</p>
+              <p class="tw-text-gray-300">Social Sciences</p>
+            </div>
+            <div>
+              <p class="tw-text-blue-400 tw-text-5xl tw-font-bold">92 Point</p>
+              <p class="tw-text-gray-300">Educator Resources</p>
+            </div>
+            <div>
+              <p class="tw-text-blue-400 tw-text-5xl tw-font-bold">96 Point</p>
+              <p class="tw-text-gray-300">Facility</p>
+            </div>
+            <div>
+              <p class="tw-text-blue-400 tw-text-5xl tw-font-bold">98 Point</p>
+              <p class="tw-text-gray-300">Environment</p>
+            </div>
+            <div>
+              <p class="tw-text-blue-400 tw-text-5xl tw-font-bold">90 Point</p>
+              <p class="tw-text-gray-300">Alumni</p>
+            </div>
+          </div>
+
+          <div class="tw-flex tw-justify-center tw-space-x-4">
+            <a
+              href="#"
+              class="tw-bg-blue-400 tw-text-gray-900 tw-font-semibold tw-px-6 tw-py-2 tw-rounded hover:tw-bg-orange-500 tw-transition"
+            >
+              Check International Accreditation
+            </a>
+            <a
+              href="https://ban-pdm.id/"
+              class="tw-bg-gray-700 tw-text-white tw-font-semibold tw-px-6 tw-py-2 tw-rounded hover:tw-bg-gray-500 tw-transition"
+            >
+              About BAN-PDM
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  <!-- FACILITY -->
+  <div class="tw-container tw-mx-auto tw-py-10 tw-px-4 md:tw-px-16">
+    <div class="tw-text-center tw-mb-10">
+      <h1 class="tw-text-5xl tw-font-extrabold tw-text-gray-800">
+        OUR FACILITIES
+      </h1>
+      <p class="tw-text-lg tw-font-semibold tw-text-gray-600">A comfortable school with complete facilities will increase the enthusiasm of students to study at ERSANAWATA high school</p>
+      
+
+    <!-- HISTORY -->
+    <div class="tw-container tw-mx-auto tw-py-10 tw-px-4 md:tw-px-16">
+      <div class="tw-text-center tw-mb-10">
+        <h1 class="tw-text-5xl tw-font-extrabold tw-text-gray-800">
+          HISTORY OF
+        </h1>
+        <p class="tw-text-lg tw-font-semibold tw-text-gray-600">ERSANAWATA HIGH SCHOOL</p>
+        <div
+          class="tw-border-t-2 tw-border-gray-300 tw-w-16 tw-mx-auto tw-mt-2"
+        ></div>
+      </div>
+
+      <div class="container">
+        <div>
+          <img src="../assets/historyImage.jpg" alt="">
+        </div>
+        <p class="tw-text-justify tw-tracking-wider tw-mt-4">
+          Established in 1985, ERSANAWATA High School began as a small
+          educational institution with a vision to provide quality education
+          and nurture future leaders. Founded by a group of dedicated
+          educators and community leaders, the school initially operated in a
+          modest building with just a handful of students and teachers.
+        </p>
+        <br />
+        <p class="tw-text-justify tw-tracking-wider">
+          Over the years, ERSANAWATA grew steadily, becoming a beacon of
+          academic excellence and character development. By the early 2000s,
+          the school expanded its facilities, incorporating state-of-the-art
+          classrooms, laboratories, and a library that housed thousands of
+          books and digital resources.
+        </p>
+        <br />
+        <p class="tw-text-justify tw-tracking-wider">
+          The name "ERSANAWATA" symbolizes unity, wisdom, and
+          perseverance—values that have been deeply ingrained in the school's
+          culture. The school has always prioritized holistic education,
+          blending academic achievements with extracurricular activities such
+          as arts, sports, and community service.
+        </p>
+        <br />
+        <p class="tw-text-justify tw-tracking-wider">
+          Today, ERSANAWATA High School is a proud institution with a diverse
+          community of students and alumni who excel in various fields. Its
+          reputation as a center for excellence continues to inspire
+          generations to strive for knowledge, integrity, and innovation.
+        </p>
+        <br />
+      </div>
+      
+      <!-- HEADMASTER -->
+    <div class="container tw-mt-12">
       <div class="row">
         <div class="col-md-5">
           <img
@@ -50,20 +431,14 @@
         </div>
 
         <div class="col-md-7 tw-font-poppins">
-          <h1 class="mb-2 tw-text-5xl tw-font-bold">Our Story</h1>
-          <p class="text-justify">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem
-            error animi sapiente, repellendus a consequuntur. Accusantium
-            obcaecati delectus quo nam distinctio est molestiae, natus quidem,
-            cupiditate accusamus eaque dolores dicta expedita debitis quod
-            laboriosam voluptates nobis nihil iure velit animi.
+          <h1 class="tw-text-4xl tw-font-extrabold tw-text-gray-800">HEADMASTER</h1>
+          <p class="tw-text-justify tw-tracking-wider">
+            On behalf of the entire ERSANAWATA Senior High School community, I am delighted to welcome you to our school. Our vision is to nurture students who excel academically, embody ethical values, and are prepared to become the future leaders of our society. At ERSANAWATA, we foster a supportive environment where students are encouraged to thrive, pursue their dreams, and develop their full potential. Through our competency-based curriculum, we integrate academic excellence with character-building and essential 21st-century skills, ensuring students are well-equipped to face the challenges of a dynamic world.
           </p>
           <br />
-          <p class="text-justify">
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cupiditate
-            ab explicabo reiciendis perspiciatis in soluta sint itaque nostrum
-            cum velit?
-          </p>
+          <p class="tw-text-justify tw-tracking-wider">
+            We are proud to offer a holistic education that combines modern facilities, engaging extracurricular programs, and leadership development initiatives. Our dedicated educators serve as mentors, guiding students on their academic and personal growth journeys. With the support of our committed staff and parents, we aim to cultivate not only outstanding scholars but also compassionate individuals who will contribute positively to society. We invite you to discover all that ERSANAWATA Senior High School has to offer and look forward to supporting our students in achieving their aspirations.          </p>
+          <br />
           <p class="tw-font-medium">
             Dr. Nisa Almawati, M.B.A <br />
             <small class="text-muted">Founding of Ersanawata High School</small>
@@ -72,114 +447,155 @@
       </div>
     </div>
 
-    <div class="container mt-5 tw-font-poppins">
-      <div class="tw-flex tw-justify-start">
-        <div class="col-md-6 tw-bg-blue-700 tw-mr-4">
-          <div class="tw-">
-            <h3 class="tw-text-center tw-mt-2 tw-text-3xl tw-font-bold">Visi</h3>
-            <p class="tw-m-2">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi
-              nobis illo dolorem, dignissimos qui dolore delectus est velit
-              incidunt ipsam perferendis eligendi molestiae possimus ullam
-              praesentium? Qui accusantium eius ullam.
-            </p>
+    <!-- VISI MISI -->
+    <div class="container tw-flex tw-flex-wrap md:tw-flex-nowrap tw-mt-32">
+      <div
+        class="tw-bg-blue-400 tw-mb-4 md:tw-mb-0 md:tw-mr-4 md:tw-w-1/2 tw-text-center tw-py-4"
+      >
+        <h3 class="tw-mt-2 tw-text-3xl tw-font-bold">Visi</h3>
+        <p class="tw-m-2">
+          To become a leading educational institution that fosters intelligent,
+          ethical, and innovative individuals capable of making a positive
+          impact on the global community.
+        </p>
+      </div>
+      <div
+        class="tw-bg-blue-400 tw-mb-4 md:tw-mb-0 md:tw-mr-4 md:tw-w-1/2 tw-text-center tw-py-4"
+      >
+        <h3 class="tw-mt-2 tw-text-3xl tw-font-bold">Misi</h3>
+        <p class="tw-m-2">
+          To become a leading educational institution that fosters intelligent,
+          ethical, and innovative individuals capable of making a positive
+          impact on the global community.
+        </p>
+      </div>
+    </div>
+
+    <!-- ALUMNI -->
+    <div class="tw-bg-blue-100 tw-text-center tw-p-3 mt-5 tw-rounded-lg">
+      <div class="tw-mx-auto tw-py-8 tw-px-2 md:tw-px-8">
+        <div class="tw-text-center tw-mb-4">
+          <h1 class="tw-text-5xl tw-font-extrabold tw-text-gray-800">
+            Alumni
+          </h1>
+          <p class="tw-text-lg tw-font-semibold tw-text-gray-600">ERSANAWATA HIGH SCHOOL</p>
+          <div
+            class="tw-border-t-2 tw-border-orange-300 tw-w-16 tw-mx-auto tw-mt-2"
+          ></div>
+        </div>
+      <a
+        href="aboutAlumni.html"
+        class="btn tw-bg-customOrange tw-text-white tw-mt-3 tw-px-4 tw-py-2 tw-rounded hover:tw-bg-orange-500"
+      >
+        Find Our Alumni
+      </a>
+    </div>
+  </div>
+  
+  <!-- ADVANTAGES -->
+  <div class="tw-my-8 tw-border tw-rounded-lg">
+    <h3 class="tw-text-center tw-m-4 tw-font-semibold tw-text-xl">
+      5 Advantages of ERSANAWATA Senior High School
+    </h3>
+    <div class="accordion tw-my-4 tw-mx-4 tw-border-none" id="pilarAccordion">
+      <!-- Item 1 -->
+      <div class="accordion-item tw-border-b">
+        <h4 class="accordion-header">
+          <button
+            class="accordion-button collapsed tw-w-full tw-py-3 tw-text-left tw-border-none tw-bg-white tw-font-medium tw-cursor-pointer"
+            type="button"
+            onclick="toggleAccordion(0)"
+          >
+            Competency-Based Curriculum Excellence
+          </button>
+        </h4>
+        <div class="accordion-collapse collapse" id="content-0">
+          <div class="accordion-body tw-text-justify tw-px-4 tw-py-2 tw-bg-gray-50">
+            ERSANAWATA Senior High School implements a curriculum that integrates
+            academic excellence, 21st-century skills, and character-building values
+            to shape outstanding and virtuous students.
           </div>
         </div>
-        <div class="col-md-6 tw-bg-blue-700">
-          <div class="">
-            <h3 class="tw-text-center tw-mt-2 tw-text-3xl tw-font-bold">Misi</h3>
-            <p class="tw-m-2">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo,
-              aliquid? Exercitationem possimus quibusdam facilis quasi aperiam,
-              aliquam tempora delectus iure consequatur incidunt nemo neque iste
-              voluptatem at, in obcaecati corporis?
-            </p>
+      </div>
+      <!-- Item 2 -->
+      <div class="accordion-item tw-border-b">
+        <h4 class="accordion-header">
+          <button
+            class="accordion-button collapsed tw-w-full tw-py-3 tw-text-left tw-border-none tw-bg-white tw-font-medium tw-cursor-pointer"
+            type="button"
+            onclick="toggleAccordion(1)"
+          >
+            Modern and Comprehensive Facilities
+          </button>
+        </h4>
+        <div class="accordion-collapse collapse" id="content-1">
+          <div class="accordion-body tw-text-justify tw-px-4 tw-py-2 tw-bg-gray-50">
+            Equipped with science laboratories, a digital library, multimedia
+            classrooms, and sports areas to support learning and students' potential
+            development.
+          </div>
+        </div>
+      </div>
+      <!-- Item 3 -->
+      <div class="accordion-item tw-border-b">
+        <h4 class="accordion-header">
+          <button
+            class="accordion-button collapsed tw-w-full tw-py-3 tw-text-left tw-border-none tw-bg-white tw-font-medium tw-cursor-pointer"
+            type="button"
+            onclick="toggleAccordion(2)"
+          >
+            Qualified and Inspiring Teachers
+          </button>
+        </h4>
+        <div class="accordion-collapse collapse" id="content-2">
+          <div class="accordion-body tw-text-justify tw-px-4 tw-py-2 tw-bg-gray-50">
+            Professional and dedicated educators who continuously innovate to create
+            meaningful and enjoyable learning experiences.
+          </div>
+        </div>
+      </div>
+      <!-- Item 4 -->
+      <div class="accordion-item tw-border-b">
+        <h4 class="accordion-header">
+          <button
+            class="accordion-button collapsed tw-w-full tw-py-3 tw-text-left tw-border-none tw-bg-white tw-font-medium tw-cursor-pointer"
+            type="button"
+            onclick="toggleAccordion(3)"
+          >
+            Character and Leadership Development Programs
+          </button>
+        </h4>
+        <div class="accordion-collapse collapse" id="content-3">
+          <div class="accordion-body tw-text-justify tw-px-4 tw-py-2 tw-bg-gray-50">
+            A variety of extracurricular activities, leadership training, and
+            soft-skill workshops to nurture students into future leaders.
+          </div>
+        </div>
+      </div>
+      <!-- Item 5 -->
+      <div class="accordion-item tw-border-b">
+        <h4 class="accordion-header">
+          <button
+            class="accordion-button collapsed tw-w-full tw-py-3 tw-text-left tw-border-none tw-bg-white tw-font-medium tw-cursor-pointer"
+            type="button"
+            onclick="toggleAccordion(4)"
+          >
+            Achievements at National and International Levels
+          </button>
+        </h4>
+        <div class="accordion-collapse collapse" id="content-4">
+          <div class="accordion-body tw-text-justify tw-px-4 tw-py-2 tw-bg-gray-50">
+            ERSANAWATA Senior High School has produced many students who excel in
+            various fields such as science olympiads, arts, sports, and debates at
+            national and international levels.
           </div>
         </div>
       </div>
     </div>
-
-    <div class="container mt-5">
-      <h3 class="text-center mb-4">5 Keunggulan</h3>
-      <div class="accordion" id="pilarAccordion">
-        <div class="accordion-item">
-          <h4 class="accordion-header">
-            <button
-              class="accordion-button collapsed"
-              type="button"
-              onclick="toggleAccordion(0)"
-            >
-              Lorem.
-            </button>
-          </h4>
-          <div class="accordion-collapse collapse" id="content-0">
-            <div class="accordion-body"></div>
-            Lorem ipsum dolor sit amet.
-          </div>
-        </div>
-        <div class="accordion-item">
-          <h4 class="accordion-header">
-            <button
-              class="accordion-button collapsed"
-              type="button"
-              onclick="toggleAccordion(1)"
-            >
-              Lorem.
-            </button>
-          </h4>
-          <div class="accordion-collapse collapse" id="content-1">
-            <div class="accordion-body"></div>
-            Lorem ipsum dolor sit amet.
-          </div>
-        </div>
-        <div class="accordion-item">
-          <h4 class="accordion-header">
-            <button
-              class="accordion-button collapsed"
-              type="button"
-              onclick="toggleAccordion(2)"
-            >
-              Lorem.
-            </button>
-          </h4>
-          <div class="accordion-collapse collapse" id="content-2">
-            <div class="accordion-body"></div>
-            Lorem ipsum dolor sit amet.
-          </div>
-        </div>
-        <div class="accordion-item">
-          <h4 class="accordion-header">
-            <button
-              class="accordion-button collapsed"
-              type="button"
-              onclick="toggleAccordion(3)"
-            >
-              Lorem.
-            </button>
-          </h4>
-          <div class="accordion-collapse collapse" id="content-3">
-            <div class="accordion-body"></div>
-            Lorem ipsum dolor sit amet.
-          </div>
-        </div>
-        <div class="accordion-item">
-          <h4 class="accordion-header">
-            <button
-              class="accordion-button collapsed"
-              type="button"
-              onclick="toggleAccordion(4)"
-            >
-              Lorem.
-            </button>
-          </h4>
-          <div class="accordion-collapse collapse" id="content-4">
-            <div class="accordion-body">Lorem ipsum dolor sit amet.</div>
-          </div>
-        </div>
-      </div>
-    </div>
-
+  </div>
+  
+      
     <script src="../src/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="../js/index.js"></script>
+    <script src="../js/about.js"></script>
   </body>
 </html>
