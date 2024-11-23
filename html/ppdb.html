@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link href="../src/output.css" rel="stylesheet" />
+    <style>
+        .navbar{
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .navbar .nav-link,
+        .navbar .navbar-brand {
+            color: white;
+            transition: color 0.3s ease;
+        }
+
+        .navbar .nav-link:hover {
+            color: #ff9800;
+            text-decoration: underline;
+            text-underline-offset: 4px;
+        }
+
+        .nav-link.tw-text-customOrange {
+            color: #ff9800 !important;
+        }
+
+        .btn.tw-bg-customOrange {
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        .btn.tw-bg-customOrange:hover {
+            background-color: #ff9800;
+            transform: scale(1.05);
+        }
+
+        .nav-item.dropdown:hover .dropdown-menu {
+            display: block;
+        }
+
+        .dropdown-menu {
+            display: none;
+        }
+
+        .form-section {
+            margin-bottom: 20px;
+        }
+        .form-section h5 {
+            font-weight: bold;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .form-group label {
+            font-weight: bold;
+        }
+        .form-group input[type="text"],
+        .form-group input[type="date"],
+        .form-group input[type="email"],
+        .form-group input[type="number"] {
+            width: 100%;
+        }
+        .form-group .form-check {
+            margin-bottom: 10px;
+        }
+        .form-group .form-check-inline {
+            margin-right: 20px;
+        }
+        .form-group .form-check-inline input {
+            margin-right: 5px;
+        }
+        .form-group .form-check-inline label {
+            margin-right: 10px;
+        }
+        .form-group .input-group {
+            width: 100%;
+        }
+        .form-group .input-group input {
+            width: auto;
+        }
+        .form-group .input-group .form-control {
+            width: 100%;
+        }
+
+        #popup {
+            display: none;
+            border-radius: 15px;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            padding: 20px;
+            background-color: white;
+            border: 1px solid #ddd;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            text-align: center;
+            z-index: 9999;
+        }
+
+        #popup button {
+            border-radius: 15px;
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+        }
+
+        #overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 9998;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg tw-bg-customBlue">
+        <div class="container">
+          <a class="navbar-brand d-flex align-items-center" href="index.html">
+            <img
+              src="../assets/logo_nav.png"
+              alt="Logo"
+              width="30"
+              height="30"
+              class="d-inline-block align-top me-2"
+            />
+            <p class="tw-font-bold tw-text-white">ERSANAWATA</p>
+          </a>
+          <button
+            class="navbar-toggler tw-bg-customOrange"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarContent"
+            aria-controls="navbarContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarContent">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active tw-text-customOrange" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="About.html">About</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="majorDropdown" role="button">
+                  Major
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="majorDropdown">
+                  <li><a class="dropdown-item" href="ipa.html">Science</a></li>
+                  <li><a class="dropdown-item" href="ips.html">Social</a></li>
+                </ul>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="achievementDropdown" role="button">
+                  Achievement
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="achievementDropdown">
+                  <li><a class="dropdown-item" href="academic.html">Academic</a></li>
+                  <li><a class="dropdown-item" href="non-academic.html">Non-Academic</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="activity.html">Activity</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">PPDB</a>
+              </li>
+            </ul>
+            <div class="dropdown">
+              <button id="loginButton" class="btn tw-bg-customOrange ms-lg-3 text-white" href="#" role="button">Login</button>
+              <ul class="dropdown-menu" aria-labelledby="loginButton">
+                <li><a class="dropdown-item" href="#" id="logoutButton">Logout</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <div class="container" id="container"  style="display: none;">
+        <div class="form-section">
+            <p class="tw-font-bold tw-text-3xl tw-pb-6">STUDENT REGISTRATION DATA</p>
+            <form id="ppdbForm">
+                <div class="form-group">
+                    <label for="fullName">Full Name <span style="color: red;">*</span></label>
+                    <input required type="text" class="form-control" id="fullName" placeholder="Enter your full name as per your previous school certificate">
+                </div>
+                <div class="form-group">
+                    <label for="nickname">Nickname <span style="color: red;">*</span></label>
+                    <input required type="text" class="form-control" id="nickname" placeholder="Enter your daily nickname">
+                </div>
+                <div class="form-group">
+                    <label>Gender <span style="color: red;">*</span></label>
+                    <div class="form-check">
+                        <input required class="form-check-input" type="radio" name="gender" id="male" value="Male">
+                        <label class="form-check-label" for="male">Male</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="gender" id="female" value="Female">
+                        <label class="form-check-label" for="female">Female</label>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="nisn">NISN <span style="color: red;">*</span></label>
+                    <input required type="text" class="form-control" id="nisn" placeholder="Example: 9999910088">
+                </div>
+                <div class="form-group">
+                    <label for="nik">NIK <span style="color: red;">*</span></label>
+                    <input required type="text" class="form-control" id="nik" placeholder="Example: 3171070403890003">
+                </div>
+                <div class="form-group">
+                    <label for="birthPlace">Place of Birth <span style="color: red;">*</span></label>
+                    <input required type="text" class="form-control" id="birthPlace">
+                </div>
+                <div class="form-group">
+                    <label for="birthDate">Date of Birth <span style="color: red;">*</span></label>
+                    <input required type="date" class="form-control" id="birthDate" placeholder="dd-mm-yyyy">
+                </div>
+                <div class="form-group">
+                    <label>Religion <span style="color: red;">*</span></label>
+                    <div>
+                        <div class="form-check form-check-inline">
+                            <input required class="form-check-input" type="radio" name="religion" id="islam" value="Islam">
+                            <label class="form-check-label" for="islam">Islam</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="religion" id="catholic" value="Catholic">
+                            <label class="form-check-label" for="catholic">Catholic</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="religion" id="buddhist" value="Buddhist">
+                            <label class="form-check-label" for="buddhist">Buddhist</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="religion" id="christian" value="Christian">
+                            <label class="form-check-label" for="christian">Christian</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="religion" id="hindu" value="Hindu">
+                            <label class="form-check-label" for="hindu">Hindu</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>Blood Type</label>
+                    <div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="bloodType" id="a" value="A">
+                            <label class="form-check-label" for="a">A</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="bloodType" id="b" value="B">
+                            <label class="form-check-label" for="b">B</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="bloodType" id="ab" value="AB">
+                            <label class="form-check-label" for="ab">AB</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="bloodType" id="o" value="O">
+                            <label class="form-check-label" for="o">O</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="homeAddress">Home Address <span style="color: red;">*</span></label>
+                    <input required type="text" class="form-control" id="homeAddress" placeholder="e.g., Jln example">
+                </div>
+                <div class="form-group">
+                    <label for="phoneNumber">Contactable Phone Number <span style="color: red;">*</span></label>
+                    <div class="input-group">
+                        <input required type="text" class="form-control" id="phoneNumber" placeholder="+62xxxxxxxxxx">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="registrationEmail">Registration Email <span style="color: red;">*</span></label>
+                    <input required type="email" class="form-control" id="registrationEmail" placeholder="email@gmail.com">
+                </div>
+                <button type="submit" class="btn btn-primary">SEND</button>
+            </form>
+        </div>
+    </div>    
+    <div id="overlay"></div>
+    <div id="popup">
+        <p id="popupMessage"></p>
+        <p id="popupID"></p>
+        <button id="popupButton">OK</button>
+    </div>
+</body>
+<script src="../js/cookie.js"></script>
+<script>
+    document.getElementById('ppdbForm').addEventListener('submit', function(event) {
+    event.preventDefault();
+            
+    const jenisKelamin = document.querySelector('input[name="jenisKelamin"]:checked');
+    const agama = document.querySelector('input[name="agama"]:checked');
+    const golonganDarah = document.querySelector('input[name="golonganDarah"]:checked');
+    
+    if (!jenisKelamin || !agama || !golonganDarah) {
+        alert("Pastikan semua pilihan telah diisi.");
+        return;
+    }
+
+    var id = getCookie('user_id');
+
+    const formData = {
+        id_user: id,
+        namaLengkap: document.getElementById('namaLengkap').value,
+        namaPanggilan: document.getElementById('namaPanggilan').value,
+        jenisKelamin: jenisKelamin.value,
+        nisn: document.getElementById('nisn').value,
+        nik: document.getElementById('nik').value,
+        tempatLahir: document.getElementById('tempatLahir').value,
+        tanggalLahir: document.getElementById('tanggalLahir').value,
+        agama: agama.value,
+        golonganDarah: golonganDarah.value,
+        alamatRumah: document.getElementById('alamatRumah').value,
+        nomorHp: document.getElementById('nomorHp').value,
+        emailPendaftaran: document.getElementById('emailPendaftaran').value
+    };
+
+        fetch("http://localhost:8000/ppdb", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(formData)
+        })
+        .then(response => response.json())
+        .then(data => {
+            if (data.status === 'success') {
+                document.getElementById('popupMessage').textContent = data.message;
+                document.getElementById('popup').style.display = 'block';
+                document.getElementById('overlay').style.display = 'block';
+                document.getElementById('popupButton').style.backgroundColor = '#4CAF50'
+
+                document.getElementById('popupButton').addEventListener('click', function() {
+                    window.location.href = 'index.html';
+                });
+            } else {
+                document.getElementById('popupMessage').textContent = data.message;
+                document.getElementById('popup').style.display = 'block';
+                document.getElementById('overlay').style.display = 'block';
+                document.getElementById('popupButton').style.backgroundColor = '#f44336'
+
+                document.getElementById('popupButton').addEventListener('click', function() {
+                    document.getElementById('popup').style.display = 'none';
+                    document.getElementById('overlay').style.display = 'none';
+                });
+            }
+        })
+        .catch(error => {
+            console.error('Error:', error);
+        });
+    });
+</script>
+<script>
+    const id = getCookie("user_id")
+    document.addEventListener("DOMContentLoaded", function () {
+    fetch("http://localhost:8000/valid",{
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({id})
+        })
+        .then(response => response.json())
+        .then(data => {
+            if (data.status === "error") {
+                document.getElementById('popupMessage').textContent = data.message;
+                document.getElementById('popup').style.display = 'block';
+                document.getElementById('overlay').style.display = 'block';
+                document.getElementById('popupButton').style.backgroundColor = '#f44336'
+
+                document.getElementById('popupButton').addEventListener('click', function() {
+                    document.getElementById('popup').style.display = 'none';
+                    document.getElementById('overlay').style.display = 'none';
+                });
+                document.getElementById('popupButton').addEventListener('click', function() {
+                    window.location.href = 'login.html';
+                });
+            } else if (data.registered) {
+                document.getElementById('popupMessage').textContent = data.message;
+                document.getElementById('popup').style.display = 'block';
+                document.getElementById('popupID').textContent = "Registration Number = "+data.id;
+                document.getElementById('overlay').style.display = 'block';
+                document.getElementById('popupButton').style.backgroundColor = '#4CAF50'
+
+                document.getElementById('popupButton').addEventListener('click', function() {
+                    window.location.href = 'index.html';
+                });
+            } else {
+                // Tetap tampilkan form jika belum mendaftar
+                document.getElementById("container").style.display = "block";
+            }
+        })
+        .catch(error => console.error("Error:", error));
+});
+</script>
+</html>

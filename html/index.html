@@ -51,6 +51,12 @@
         text-shadow: 5px 2px #222324, 2px 4px #222324, 3px 5px #222324;
       }
 
+      .navbar{
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
       .navbar .nav-link,
       .navbar .navbar-brand {
         color: white;
@@ -59,7 +65,7 @@
 
       .navbar .nav-link:hover {
         color: #ff9800;
-        text-decoration: underline; /* Menambahkan garis bawah saat di-hover */
+        text-decoration: underline;
         text-underline-offset: 4px;
       }
 
@@ -75,6 +81,15 @@
         background-color: #ff9800;
         transform: scale(1.05);
       }
+
+      .nav-item.dropdown:hover .dropdown-menu {
+        display: block;
+      }
+
+      .dropdown-menu {
+        display: none;
+      }
+
 
       .title mark {
         background-color: transparent;
@@ -321,7 +336,7 @@
         transition: 1s;
       }
       .flipbook-card:hover {
-        z-index: 10000;
+        z-index: 10;
         transform: perspective(2000px) rotate(-10deg);
         box-shadow: inset 20px 0 50px rgba(0, 0, 0, 0.5),
           0 10px 100px rgba(0, 0, 0, 0.5);
@@ -489,142 +504,139 @@
       }
 
       .timeline{
-    color: #002852 !important;
-}
+        color: #002852 !important;
+      }
 
-.timeline ul {
-  list-style-type: none;
-}
+      .timeline ul {
+        list-style-type: none;
+      }
 
-.timeline ul li {
-  position: relative;
-  width: 6px;
-  margin: 0 auto;
-  padding-top: 50px;
-  background: #002852;
-}
+      .timeline ul li {
+        position: relative;
+        width: 6px;
+        margin: 0 auto;
+        padding-top: 50px;
+        background: #002852;
+      }
 
-.timeline ul li::after {
-  content: '';
-  position: absolute;
-  left: 50%;
-  bottom: 0;
-  transform: translateX(-50%) rotate(45deg);
-  width: 20px;
-  height: 20px;
-  z-index: 2;
-  background: #002852;
-}
+      .timeline ul li::after {
+        content: '';
+        position: absolute;
+        left: 50%;
+        bottom: 0;
+        transform: translateX(-50%) rotate(45deg);
+        width: 20px;
+        height: 20px;
+        z-index: 2;
+        background: #002852;
+      }
 
-.timeline ul li div {
-  position: relative;
-  bottom: 0;
-  width: 400px;
-  padding: 20px;
-  background: #ee7e1b;
-  box-shadow: 4px 13px 30px 1px rgba(252, 56, 56, 0.2);
-  border-radius: 5px;
-  display: flex;
-  align-items: center;
-}
+      .timeline ul li div {
+        position: relative;
+        bottom: 0;
+        width: 400px;
+        padding: 20px;
+        background: #ee7e1b;
+        box-shadow: 4px 13px 30px 1px rgba(252, 56, 56, 0.2);
+        border-radius: 5px;
+        display: flex;
+        align-items: center;
+      }
 
-.timeline ul li div time {
-  position: absolute;
-  background: #f5af19;
-  width: 80px;
-  height: 30px;
-  top: -15px;
-  border-radius: 5px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  letter-spacing: 2px;
-}
+      .timeline ul li div time {
+        position: absolute;
+        background: #f5af19;
+        width: 80px;
+        height: 30px;
+        top: -15px;
+        border-radius: 5px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        letter-spacing: 2px;
+      }
 
-.timeline ul li div div {
-  height: 100px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
+      .timeline ul li div div {
+        height: 100px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
 
-.timeline ul li div div p {
-  text-align: center;
-}
+      .timeline ul li div div p {
+        text-align: center;
+      }
 
-.timeline ul li div .discovery {
-  margin-right: 10px;
-}
+      .timeline ul li div .discovery {
+        margin-right: 10px;
+      }
 
-.timeline ul li:nth-of-type(odd) > div {
-  left: 45px;
-}
+      .timeline ul li:nth-of-type(odd) > div {
+        left: 45px;
+      }
 
-.timeline ul li:nth-of-type(even) > div {
-  left: -479px;
-}
+      .timeline ul li:nth-of-type(even) > div {
+        left: -479px;
+      }
 
-/* Hapus animasi */
-.timeline ul li div {
-  visibility: visible;
-  opacity: 1;
-  transition: none;
-}
+      .timeline ul li div {
+        visibility: visible;
+        opacity: 1;
+        transition: none;
+      }
 
-.timeline ul li:nth-of-type(odd) div {
-  transform: translate3d(0, 0, 0) rotate(0deg);
-}
+      .timeline ul li:nth-of-type(odd) div {
+        transform: translate3d(0, 0, 0) rotate(0deg);
+      }
 
-.timeline ul li:nth-of-type(even) div {
-  transform: translate3d(0, 0, 0) rotate(0deg);
-}
+      .timeline ul li:nth-of-type(even) div {
+        transform: translate3d(0, 0, 0) rotate(0deg);
+      }
 
-/* RESPONSIVE STYLING */
-@media screen and (max-width: 900px) {
-  .timeline ul li div {
-    width: 250px;
-    flex-direction: column;
-  }
-
-  .timeline ul li div div {
-    width: 80%;
-    margin: 10px;
-  }
-
-  .timeline ul li:nth-of-type(even) > div {
-    left: -289px;
-  }
-}
-
-@media screen and (max-width: 600px) {
-  .timeline ul li {
-    margin-left: 20px;
-  }
-
-  .timeline ul li div {
-    width: calc(100vw - 91px);
-  }
-
-  .timeline ul li:nth-of-type(even) > div {
-    left: 45px;
-  }
-}
-
-        .white-gradient {
-        background: linear-gradient(to right, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100%);
+      @media screen and (max-width: 900px) {
+        .timeline ul li div {
+          width: 250px;
+          flex-direction: column;
         }
 
-        @keyframes scroll {
-        0% { 
-            transform: translateX(500); 
-        }
-        100% { 
-            transform: translateX(calc(-250px * 7));
-        }
+        .timeline ul li div div {
+          width: 80%;
+          margin: 10px;
         }
 
-        .slider {
+        .timeline ul li:nth-of-type(even) > div {
+          left: -289px;
+        }
+      }
+
+      @media screen and (max-width: 600px) {
+        .timeline ul li {
+          margin-left: 20px;
+        }
+
+        .timeline ul li div {
+          width: calc(100vw - 91px);
+        }
+
+        .timeline ul li:nth-of-type(even) > div {
+          left: 45px;
+        }
+      }
+
+      .white-gradient {
+      background: linear-gradient(to right, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100%);
+      }
+
+      @keyframes scroll {
+      0% { 
+          transform: translateX(500); 
+      } 100% { 
+          transform: translateX(calc(-250px * 7));
+        }
+      }
+
+      .slider {
         background: white;
         box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.125);
         height: 100px;
@@ -632,41 +644,88 @@
         overflow: hidden;
         position: relative;
         width: 100%;
-        }
+      }
 
-        .slider::before,
-        .slider::after {
+      .slider::before,
+      .slider::after {
         background: linear-gradient(to right, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100%);
         content: "";
         height: 100px;
         position: absolute;
         width: 200px;
         z-index: 2;
-        }
+      }
 
-        .slider::after {
+      .slider::after {
         right: 0;
         top: 0;
         transform: rotateZ(180deg);
-        }
+      }
 
-        .slider::before {
+      .slider::before {
         left: 0;
         top: 0;
+      }
+
+      .slide-track {
+        justify-content: space-between;
+        animation: scroll 30s linear infinite;
+        display: flex;
+        width: calc(250px * 14);
+      }
+
+      .slides {
+        padding-left: 10px;
+        padding-right: 10px;
+      }
+
+      #popup {
+            display: none;
+            border-radius: 15px;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            padding: 20px;
+            background-color: white;
+            border: 1px solid #ddd;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            text-align: center;
+            z-index: 9999;
         }
 
-        .slide-track {
-          justify-content: space-between;
-          animation: scroll 30s linear infinite;
+        #popup button {
+            border-radius: 15px;
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+        }
+
+        #overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 9998;
+        }
+
+        .bot {
+          z-index: 99999;
+          position: absolute;
+          top: 60px;
+          right: 20px; 
           display: flex;
-          width: calc(250px * 14);
-        }
-
-        .slides {
-          padding-left: 10px;
-          padding-right: 10px;
-        }
-
+          flex-direction: row-reverse;
+          background-color: white;
+          padding: 3px;
+          border: solid transparent;
+          border-radius: 8px;
+      }
     </style>
 </head>
 <body>
@@ -676,6 +735,17 @@
     <div class="curtain curtain-bottom tw-flex tw-justify-center tw-align-middle">
         <h1 class="title-curtain tw-text-customBlue tw-font-extrabold tw-text-4xl" id="animatedTitle"></h1>
     </div> -->
+    <a href="bot.html">
+      <div class="bot">
+        <img src="../assets/logo.png" width="20">
+        <p>Our BOT</p>
+      </div>
+    </a>
+    <div id="overlay"></div>
+    <div id="popup">
+        <p id="popupMessage"></p>
+        <button id="popupButton">OK</button>
+    </div>
     <nav class="navbar navbar-expand-lg tw-bg-customBlue">
       <div class="container">
         <a class="navbar-brand d-flex align-items-center" href="index.html">
@@ -707,25 +777,37 @@
             <li class="nav-item">
               <a class="nav-link" href="About.html">About</a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="jurusan.html">Major</a>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="majorDropdown" role="button">
+                Major
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="majorDropdown">
+                <li><a class="dropdown-item" href="ipa.html">Science</a></li>
+                <li><a class="dropdown-item" href="ips.html">Social</a></li>
+              </ul>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="Achievement.html">Achievement</a>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="achievementDropdown" role="button">
+                Achievement
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="achievementDropdown">
+                <li><a class="dropdown-item" href="academic.html">Academic</a></li>
+                <li><a class="dropdown-item" href="non-academic.html">Non-Academic</a></li>
+              </ul>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="activity.html">Activity</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">PPDB</a>
+              <a class="nav-link" href="ppdb.html">PPDB</a>
             </li>
           </ul>
-          <a
-            class="btn tw-bg-customOrange ms-lg-3 text-white"
-            href="#"
-            role="button"
-            >Login</a
-          >
+          <div class="dropdown">
+            <button id="loginButton" class="btn tw-bg-customOrange ms-lg-3 text-white" href="#" role="button">Login</button>
+            <ul class="dropdown-menu" aria-labelledby="loginButton">
+              <li><a class="dropdown-item" href="#" id="logoutButton">Logout</a></li>
+            </ul>
+          </div>
         </div>
       </div>
     </nav>
@@ -1043,7 +1125,7 @@
           <div>
             <div>
               <p class="tw-text-2xl tw-font-bold">REGISTRATION AND VERIFICATION</p>
-              <p>1 March - 15 April 2024</p>
+              <p>1 March - 15 June 2024</p>
             </div>
           </div>
         </li>
@@ -1051,7 +1133,7 @@
           <div>
             <div>
               <p class="tw-text-2xl tw-font-bold">PPDB OPENING PERIOD (PRESTATION PATH)</p>
-              <p>1-31 May 2024</p>
+              <p>1 March - 31 May 2024</p>
             </div>
           </div>
         </li>
@@ -1059,7 +1141,7 @@
           <div>
             <div>
               <p class="tw-text-2xl tw-font-bold">PPDB OPENING PERIOD (REGULAR PATH)</p>
-              <p>15 May - 15 June 2024</p>
+              <p>1 April - 15 June 2024</p>
             </div>
           </div>
         </li>
@@ -1175,10 +1257,10 @@
         </div>
             <p class="tw-py-8 tw-text-sm tw-text-white lg:tw-max-w-xs tw-text-justify">Has produced more than 1000 extraordinary graduates who are ready to make a positive impact in the world. ERSANAWATA High School has developed many skilled experts across various fields. Are you interested in joining ERSANAWATA?</p>
             <div class="tw-flex tw-flex-row tw-space-x-2">
-                <a href="contact.html" class="tw-py-2.5 tw-px-5 tw-h-9 tw-block tw-w-fit tw-rounded-full tw-shadow-sm tw-text-xs tw-text-white tw-mx-auto tw-bg-transparent tw-border-2 tw-transition-transform tw-duration-300 tw-transform hover:tw-scale-110 lg:tw-mx-0 tw-z-50">
-                    Contact us
+                <a href="bot.html" class="tw-py-2.5 tw-px-5 tw-h-9 tw-block tw-w-fit tw-rounded-full tw-shadow-sm tw-text-xs tw-text-white tw-mx-auto tw-bg-transparent tw-border-2 tw-transition-transform tw-duration-300 tw-transform hover:tw-scale-110 lg:tw-mx-0 tw-z-50">
+                    Need Help?
                 </a>
-                <a href="contact.html" class="tw-py-2.5 tw-px-5 tw-h-9 tw-block tw-w-fit tw-rounded-full tw-shadow-sm tw-text-xs tw-text-white tw-mx-auto tw-bg-transparent tw-border-2 tw-transition-transform tw-duration-300 tw-transform hover:tw-scale-110 lg:tw-mx-0 tw-z-50">
+                <a href="ppdb.html" class="tw-py-2.5 tw-px-5 tw-h-9 tw-block tw-w-fit tw-rounded-full tw-shadow-sm tw-text-xs tw-text-white tw-mx-auto tw-bg-transparent tw-border-2 tw-transition-transform tw-duration-300 tw-transform hover:tw-scale-110 lg:tw-mx-0 tw-z-50">
                     Register
                 </a>
             </div>                       
@@ -1246,5 +1328,31 @@
 
     <script src="../src/bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="../js/index.js"></script>
+    <script src="../js/cookie.js"></script>
+    <script>
+  var username = getCookie('username');
+  var loginButton = document.getElementById('loginButton');
+  var logoutButton = document.getElementById('logoutButton');
+
+  if (username) {
+    // Jika ada username, ubah teks tombol menjadi username dan tampilkan opsi logout
+    loginButton.textContent = username;
+    loginButton.setAttribute("data-bs-toggle", "dropdown"); // Menambahkan fitur dropdown
+
+    // Menambahkan event listener untuk logout
+    logoutButton.addEventListener('click', function() {
+      // Menghapus cookie (logout)
+      document.cookie = "username=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+      document.cookie = "user_id=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+      // Redirect ke halaman login
+      window.location.href = 'login.html';
+    });
+  } else {
+    // Jika tidak ada username di cookie, tetap tampilkan "Login"
+    loginButton.addEventListener('click', function() {
+      window.location.href = 'login.html';
+    });
+  }
+    </script>
   </body>
 </html>

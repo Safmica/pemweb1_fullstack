@@ -1,0 +1,194 @@
+<html>
+<head>
+    <title>Account signup</title>
+    <link href="../src/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        .bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('../assets/carousel-1.webp');
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            filter: blur(1px);
+            z-index: -1;
+        }
+        .signup-container {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            width: 100%;
+            max-width: 400px;
+        }
+        .signup-container h2 {
+            margin-bottom: 30px;
+            font-weight: bold;
+            color: #333;
+        }
+        .form-group {
+            margin-bottom: 20px;
+            text-align: left;
+        }
+        .form-group i {
+            margin-right: 10px;
+        }
+        .btn-signup {
+            background-color: #ff7f00;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 25px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .btn-signup:hover {
+            background-color: #e66b00;
+        }
+        .signup-link {
+            margin-top: 20px;
+            display: block;
+            color: #007bff;
+            text-decoration: none;
+        }
+        .signup-link:hover {
+            text-decoration: underline;
+        }
+
+        #popup {
+            display: none;
+            border-radius: 15px;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            padding: 20px;
+            background-color: white;
+            border: 1px solid #ddd;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            text-align: center;
+            z-index: 9999;
+        }
+
+        #popup button {
+            border-radius: 15px;
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+        }
+
+        #overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 9998;
+        }
+    </style>
+</head>
+<body>
+    <div class="bg"></div>
+    <div class="signup-container">
+        <div style="display: flex;">
+            <a href="index.html" style="text-decoration: none; font-size: large;">Back</a>
+        </div>
+        <div>
+            <img src="../assets/logo.png" width="100">
+        </div>
+        <h2>ACCOUNT SIGNUP</h2>
+        <form id="signupForm">
+            <div class="form-group">
+                <label for="username"><i class="fas fa-user"></i> Username</label>
+                <input type="text" class="form-control" id="username" placeholder="Username">
+            </div>
+            <div class="form-group">
+                <label for="password"><i class="fas fa-lock"></i> Password</label>
+                <input type="password" class="form-control" id="password" placeholder="Password">
+            </div>
+            <div class="form-group">
+                <label for="confirm_password"><i class="fas fa-lock"></i> Confirm Password</label>
+                <input type="confirm_password" class="form-control" id="confirm_password" placeholder="Confirm Password">
+            </div>
+            <button type="submit" class="btn-signup">SIGNUP</button>
+        </form>
+        <a href="login.html" class="signup-link">Have an account? Login</a>
+    </div>
+    <div id="overlay"></div>
+    <div id="popup">
+        <p id="popupMessage"></p>
+        <button id="popupButton">OK</button>
+    </div>
+</body>
+<script src="../src/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+     document.getElementById('signupForm').addEventListener('submit', function(event) {
+        event.preventDefault();
+
+        var username = document.getElementById('username').value;
+        var password = document.getElementById('password').value;
+        var confirmPassword = document.getElementById('confirm_password').value;
+
+        if (password !== confirmPassword) {
+            document.getElementById('popupMessage').textContent = "Password don't match";
+            document.getElementById('popup').style.display = 'block';
+            document.getElementById('overlay').style.display = 'block';
+            document.getElementById('popupButton').style.backgroundColor = '#f44336'
+
+            document.getElementById('popupButton').addEventListener('click', function() {
+                document.getElementById('popup').style.display = 'none';
+                document.getElementById('overlay').style.display = 'none';
+            });
+            return;
+        }
+
+        fetch('http://localhost:8000/signup', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({ username: username, password: password })
+        })
+        .then(response => response.json())
+        .then(data => {
+            if (data.status === 'success') {
+                document.getElementById('popupMessage').textContent = data.message;
+                document.getElementById('popup').style.display = 'block';
+                document.getElementById('overlay').style.display = 'block';
+                document.getElementById('popupButton').style.backgroundColor = '#4CAF50'
+
+                document.getElementById('popupButton').addEventListener('click', function() {
+                    window.location.href = 'login.html';
+                });
+            } else {
+                document.getElementById('popupMessage').textContent = data.message;
+                document.getElementById('popup').style.display = 'block';
+                document.getElementById('overlay').style.display = 'block';
+                document.getElementById('popupButton').style.backgroundColor = '#f44336'
+
+                document.getElementById('popupButton').addEventListener('click', function() {
+                    document.getElementById('popup').style.display = 'none';
+                    document.getElementById('overlay').style.display = 'none';
+                });
+            }
+        })
+        .catch(error => {
+            console.error('Error:', error);
+        });
+    });
+</script>

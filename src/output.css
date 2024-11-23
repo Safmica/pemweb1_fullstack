@@ -596,6 +596,10 @@ video {
   position: relative;
 }
 
+.tw-sticky {
+  position: sticky;
+}
+
 .tw-inset-0 {
   inset: 0px;
 }
@@ -608,12 +612,20 @@ video {
   top: 0.5rem;
 }
 
+.tw-top-40 {
+  top: 10rem;
+}
+
 .tw-z-20 {
   z-index: 20;
 }
 
 .tw-z-50 {
   z-index: 50;
+}
+
+.tw-z-\[9999\] {
+  z-index: 9999;
 }
 
 .tw-col-span-full {
@@ -624,13 +636,13 @@ video {
   margin: 0.5rem;
 }
 
+.tw-m-4 {
+  margin: 1rem;
+}
+
 .tw-mx-4 {
   margin-left: 1rem;
   margin-right: 1rem;
-}
-
-.tw-m-4 {
-  margin: 1rem;
 }
 
 .tw-mx-auto {
@@ -651,6 +663,10 @@ video {
 .tw-my-8 {
   margin-top: 2rem;
   margin-bottom: 2rem;
+}
+
+.tw-mb-1\.5 {
+  margin-bottom: 0.375rem;
 }
 
 .tw-mb-10 {
@@ -733,62 +749,6 @@ video {
   margin-top: 2rem;
 }
 
-.tw-mb-4 {
-  margin-bottom: 1rem;
-.tw-mb-2 {
-  margin-bottom: 0.5rem;
-}
-
-.tw-mr-2 {
-  margin-right: 0.5rem;
-}
-
-.tw-mb-8 {
-  margin-bottom: 2rem;
-}
-
-.tw-mt-5 {
-  margin-top: 1.25rem;
-}
-
-.tw-ml-1 {
-  margin-left: 0.25rem;
-}
-
-.tw-mt-10 {
-  margin-top: 2.5rem;
-}
-
-.tw-mt-20 {
-  margin-top: 5rem;
-}
-
-.tw-mt-3 {
-  margin-top: 0.75rem;
-}
-
-.tw-mt-32 {
-  margin-top: 8rem;
-.tw-ml-4 {
-  margin-left: 1rem;
-}
-
-.tw-mb-0 {
-  margin-bottom: 0px;
-}
-
-.tw-mr-1 {
-  margin-right: 0.25rem;
-}
-
-.tw-mb-1 {
-  margin-bottom: 0.25rem;
-}
-
-.tw-mb-1\.5 {
-  margin-bottom: 0.375rem;
-}
-
 .tw-block {
   display: block;
 }
@@ -861,32 +821,16 @@ video {
   width: 75%;
 }
 
-.tw-w-36 {
-  width: 9rem;
-}
-
 .tw-w-4 {
   width: 1rem;
 }
 
+.tw-w-48 {
+  width: 12rem;
+}
+
 .tw-w-5 {
   width: 1.25rem;
-}
-
-.tw-w-56 {
-  width: 14rem;
-}
-
-.tw-h-40 {
-  height: 10rem;
-}
-
-.tw-h-24 {
-  height: 6rem;
-}
-
-.tw-h-28 {
-  height: 7rem;
 }
 
 .tw-w-8 {
@@ -930,44 +874,12 @@ video {
   max-width: 64rem;
 }
 
-.tw-w-32 {
-  width: 8rem;
-}
-
-.tw-w-28 {
-  width: 7rem;
-}
-
-.tw-w-2 {
-  width: 0.5rem;
-}
-
-.tw-w-3 {
-  width: 0.75rem;
-}
-
-.tw-w-52 {
-  width: 13rem;
-}
-
 .tw-max-w-7xl {
   max-width: 80rem;
 }
 
 .tw-max-w-sm {
   max-width: 24rem;
-}
-
-.tw-max-w-xs {
-  max-width: 20rem;
-}
-
-.tw-max-w-5xl {
-  max-width: 64rem;
-}
-
-.tw-flex-shrink {
-  flex-shrink: 1;
 }
 
 .tw--translate-y-1\/2 {
@@ -1005,18 +917,6 @@ video {
 
 .tw-grid-cols-2 {
   grid-template-columns: repeat(2, minmax(0, 1fr));
-}
-
-.tw-grid-cols-1 {
-  grid-template-columns: repeat(1, minmax(0, 1fr));
-}
-
-.tw-grid-cols-4 {
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-}
-
-.tw-grid-cols-3 {
-  grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
 .tw-flex-row {
@@ -1267,10 +1167,6 @@ video {
   padding-right: 0.5rem;
 }
 
-.tw-p-2 {
-  padding: 0.5rem;
-}
-
 .tw-px-4 {
   padding-left: 1rem;
   padding-right: 1rem;
@@ -1331,22 +1227,20 @@ video {
   padding-bottom: 2rem;
 }
 
-.tw-py-5 {
-  padding-top: 1.25rem;
-  padding-bottom: 1.25rem;
-}
-
-.tw-py-32 {
-  padding-top: 8rem;
-  padding-bottom: 8rem;
-}
-
 .tw-pb-10 {
   padding-bottom: 2.5rem;
 }
 
+.tw-pb-20 {
+  padding-bottom: 5rem;
+}
+
 .tw-pb-4 {
   padding-bottom: 1rem;
+}
+
+.tw-pb-6 {
+  padding-bottom: 1.5rem;
 }
 
 .tw-pl-5 {
@@ -1355,10 +1249,6 @@ video {
 
 .tw-pt-32 {
   padding-top: 8rem;
-}
-
-.tw-pb-20 {
-  padding-bottom: 5rem;
 }
 
 .tw-text-left {
@@ -1771,15 +1661,6 @@ body {
   cursor: url('../assets/cursor.png'), auto;
 }
 
-.last\:tw-border-none:last-child {
-  border-style: none;
-}
-
-.hover\:tw-translate-y-2:hover {
-  --tw-translate-y: 0.5rem;
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-}
-
 .hover\:tw-translate-y-1:hover {
   --tw-translate-y: 0.25rem;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
@@ -1811,8 +1692,8 @@ body {
   background-color: rgb(148 163 184 / var(--tw-bg-opacity));
 }
 
-.hover\:tw-fill-red-600:hover {
-  fill: #dc2626;
+.hover\:tw-bg-gradient-to-b:hover {
+  background-image: linear-gradient(to bottom, var(--tw-gradient-stops));
 }
 
 .hover\:tw-fill-blue-600:hover {
