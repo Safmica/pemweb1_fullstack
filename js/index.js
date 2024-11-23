@@ -148,7 +148,7 @@ function startAnimation(entries, observer) {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
       animateValue("achievement-1", 0, 97, 2000, '%');
-      animateValue("achievement-2", 0, 24, 2000, ' Years');
+      animateValue("achievement-2", 0, 47, 2000, ' Years');
       animateValue("achievement-3", 0, 100, 2000, ' Top');
       animateValue("achievement-4", 0, 147, 2000, 'x');
       observer.disconnect();
@@ -166,30 +166,3 @@ document.addEventListener("DOMContentLoaded", () => {
     observer.observe(targetContainer);
   }
 });
-
-
-// Wahyu Trisno Aji
-
-// ADVANTAGES SECTION
-function toggleAccordion(index) {
-  const buttons = document.querySelectorAll(".accordion-button");
-  const contentPanels = document.querySelectorAll(".accordion-collapse");
-
-  contentPanels.forEach((panel, i) => {
-    if (i === index) {
-      if (panel.classList.contains("show")) {
-        panel.classList.remove("show");
-        buttons[i].classList.add("collapsed");
-        panel.style.height = 0;
-      } else {
-        panel.classList.add("show");
-        buttons[i].classList.remove("collapsed");
-        panel.style.height = `${panel.scrollHeight}px`;
-      }
-    } else {
-      panel.classList.remove("show");
-      buttons[i].classList.add("collapsed");
-      panel.style.height = 0;
-    }
-  });
-}

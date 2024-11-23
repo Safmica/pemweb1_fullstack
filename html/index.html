@@ -487,15 +487,195 @@
       #item-3:checked ~ .alumni-quote #test {
         transform: translateY(-410px);
       }
+
+      .timeline{
+    color: #002852 !important;
+}
+
+.timeline ul {
+  list-style-type: none;
+}
+
+.timeline ul li {
+  position: relative;
+  width: 6px;
+  margin: 0 auto;
+  padding-top: 50px;
+  background: #002852;
+}
+
+.timeline ul li::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%) rotate(45deg);
+  width: 20px;
+  height: 20px;
+  z-index: 2;
+  background: #002852;
+}
+
+.timeline ul li div {
+  position: relative;
+  bottom: 0;
+  width: 400px;
+  padding: 20px;
+  background: #ee7e1b;
+  box-shadow: 4px 13px 30px 1px rgba(252, 56, 56, 0.2);
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+}
+
+.timeline ul li div time {
+  position: absolute;
+  background: #f5af19;
+  width: 80px;
+  height: 30px;
+  top: -15px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  letter-spacing: 2px;
+}
+
+.timeline ul li div div {
+  height: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.timeline ul li div div p {
+  text-align: center;
+}
+
+.timeline ul li div .discovery {
+  margin-right: 10px;
+}
+
+.timeline ul li:nth-of-type(odd) > div {
+  left: 45px;
+}
+
+.timeline ul li:nth-of-type(even) > div {
+  left: -479px;
+}
+
+/* Hapus animasi */
+.timeline ul li div {
+  visibility: visible;
+  opacity: 1;
+  transition: none;
+}
+
+.timeline ul li:nth-of-type(odd) div {
+  transform: translate3d(0, 0, 0) rotate(0deg);
+}
+
+.timeline ul li:nth-of-type(even) div {
+  transform: translate3d(0, 0, 0) rotate(0deg);
+}
+
+/* RESPONSIVE STYLING */
+@media screen and (max-width: 900px) {
+  .timeline ul li div {
+    width: 250px;
+    flex-direction: column;
+  }
+
+  .timeline ul li div div {
+    width: 80%;
+    margin: 10px;
+  }
+
+  .timeline ul li:nth-of-type(even) > div {
+    left: -289px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .timeline ul li {
+    margin-left: 20px;
+  }
+
+  .timeline ul li div {
+    width: calc(100vw - 91px);
+  }
+
+  .timeline ul li:nth-of-type(even) > div {
+    left: 45px;
+  }
+}
+
+        .white-gradient {
+        background: linear-gradient(to right, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100%);
+        }
+
+        @keyframes scroll {
+        0% { 
+            transform: translateX(500); 
+        }
+        100% { 
+            transform: translateX(calc(-250px * 7));
+        }
+        }
+
+        .slider {
+        background: white;
+        box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.125);
+        height: 100px;
+        margin: auto;
+        overflow: hidden;
+        position: relative;
+        width: 100%;
+        }
+
+        .slider::before,
+        .slider::after {
+        background: linear-gradient(to right, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100%);
+        content: "";
+        height: 100px;
+        position: absolute;
+        width: 200px;
+        z-index: 2;
+        }
+
+        .slider::after {
+        right: 0;
+        top: 0;
+        transform: rotateZ(180deg);
+        }
+
+        .slider::before {
+        left: 0;
+        top: 0;
+        }
+
+        .slide-track {
+          justify-content: space-between;
+          animation: scroll 30s linear infinite;
+          display: flex;
+          width: calc(250px * 14);
+        }
+
+        .slides {
+          padding-left: 10px;
+          padding-right: 10px;
+        }
+
     </style>
 </head>
 <body>
-    <div class="curtain curtain-top tw-align-middle tw-justify-center tw-flex">
+    <!-- <div class="curtain curtain-top tw-align-middle tw-justify-center tw-flex">
         <img src="../assets/logo.webp" height="30" alt="Logo" class="logo fade-in" id="fadeInElement">
     </div>
     <div class="curtain curtain-bottom tw-flex tw-justify-center tw-align-middle">
         <h1 class="title-curtain tw-text-customBlue tw-font-extrabold tw-text-4xl" id="animatedTitle"></h1>
-    </div>
+    </div> -->
     <nav class="navbar navbar-expand-lg tw-bg-customBlue">
       <div class="container">
         <a class="navbar-brand d-flex align-items-center" href="index.html">
@@ -689,6 +869,12 @@
                 <p class="tw-text-3xl tw-font-bold">ERSANAWATA HIGHSCHOOL</p>
             </div>
         </div>
+        <div style="display: flex; justify-content: center; align-items: center; height: 100vh;">
+          <iframe src="https://drive.google.com/file/d/1EYoFOfAXGTSW6fJCOFg8WT0qoBuR897z/preview" 
+                  width="70%" 
+                  height="70%">
+          </iframe>
+        </div>  
         <div class="tw-flex tw-align-middle tw-justify-center">
             <p class="tw-font-extrabold tw-text-5xl tw-text-customBlue">COMMITED TO</p>
         </div>
@@ -714,7 +900,7 @@
                         <div class="tw-flex tw-justify-center tw-items-center tw-flex-col tw-transform tw-translate-y-[30%] group-hover:tw-translate-y-[0%] tw-duration-200 tw-w-[90%] tw-text-center">
                             <div class="title-achievement">HAS BEEN ESTABLISHED</div>
                             <div class="tw-z-20 tw-transform tw-duration-200 tw-opacity-0 group-hover:tw-opacity-100 tw-group-hover:tw-opacity-100">
-                                <p class="desc-achievement">ERSANAWATA High School for 24 years creating the best generation</p>
+                                <p class="desc-achievement">ERSANAWATA High School for 47 years creating the best generation</p>
                             </div>
                         </div>
                     </div>
@@ -791,13 +977,7 @@
               </div>
             </div>
           </div>
-          <div id="video-container" style="width: 100%; max-width: 800px; margin: auto; text-align: center;">
-            <video width="100%">
-              <source src="video.mp4" type="video/mp4">
-              Your browser does not support the video tag.
-            </video>
-          </div>
-    </article>
+    </article>    
     <div class="tw-flex tw-justify-center tw-align-middle">
         <h2 class="tw-font-extrabold tw-text-5xl tw-text-customBlue">Let's meet our alumni</h2>
     </div>
@@ -830,14 +1010,14 @@
                         <label class="quote-info" id="quote-info-2">
                             <div class="sub-line">
                                 <div class="tw-text-center tw-text-3xl tw-font-bold">Filumena C. Gultom</div>
-                                <div class="tw-text-center tw-text-lg tw-font-semibold tw-text-customOrange">CEO of Bank BCA</div>
+                                <div class="tw-text-center tw-text-lg tw-font-semibold tw-text-customOrange">CEO of Bank BCA- ERSANAWATA 1995</div>
                                 <div class="tw-text-center tw-text-xl tw-font-medium tw-text-customBlue">"As an alumni of ERSANAWATA and now serving as CEO of Bank BCA, I would like to share that education in this school has become an important foundation for my career journey. Here, I learned the values ​​of integrity, and an unyielding spirit that are very helpful in facing challenges in the banking world. believe that the hard work and perseverance that you instill in ERSANAWATA will pave the way to success."</div>
                             </div>
                         </label>
                         <label class="quote-info" id="quote-info-3">
                             <div class="sub-line">
                                 <div class="tw-text-center tw-text-3xl tw-font-bold">Saputra Erlangga</div>
-                                <div class="tw-text-center tw-text-lg tw-font-semibold tw-text-customOrange">CEO of Tiktok Indonesia</div>
+                                <div class="tw-text-center tw-text-lg tw-font-semibold tw-text-customOrange">CEO of Tiktok Indonesia - ERSANAWATA 1994</div>
                                 <div class="tw-text-center tw-text-xl tw-font-medium tw-text-customBlue">"As an ERSANAWATA alumnus and CEO of TikTok Indonesia, I would like to say that this school has given me incredible provisions to achieve my dreams. Here, I learned the importance of creativity, innovation, and the courage to try new things — values ​​that have played a huge role in my career journey in the digital world. Make every challenge an opportunity, because the future is in your hands!"</div>
                             </div>
                         </label>
@@ -845,7 +1025,144 @@
                 </div>
             </div>
         </div>
-    </div>      
+    </div>
+    <div class="tw-flex tw-justify-center tw-align-middle">
+      <h2 class="tw-font-extrabold tw-text-5xl tw-text-customBlue">PPDB Timeline</h2>
+    </div>
+    <section class="timeline tw-text-white">
+      <ul>
+        <li>
+          <div>
+            <div>
+              <p class="tw-text-2xl tw-font-bold">PREPARATION FOR PPDB</p>
+              <p>1 January - 31 February 2024</p>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div>
+            <div>
+              <p class="tw-text-2xl tw-font-bold">REGISTRATION AND VERIFICATION</p>
+              <p>1 March - 15 April 2024</p>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div>
+            <div>
+              <p class="tw-text-2xl tw-font-bold">PPDB OPENING PERIOD (PRESTATION PATH)</p>
+              <p>1-31 May 2024</p>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div>
+            <div>
+              <p class="tw-text-2xl tw-font-bold">PPDB OPENING PERIOD (REGULAR PATH)</p>
+              <p>15 May - 15 June 2024</p>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div>
+            <div>
+              <p class="tw-text-2xl tw-font-bold">INTERVIEWS OR CONSULTATIONS (PRESTATION PATH)</p>
+              <p>1-15 May 2024</p>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div>
+            <div>
+              <p class="tw-text-2xl tw-font-bold">SELECTION TEST (REGULAR PATH)</p>
+              <p>15-30 May 2024</p>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div>
+            <div>
+              <p class="tw-text-2xl tw-font-bold">PPDB RESULTS ANNOUNCEMENT</p>
+              <p>5 June 2024</p>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div>
+            <div>
+              <p class="tw-text-2xl tw-font-bold">RE-REGISTRATION</p>
+              <p>6-10 June 2024</p>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div>
+            <div>
+              <p class="tw-text-2xl tw-font-bold">NEW STUDENT ORIENTATION</p>
+              <p>27-30 June 2024</p>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div>
+            <div>
+              <p class="tw-text-2xl tw-font-bold">START OF THE NEW ACADEMIC YEAR</p>
+              <p>1 July 2024</p>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </section>
+    <div class="tw-flex tw-justify-center tw-align-middle">
+      <h2 class="tw-font-extrabold tw-text-5xl tw-text-customBlue tw-pt-32 tw-pb-20">Our Partner and Sponsorship</h2>
+  </div>
+  <div class="slider">
+    <div class="slide-track">
+        <div class="slides">
+            <img src="../assets/gojek.png" height="50" width="150" alt="gojek" />
+        </div>
+        <div class="slides">
+            <img src="../assets/mandiri.png" height="50" width="150" alt="mandiri" />
+        </div>
+        <div class="slides">
+            <img src="../assets/indofood.png" height="50" width="150" alt="indofood"/>
+        </div>
+        <div class="slides">
+            <img src="../assets/telkomsel.png" height="50" width="150" alt="telkomsel" />
+        </div>
+        <div class="slides">
+            <img src="../assets/alfamart.png" height="50" width="150" alt="alfamart" />
+        </div>
+        <div class="slides">
+            <img src="../assets/hilo.png" height="50" width="150" alt="hilo" />
+        </div>
+        <div class="slides">
+            <img src="../assets/ruangguru.png" height="50" width="150" alt="ruangguru" />
+        </div>
+        <div class="slides">
+          <img src="../assets/gojek.png" height="50" width="150" alt="gojek" />
+        </div>
+        <div class="slides">
+            <img src="../assets/mandiri.png" height="50" width="150" alt="mandiri" />
+        </div>
+        <div class="slides">
+            <img src="../assets/indofood.png" height="50" width="150" alt="indofood"/>
+        </div>
+        <div class="slides">
+            <img src="../assets/telkomsel.png" height="50" width="150" alt="telkomsel" />
+        </div>
+        <div class="slides">
+            <img src="../assets/alfamart.png" height="50" width="150" alt="alfamart" />
+        </div>
+        <div class="slides">
+            <img src="../assets/hilo.png" height="50" width="150" alt="hilo" />
+        </div>
+        <div class="slides">
+            <img src="../assets/ruangguru.png" height="50" width="150" alt="ruangguru" />
+        </div>
+    </div>
+</div>
+
     <footer class="tw-w-full tw-bg-customBlue">
     <div class="tw-mx-auto tw-max-w-7xl tw-px-4 sm:tw-px-6 lg:tw-px-8">
         <div class="tw-grid tw-grid-cols-2 sm:tw-grid-cols-4 lg:tw-grid-cols-6 tw-gap-3 tw-gap-y-8 md:tw-gap-8 tw-py-8 tw-max-w-sm tw-mx-auto sm:tw-max-w-3xl lg:tw-max-w-full">
