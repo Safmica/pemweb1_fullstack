@@ -136,3 +136,29 @@ animateValue("achievement-1", 0, 97, 2000, '%');
 animateValue("achievement-2", 0, 24, 2000, ' Years');
 animateValue("achievement-3", 0, 100, 2000, ' Top');
 animateValue("achievement-4", 0, 147, 2000, 'x');
+
+
+const prevButton = document.getElementById('prev');
+const nextButton = document.getElementById('next');
+const slides = document.querySelector('.carousel-slides');
+let index = 0;
+const totalSlides = document.querySelectorAll('.carousel-slide').length;
+
+  function moveToSlide(newIndex) {
+    if (newIndex < 0) {
+        index = totalSlides - 1;
+        } else if (newIndex >= totalSlides) {
+            index = 0;
+        } else {
+            index = newIndex;
+        }
+        slides.style.transform = `translateX(-${index * 100}%)`;
+    }
+
+    prevButton.addEventListener('click', () => moveToSlide(index - 1));
+    nextButton.addEventListener('click', () => moveToSlide(index + 1));
+
+    // Optionally, set an interval for automatic carousel sliding
+    setInterval(() => moveToSlide(index + 1), 3000); // change slide every 3 seconds
+
+
